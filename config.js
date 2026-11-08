@@ -1,1 +1,1 @@
-window.CFG={url:"PASTE_SUPABASE_PROJECT_URL",key:"PASTE_SUPABASE_ANON_OR_PUBLISHABLE_KEY"};
+window.CFG={url:"https://ujtrzsgtikcchcvrnwph.supabase.co",key:"sb_publishable_8AvjgqU-JfV6hAvglhNbVQ_vUu46zLC"};

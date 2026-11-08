@@ -1,31 +1,45 @@
+
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CANONE · Film Watchlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: light;
-  --void: #D2C8B8;
-  --surface: #E1D8C9;
-  --surface-raised: #EEE8DC;
-  --surface-hi: #F5F0E6;
-  --border: #4E493F;
-  --border-hi: #292720;
-  --shadow: none;
-  --divider: #756B59;
-  --text-primary: #292720;
-  --text-secondary: #595247;
-  --text-dim: #686154;
-  --text-inverse: #F5F0E6;
-  --accent-primary: #783B32;
-  --accent-secondary: #46584C;
-  --accent-tertiary: #877554;
-  --accent-critical: #A3352A;
-  --accent-primary-dim: #D3B7AC;
-  --accent-secondary-dim: #BEC7BD;
-  --accent-tertiary-dim: #D7CBB0;
-  --accent-critical-dim: #E3C2B9;
-  --font-chrome: "Jost", Futura, "Century Gothic", sans-serif;
-  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  /* travertine massing */
+  --void: #D2C7B3;
+  --surface: #DFD8C8;
+  --surface-raised: #EAE5D9;
+  --surface-hi: #F4EFE4;
+  /* umber structure, never pure black */
+  --border: #3E362A;
+  --border-hi: #211C15;
+  --divider: #9A8B72;
+  --shadow: 0 1px 0 var(--engrave-hi), 0 12px 24px -16px rgba(33, 28, 21, .55);
+  /* engraved light edge + deboss well + stamp step */
+  --engrave-hi: rgba(255, 251, 240, .62);
+  --deboss: rgba(33, 28, 21, .18);
+  --step: #846B37;
+  --drop: rgba(33, 28, 21, .30);
+  --text-primary: #241F17;
+  --text-secondary: #57493A;
+  --text-dim: #6B5D49;
+  --text-inverse: #F4EFE4;
+  /* oxblood seal · laurel verdigris · antique brass · burnt sienna */
+  --accent-primary: #6B1D1D;
+  --accent-secondary: #4A5A48;
+  --accent-tertiary: #A3864D;
+  --accent-critical: #9A4A12;
+  --accent-primary-dim: #DCC5BD;
+  --accent-secondary-dim: #C8CFC3;
+  --accent-tertiary-dim: #E3D5B2;
+  --accent-critical-dim: #E6CFB2;
+  --brass-deep: #846B37;
+  --oxblood-hi: #7E2A24;
+  --oxblood-deep: #4A1212;
+  --sienna: #C67D34;
+  --rule: color-mix(in srgb, var(--divider) 62%, transparent);
+  --font-chrome: "Jost", Futura, "Century Gothic", "Gill Sans", sans-serif;
+  --font-display: "Cinzel", "Trajan Pro", "Bodoni MT", "Times New Roman", serif;
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
@@ -33,161 +47,278 @@
   --sp-5: 24px;
   --sp-6: 32px;
   --radius: 2px;
-  --motion-fast: 100ms;
-  --dialog-backdrop: rgba(36, 34, 28, .62);
+  --motion-fast: 110ms;
+  --dialog-backdrop: rgba(28, 22, 15, .68);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23g)'/%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --void: #191A17;
-    --surface: #22231F;
-    --surface-raised: #2C2D28;
-    --surface-hi: #373832;
-    --border: #999385;
-    --border-hi: #EEE8DC;
-    --shadow: none;
-    --divider: #8A8579;
-    --text-primary: #EEE8DC;
-    --text-secondary: #C5BFAF;
-    --text-dim: #ADA797;
-    --text-inverse: #221F1A;
-    --accent-primary: #D6907C;
-    --accent-secondary: #94AA98;
-    --accent-tertiary: #C3AE7B;
-    --accent-critical: #E8745F;
-    --accent-primary-dim: #583830;
-    --accent-secondary-dim: #36463E;
-    --accent-tertiary-dim: #4D442F;
-    --accent-critical-dim: #5C2E25;
-    --dialog-backdrop: rgba(8, 9, 8, .76);
+    /* basalt night: the same archive after hours */
+    --void: #15120E;
+    --surface: #1D1915;
+    --surface-raised: #26211B;
+    --surface-hi: #312B23;
+    --border: #A08A62;
+    --border-hi: #E9E0CB;
+    --divider: #5E5340;
+    --shadow: 0 1px 0 var(--engrave-hi), 0 14px 28px -16px rgba(0, 0, 0, .8);
+    --engrave-hi: rgba(233, 224, 203, .14);
+    --deboss: rgba(0, 0, 0, .5);
+    --step: #C9A961;
+    --drop: rgba(0, 0, 0, .55);
+    --text-primary: #E9E0CB;
+    --text-secondary: #C0B49A;
+    --text-dim: #A2967E;
+    --text-inverse: #1D1915;
+    --accent-primary: #D09A8E;
+    --accent-secondary: #A3B59E;
+    --accent-tertiary: #C9A961;
+    --accent-critical: #DE9050;
+    --accent-primary-dim: #4E2823;
+    --accent-secondary-dim: #333F31;
+    --accent-tertiary-dim: #46391F;
+    --accent-critical-dim: #4E3018;
+    --brass-deep: #C9A961;
+    --oxblood-hi: #C08478;
+    --oxblood-deep: #9A5F52;
+    --sienna: #C67D34;
+    --dialog-backdrop: rgba(5, 4, 3, .8);
   }
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   min-height: 100vh;
   margin: 0;
-  background: var(--void);
+  background: var(--grain), var(--void);
   color: var(--text-primary);
-  font: 15px/1.55 var(--font-body);
+  font: 15px/1.6 var(--font-chrome);
 }
+::selection { background: var(--accent-tertiary-dim); color: var(--text-primary); }
 .chrome {
   font-family: var(--font-chrome);
   letter-spacing: .05em;
 }
+/* ── FRIEZE: axial stone header with futurist speed-line cornice ───────── */
 header {
-  padding: 24px 16px 20px;
+  position: relative;
+  padding: 34px 16px 30px;
   text-align: center;
-  background: var(--surface);
-  border-bottom: 3px solid var(--accent-tertiary);
+  background: var(--grain), linear-gradient(180deg, var(--surface-hi), var(--surface-raised) 58%, var(--surface));
+}
+header::before {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  background-image:
+    linear-gradient(var(--brass-deep), var(--brass-deep)),
+    linear-gradient(var(--brass-deep), var(--brass-deep));
+  background-position: 0 0, 0 6px;
+  background-size: 100% 1px, 100% 1px;
+  background-repeat: no-repeat;
+  content: "";
+}
+header::after {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 10px;
+  background-image:
+    linear-gradient(var(--brass-deep), var(--brass-deep)),
+    repeating-linear-gradient(115deg, var(--accent-primary) 0 2px, transparent 2px 9px),
+    linear-gradient(var(--brass-deep), var(--brass-deep));
+  background-position: 0 0, 0 3px, 0 9px;
+  background-size: 100% 1px, 100% 6px, 100% 1px;
+  background-repeat: no-repeat;
+  content: "";
 }
 .inscription {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin: 0 auto 10px;
+  gap: 14px;
+  margin: 0 auto 14px;
   color: var(--text-secondary);
   font: 600 10px/1.3 var(--font-chrome);
-  letter-spacing: .19em;
+  letter-spacing: .24em;
   text-transform: uppercase;
 }
 .inscription::before,
 .inscription::after {
-  width: clamp(28px, 5vw, 64px);
+  width: clamp(28px, 6vw, 84px);
   height: 1px;
-  background: var(--divider);
+  background: var(--brass-deep);
   content: "";
 }
 .seal {
-  padding: 1px 5px;
-  color: var(--text-dim);
-  border: 1px solid var(--divider);
+  padding: 2px 7px;
+  color: var(--brass-deep);
+  background: var(--surface-hi);
+  border: 1px solid var(--brass-deep);
+  box-shadow: inset 0 1px 0 var(--engrave-hi), inset 0 -2px 4px var(--deboss);
   font-size: 9px;
-  letter-spacing: .14em;
+  font-weight: 600;
+  letter-spacing: .2em;
 }
 h1 {
   margin: 0;
+  padding-left: .17em;
   color: var(--text-primary);
-  font: 500 clamp(2.8rem, 6.2vw, 3.8rem)/1 var(--font-chrome);
-  letter-spacing: .12em;
+  font: 600 clamp(2.6rem, 7vw, 4.3rem)/1.05 var(--font-display);
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 var(--engrave-hi), 0 -1px 0 var(--deboss);
+  text-wrap: balance;
 }
 .sub {
+  max-width: 1020px;
+  margin: 12px auto 0;
   color: var(--text-secondary);
-  font: 13px/1.5 var(--font-body);
+  font: 500 13px/1.6 var(--font-chrome);
+  letter-spacing: .04em;
+}
+#meth {
+  display: block;
+  max-width: 960px;
+  margin: 12px auto 0;
+  padding: 10px 16px;
+  color: var(--text-secondary);
+  background: var(--grain), color-mix(in srgb, var(--surface-hi) 55%, transparent);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: .015em;
+  text-align: justify;
+  hyphens: auto;
+  text-wrap: pretty;
 }
 .bar {
-  width: min(72vw, 380px);
-  height: 4px;
-  margin: 14px auto 6px;
+  width: min(72vw, 440px);
+  height: 12px;
+  margin: 18px auto 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 2px 5px var(--deboss), inset 0 -1px 0 var(--engrave-hi);
   overflow: hidden;
-  background: var(--surface-hi);
-  border: 1px solid var(--divider);
 }
 .bar i {
   display: block;
   height: 100%;
-  background: var(--accent-primary);
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .15) 0 2px, transparent 2px 7px),
+    linear-gradient(180deg, var(--oxblood-hi), var(--oxblood-deep));
   transition: width var(--motion-fast) linear;
 }
-main {
-  max-width: 1640px;
-  margin: 0 auto;
-  padding: 24px clamp(16px, 3vw, 40px);
+#pt {
+  color: var(--text-secondary);
+  font: 600 12px/1.4 var(--font-display);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 var(--engrave-hi);
 }
+main {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 30px clamp(16px, 3vw, 40px) 8px;
+}
+/* ── HARDWARE: inputs, selects, stamps ─────────────────────────────────── */
 input,
 select,
 textarea,
 button {
   min-width: 0;
   min-height: 44px;
-  padding: 9px 11px;
+  padding: 9px 12px;
   color: var(--text-primary);
   background: var(--surface-hi);
-  border: 1px solid var(--divider);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   font: inherit;
+}
+input,
+select,
+textarea {
+  background: var(--grain), var(--surface-hi);
+  box-shadow: inset 0 2px 5px var(--deboss), inset 0 -1px 0 var(--engrave-hi);
 }
 input::placeholder,
 textarea::placeholder {
   color: var(--text-secondary);
   opacity: 1;
 }
-button {
+select {
+  padding-right: 36px;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--brass-deep) 50%),
+    linear-gradient(135deg, var(--brass-deep) 50%, transparent 50%),
+    var(--grain);
+  background-position: right 19px center, right 13px center, 0 0;
+  background-size: 7px 7px, 7px 7px, auto;
+  background-repeat: no-repeat, no-repeat, repeat;
   cursor: pointer;
+}
+button {
+  position: relative;
+  cursor: pointer;
+  background: var(--grain), linear-gradient(180deg, var(--surface-hi), var(--surface-raised));
+  border-color: var(--border);
+  box-shadow: inset 0 1px 0 var(--engrave-hi), 0 2px 0 var(--step), 0 4px 6px -2px var(--drop);
   font-family: var(--font-chrome);
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: .055em;
+  letter-spacing: .12em;
   line-height: 1.2;
   text-transform: uppercase;
   transition:
     background-color var(--motion-fast) linear,
     border-color var(--motion-fast) linear,
-    color var(--motion-fast) linear;
+    color var(--motion-fast) linear,
+    box-shadow var(--motion-fast) linear,
+    transform var(--motion-fast) linear;
 }
 button:hover:not(:disabled) {
-  background: var(--surface);
-  border-color: var(--border);
+  background: var(--grain), linear-gradient(180deg, var(--surface-hi), var(--surface-hi));
+  border-color: var(--brass-deep);
 }
 button:active:not(:disabled) {
   color: var(--text-inverse);
   background: var(--border);
   border-color: var(--border);
+  box-shadow: inset 0 2px 5px var(--deboss);
+  transform: translateY(2px);
 }
 button:disabled {
   cursor: not-allowed;
   color: var(--text-dim);
   background: var(--surface);
+  box-shadow: none;
 }
 button.p {
   color: var(--text-inverse);
-  background: var(--accent-critical);
-  border-color: var(--accent-critical);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--text-inverse) 14%, transparent), transparent 42%),
+    linear-gradient(180deg, var(--oxblood-hi), var(--accent-primary) 55%, var(--oxblood-deep));
+  border-color: var(--oxblood-deep);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-inverse) 30%, transparent), 0 2px 0 var(--oxblood-deep), 0 5px 8px -3px var(--drop);
+  text-shadow: 0 1px 0 var(--oxblood-deep);
+}
+button.p::after {
+  position: absolute;
+  top: 0; right: 0;
+  border-style: solid;
+  border-width: 0 9px 9px 0;
+  border-color: transparent var(--accent-tertiary) transparent transparent;
+  content: "";
 }
 button.p:hover:not(:disabled) {
   color: var(--text-inverse);
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--text-inverse) 20%, transparent), transparent 46%),
+    linear-gradient(180deg, var(--oxblood-hi), var(--accent-primary) 60%, var(--oxblood-deep));
+  border-color: var(--oxblood-deep);
 }
 button.p:active:not(:disabled) {
   color: var(--text-inverse);
@@ -195,7 +326,7 @@ button.p:active:not(:disabled) {
   border-color: var(--border-hi);
 }
 :focus-visible {
-  outline: 3px solid var(--accent-primary);
+  outline: 3px solid var(--accent-tertiary);
   outline-offset: 2px;
 }
 a {
@@ -204,97 +335,173 @@ a {
   text-decoration-thickness: 1px;
 }
 a:hover { color: var(--accent-secondary); }
+/* ── GATE: auth plinth ─────────────────────────────────────────────────── */
 #auth {
-  width: 100%;
-  padding: 20px;
-  background: var(--surface-raised);
-  border: 1px solid var(--divider);
-  border-bottom: 4px solid var(--accent-tertiary);
+  display: grid;
+  gap: 10px;
+  max-width: 440px;
+  margin: 40px auto;
+  padding: 28px 26px 24px;
+  background: var(--grain), linear-gradient(180deg, var(--surface-raised), var(--surface));
+  border: 1px solid var(--border);
+  outline: 1px solid var(--divider);
+  outline-offset: -8px;
+  box-shadow: var(--shadow);
 }
 #auth input { width: 100%; }
-#ae { color: var(--accent-critical); }
+#ae { color: var(--accent-critical); font-weight: 500; }
+#lm {
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  color: var(--text-secondary);
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+/* ── READING ROOM: ask, chips, recommendation slip ─────────────────────── */
 .ask {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px;
-  max-width: 850px;
-  margin: 0 auto 12px;
+  gap: 10px;
+  max-width: 880px;
+  margin: 0 auto 14px;
 }
-.ask input { min-width: 0; }
+.ask input { min-width: 0; min-height: 50px; }
+.ask button { min-height: 50px; padding: 9px 22px; }
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  max-width: 850px;
-  margin: 0 auto 20px;
+  justify-content: center;
+  gap: 8px;
+  max-width: 880px;
+  margin: 0 auto 22px;
 }
 .chips button {
   min-height: 44px;
-  padding: 8px 12px;
+  padding: 8px 14px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%);
   font-size: 11px;
 }
-#rec {
-  max-width: 850px;
-  margin: 12px auto 20px;
-  padding: 12px 16px;
-  background: var(--surface-raised);
-  border-top: 1px solid var(--divider);
-  border-right: 1px solid var(--divider);
-  border-bottom: 1px solid var(--divider);
-  border-left: 3px solid var(--accent-primary);
+.chips button:focus-visible { outline-offset: -4px; }
+#sur {
+  color: var(--brass-deep);
+  background: var(--grain), linear-gradient(180deg, var(--accent-tertiary-dim), var(--surface-raised));
+  border-color: var(--brass-deep);
 }
-#rec p { margin: 4px 0; }
+#rec {
+  max-width: 880px;
+  margin: 14px auto 24px;
+  padding: 14px 22px;
+  background-image:
+    linear-gradient(var(--accent-primary), var(--accent-primary)),
+    var(--grain);
+  background-position: 0 0, 0 0;
+  background-size: 5px 100%, auto;
+  background-repeat: no-repeat, repeat;
+  background-color: var(--surface-hi);
+  clip-path: polygon(0 4px, 4% 1px, 11% 3px, 19% 0, 27% 3px, 36% 1px, 44% 4px, 52% 1px, 61% 3px, 69% 0, 78% 3px, 86% 1px, 93% 4px, 100% 2px, 100% calc(100% - 3px), 94% calc(100% - 1px), 86% calc(100% - 4px), 77% calc(100% - 1px), 68% calc(100% - 3px), 58% calc(100% - 1px), 49% calc(100% - 4px), 40% calc(100% - 1px), 31% calc(100% - 3px), 21% calc(100% - 1px), 12% calc(100% - 4px), 5% calc(100% - 1px), 0 calc(100% - 3px));
+  filter: drop-shadow(0 2px 2px var(--drop));
+}
+#rec p { margin: 6px 0; }
+#rec b { font-weight: 600; letter-spacing: .02em; }
+/* ── CONTROL PLINTH ────────────────────────────────────────────────────── */
 .tools {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  max-width: 1480px;
-  margin: 20px auto 28px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1320px;
+  margin: 8px auto 30px;
+  padding: 16px;
+  background: var(--grain), linear-gradient(180deg, var(--surface-raised), var(--surface));
+  border: 1px solid var(--border);
+  outline: 1px solid var(--divider);
+  outline-offset: -7px;
+  box-shadow: var(--shadow);
 }
-#s,
-#so,
-#cfg,
-#out { grid-column: span 2; }
+#s { grid-column: span 6; }
+#so { grid-column: span 3; }
+#fc, #fl, #fg, #fw { grid-column: span 3; }
+#cfg { grid-column: span 8; }
+#out { grid-column: span 4; }
+.acc {
+  grid-column: span 3;
+  display: block;
+  min-height: 44px;
+  padding: 0 14px;
+  overflow: hidden;
+  color: var(--text-secondary);
+  background: var(--grain), var(--surface-hi);
+  border: 1px solid var(--divider);
+  border-left: 3px solid var(--brass-deep);
+  box-shadow: inset 0 2px 4px var(--deboss);
+  font: 600 11px/42px var(--font-chrome);
+  letter-spacing: .16em;
+  text-align: right;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* ── THE STACKS: decade rules & plaques ────────────────────────────────── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
   align-items: stretch;
-  gap: 20px;
-  max-width: 1560px;
+  gap: 22px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 .decade {
   display: flex;
   grid-column: 1 / -1;
   align-items: center;
-  gap: 12px;
-  margin: 16px 0 0;
+  gap: 16px;
+  margin: 22px 0 2px;
   color: var(--text-secondary);
 }
 .decade::before,
 .decade::after {
   flex: 1;
-  height: 1px;
-  background: var(--divider);
+  height: 7px;
+  background: repeating-linear-gradient(115deg, var(--divider) 0 1px, transparent 1px 8px);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
   content: "";
 }
 .decade b {
-  color: var(--text-secondary);
-  font: 500 12px/1.3 var(--font-chrome);
-  letter-spacing: .14em;
+  color: var(--text-primary);
+  font: 600 13px/1.3 var(--font-display);
+  letter-spacing: .34em;
+  text-shadow: 0 1px 0 var(--engrave-hi);
   white-space: nowrap;
 }
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(118px, .42fr) minmax(0, 1fr);
+  grid-template-columns: minmax(122px, .42fr) minmax(0, 1fr);
   align-items: stretch;
   min-width: 0;
-  background: var(--surface-raised);
-  border: 1px solid var(--divider);
+  scroll-margin-top: 16px;
+  background: var(--grain), linear-gradient(180deg, var(--surface-raised), var(--surface) 94%);
+  border: 1px solid var(--border);
   border-bottom: 4px solid var(--accent-tertiary);
+  box-shadow: var(--shadow);
 }
 .card.w { border-left: 4px solid var(--accent-secondary); }
+.card.w::after {
+  position: absolute;
+  top: 12px; right: 12px;
+  transform: rotate(-6deg);
+  padding: 4px 6px 3px 9px;
+  color: var(--accent-secondary);
+  background: color-mix(in srgb, var(--surface-hi) 62%, transparent);
+  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+  font: 700 10px/1 var(--font-display);
+  letter-spacing: .3em;
+  content: "VISTO";
+  opacity: .82;
+  pointer-events: none;
+}
 .card.hl,
 .card:focus-visible {
   outline: 3px solid var(--accent-primary);
@@ -309,200 +516,261 @@ a:hover { color: var(--accent-secondary); }
   aspect-ratio: 2 / 3;
   object-fit: cover;
   color: var(--text-primary);
-  background: var(--surface);
-  border-right: 1px solid var(--divider);
+  background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--void) 78%, var(--border)));
+  border-right: 1px solid var(--border);
+  box-shadow: inset -6px 0 12px -8px var(--deboss), inset 0 4px 10px -6px var(--deboss);
 }
 div.pos {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
 }
 div.pos b {
   color: var(--accent-critical);
-  font: 600 clamp(2.6rem, 4.5vw, 3.5rem)/1 var(--font-body);
+  font: 600 clamp(2.5rem, 4.2vw, 3.3rem)/1 var(--font-display);
+  letter-spacing: .06em;
+  text-shadow: 0 1px 0 var(--engrave-hi), 0 -1px 0 var(--deboss);
 }
 div.pos span {
   display: block;
   max-width: 100%;
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--text-secondary);
-  font: 500 11px/1.45 var(--font-chrome);
-  letter-spacing: .035em;
+  font: 600 11px/1.5 var(--font-chrome);
+  letter-spacing: .12em;
   overflow-wrap: anywhere;
   text-transform: uppercase;
 }
-img.pos { display: block; }
+img.pos {
+  display: block;
+  filter: sepia(.2) saturate(.84) contrast(1.05);
+}
 .pos.skel { background: var(--surface); }
 .pos-err { background: var(--surface) !important; }
 .pos-err::after {
-  margin-top: 8px;
-  padding-top: 6px;
+  margin-top: 10px;
+  padding-top: 7px;
   color: var(--accent-critical);
   border-top: 1px solid var(--divider);
   content: "NO PLATE ON FILE";
-  font: 500 10px/1.3 var(--font-chrome);
-  letter-spacing: .08em;
+  font: 600 10px/1.3 var(--font-chrome);
+  letter-spacing: .14em;
 }
 .cb {
   grid-row: 1;
   grid-column: 2;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 9px;
   min-width: 0;
-  padding: 14px;
+  padding: 16px 18px;
 }
 .cb h2 {
   margin: 0;
   color: var(--text-primary);
-  font: 600 clamp(17px, 1.65vw, 20px)/1.25 var(--font-body);
-  letter-spacing: .005em;
+  font: 600 clamp(17px, 1.7vw, 21px)/1.3 var(--font-display);
+  letter-spacing: .02em;
   overflow-wrap: anywhere;
+  text-shadow: 0 1px 0 var(--engrave-hi);
 }
-.cb h2 .rk { color: var(--accent-critical); }
+.cb h2 .rk {
+  color: var(--accent-critical);
+  letter-spacing: .04em;
+}
 .m {
   color: var(--text-secondary);
-  font: 13px/1.5 var(--font-body);
+  font: 400 13px/1.6 var(--font-chrome);
+  letter-spacing: .02em;
+}
+.cb > div.m {
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: 11.5px;
 }
 .tag {
   display: inline-block;
-  margin: 0 4px 4px 0;
-  padding: 3px 6px;
-  color: var(--text-primary);
-  background: var(--accent-secondary-dim);
-  border: 1px solid var(--divider);
-  border-radius: 1px;
-  font: 500 10px/1.3 var(--font-chrome);
-  letter-spacing: .035em;
+  margin: 0 5px 5px 0;
+  padding: 3px 9px;
+  color: var(--brass-deep);
+  background: var(--accent-tertiary-dim);
+  border: 1px solid var(--brass-deep);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%);
+  box-shadow: inset 0 1px 0 var(--engrave-hi);
+  font: 600 10px/1.4 var(--font-chrome);
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 .chk {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-height: 44px;
   color: var(--text-primary);
   cursor: pointer;
   font: 600 12px/1.3 var(--font-chrome);
-  letter-spacing: .045em;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 .chk input {
-  width: 20px;
-  height: 20px;
-  min-height: 20px;
+  width: 22px;
+  height: 22px;
+  min-height: 22px;
   margin: 0;
   padding: 0;
-  accent-color: var(--accent-primary);
+  appearance: none;
+  background: var(--grain), var(--surface-hi);
+  border: 1px solid var(--brass-deep);
+  border-radius: var(--radius);
+  box-shadow: inset 0 2px 4px var(--deboss), inset 0 -1px 0 var(--engrave-hi);
+  cursor: pointer;
+  transition: background-color var(--motion-fast) linear, box-shadow var(--motion-fast) linear;
 }
+.chk input:checked {
+  background:
+    radial-gradient(circle at 50% 50%, var(--accent-tertiary) 0 2.5px, transparent 3.5px),
+    linear-gradient(180deg, var(--oxblood-hi), var(--oxblood-deep));
+  border-color: var(--oxblood-deep);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .45);
+}
+.chk:has(input:checked) { color: var(--accent-secondary); }
 textarea {
   width: 100%;
-  min-height: 68px;
+  min-height: 72px;
   resize: vertical;
-  font: 15px/1.5 var(--font-body);
+  padding: 2px 12px;
+  background-image:
+    repeating-linear-gradient(180deg, transparent 0 23px, var(--rule) 23px 24px),
+    var(--grain);
+  font: 400 14px/24px var(--font-chrome);
 }
+/* ── REGISTRY DIALOG ───────────────────────────────────────────────────── */
 dialog {
-  width: min(92vw, 560px);
-  max-width: 560px;
-  padding: 20px;
+  width: min(94vw, 620px);
+  max-width: 620px;
+  padding: 28px 26px 24px;
   color: var(--text-primary);
-  background: var(--surface-raised);
-  border: 1px solid var(--border);
-  border-bottom: 4px solid var(--accent-tertiary);
+  background: var(--grain), linear-gradient(180deg, var(--surface-raised), var(--surface));
+  border: 1px solid var(--border-hi);
+  outline: 1px solid var(--accent-tertiary);
+  outline-offset: -8px;
+  box-shadow: 0 34px 70px -34px rgba(0, 0, 0, .65), inset 0 1px 0 var(--engrave-hi);
 }
 dialog::backdrop { background: var(--dialog-backdrop); }
 dialog form { margin: 0; }
 dialog h2 {
-  margin: 0 0 16px;
-  font: 600 21px/1.25 var(--font-body);
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-tertiary);
+  color: var(--text-primary);
+  font: 600 22px/1.25 var(--font-display);
+  letter-spacing: .12em;
+  text-shadow: 0 1px 0 var(--engrave-hi);
+  text-transform: uppercase;
 }
 dialog label {
   display: block;
-  margin: 12px 0 4px;
+  margin: 14px 0 5px;
   color: var(--text-primary);
-  font: 600 12px/1.4 var(--font-chrome);
-  letter-spacing: .045em;
+  font: 600 11px/1.4 var(--font-chrome);
+  letter-spacing: .18em;
   text-transform: uppercase;
 }
 dialog input,
 dialog textarea { width: 100%; }
 .kf { display: flex; gap: 8px; }
 .kf input { flex: 1; min-width: 0; }
-.kf button { min-width: 64px; padding: 9px; font-size: 11px; }
+.kf button { min-width: 68px; padding: 9px; font-size: 11px; }
 dialog .m { margin-top: 12px; }
-dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
+dialog p { display: flex; flex-wrap: wrap; gap: 10px; }
 .aip-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  gap: 6px;
+  grid-template-columns: 1.05fr 1.35fr 1.35fr .9fr auto;
+  gap: 8px;
   margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--divider);
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  box-shadow: inset 0 2px 5px var(--deboss);
 }
 .aip-row .kf { grid-column: span 1; }
 .aip-x {
-  min-width: 36px;
+  min-width: 40px;
   padding: 0;
   color: var(--accent-critical);
+  border-color: var(--accent-critical);
 }
-#aipa { margin: 4px 0 8px; }
-.acc {
-  display: flex;
-  align-items: center;
-  min-width: 0;
-  padding: 0 4px;
-  overflow: hidden;
-  color: var(--text-secondary);
-  font: 500 11px/1.3 var(--font-chrome);
-  letter-spacing: .03em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
+#aipa { margin: 6px 0 10px; }
+/* ── LEDGER TOAST ──────────────────────────────────────────────────────── */
 #st {
   position: fixed;
   z-index: 2;
-  right: 12px;
-  bottom: 12px;
+  right: 14px;
+  bottom: 14px;
   max-width: min(90vw, 420px);
-  padding: 8px 12px;
-  color: var(--void);
-  background: var(--text-primary);
-  border: 1px solid var(--border);
-  font: 13px/1.4 var(--font-chrome);
-  letter-spacing: .025em;
+  padding: 10px 16px;
+  color: var(--text-primary);
+  background: var(--grain), linear-gradient(180deg, var(--surface-hi), var(--surface-raised));
+  border: 1px solid var(--brass-deep);
+  border-left: 4px solid var(--brass-deep);
+  box-shadow: 0 2px 0 var(--step), 0 10px 20px -8px var(--drop);
+  font: 500 12.5px/1.45 var(--font-chrome);
+  letter-spacing: .06em;
   display: none;
 }
 .hide { display: none !important; }
 .empty {
   grid-column: 1 / -1;
-  padding: 28px 20px;
+  padding: 34px 26px;
   color: var(--text-secondary);
   text-align: left;
-  background: var(--surface);
+  background: var(--grain), var(--surface);
   border: 1px solid var(--divider);
   border-left: 4px solid var(--accent-tertiary);
+  box-shadow: inset 0 2px 6px var(--deboss);
 }
 .empty b {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   color: var(--text-primary);
-  font: 500 16px/1.3 var(--font-chrome);
+  font: 600 17px/1.3 var(--font-display);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 var(--engrave-hi);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 30px 8px 36px;
+  color: var(--text-dim);
+  font: 500 10.5px/1.6 var(--font-chrome);
+  letter-spacing: .18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+footer::before,
+footer::after {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+  content: "";
+}
+/* ── RESPONSIVE MASSING ────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .tools { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  #s { grid-column: span 6; }
+  #so, .acc { grid-column: span 3; }
+  #fc, #fl, #fg, #fw { grid-column: span 3; }
+  #cfg { grid-column: span 4; }
+  #out { grid-column: span 2; }
 }
 @media (max-width: 780px) {
-  main { padding: 20px 18px; }
-  .tools {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 720px;
-  }
-  #s,
-  #so,
-  #cfg,
-  #out,
-  .acc { grid-column: span 1; }
+  main { padding: 24px 18px 8px; }
   .aip-row { grid-template-columns: 1fr; }
   .grid {
     grid-template-columns: 1fr;
@@ -511,20 +779,21 @@ dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
   }
 }
 @media (max-width: 560px) {
-  header { padding: 22px 12px 18px; }
-  h1 { font-size: clamp(2.5rem, 11vw, 3.2rem); }
-  main { padding: 16px 12px; }
+  header { padding: 26px 12px 24px; }
+  h1 { font-size: clamp(2.2rem, 11vw, 3rem); letter-spacing: .12em; padding-left: .12em; }
+  main { padding: 18px 12px 6px; }
   .ask { grid-template-columns: 1fr; }
-  .chips { justify-content: flex-start; }
-  .tools { grid-template-columns: 1fr; }
-  .tools > * { grid-column: 1 / -1; }
-  .card {
-    grid-template-columns: minmax(88px, .4fr) minmax(0, 1fr);
-  }
-  .cb { padding: 12px; }
-  .decade { gap: 8px; }
+  .tools { grid-template-columns: 1fr; padding: 12px; }
+  .tools > * { grid-column: 1 / -1 !important; }
+  .acc { line-height: 40px; }
+  .card { grid-template-columns: minmax(92px, .4fr) minmax(0, 1fr); }
+  .cb { padding: 13px; }
+  .decade { gap: 10px; }
+  footer { flex-direction: column; gap: 8px; }
+  footer::before, footer::after { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
@@ -540,16 +809,17 @@ dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
  <div id="pt" class="sub"></div>
 </header>
 <main>
-<section id="auth" class="hide" style="max-width:380px;margin:30px auto;display:grid;gap:8px">
+<section id="auth" class="hide">
 <input id="em" type="email" placeholder="Email" autocomplete="username"><input id="pw" type="password" placeholder="Password (min 6)" autocomplete="current-password">
-<button class="p" id="in">Log in</button><button id="up">Create account</button><div id="ae" class="m"></div></section>
+<button class="p" id="in">Log in</button><button id="up">Create account</button><div id="ae" class="m"></div><div id="lm" class="m hide"></div></section>
 <section id="app" class="hide">
 <div class="ask"><input id="q" placeholder="What do you feel like? e.g. slow, sad, under 2 hours" aria-label="Ask for a recommendation"><button class="p" id="go">Pick for me</button></div>
 <div class="chips"><button data-m="short and easy to get into">Easy</button><button data-m="slow, contemplative">Slow</button><button data-m="exciting and fast">Thrilling</button><button data-m="funny">Funny</button><button data-m="something silent or very old">Old</button><button id="sur">Surprise me</button></div>
 <div id="rec" class="hide"></div>
 <div class="tools"><input id="s" type="search" placeholder="Search title or director"><select id="so"><option value="rank">Sort: rank</option><option value="year">Sort: year ↑</option><option value="yd">Sort: year ↓</option><option value="title">Sort: title</option></select>
 <select id="fc"></select><select id="fl"></select><select id="fg"></select><select id="fw"><option value="">All</option><option value="u">Unwatched</option><option value="w">Watched</option></select><div id="acc" class="acc"></div><button id="cfg">Settings</button><button id="out">Log out</button></div>
-<div class="grid" id="g"></div></section><footer class="m" style="text-align:center;padding:24px 0">Posters via TMDB and Wikipedia. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></main>
+<div class="grid" id="g"></div></section>
+<footer class="m">Posters via TMDB and Wikipedia. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></main>
 <dialog id="dlg"><form method="dialog"><h2>Settings</h2>
 <label>Account</label><div class="m" id="accd"></div>
 <label>Display name</label><input id="dn" placeholder="How you appear here" autocomplete="off">
@@ -563,13 +833,83 @@ dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
 <script>
-const $=id=>document.getElementById(id),sb=supabase.createClient(CFG.url,CFG.key);
+const $=id=>document.getElementById(id);
+const CFG=window.CFG||{url:"",key:""};
+const REMOTE=!!(window.supabase&&CFG.url);
+const sb=REMOTE?supabase.createClient(CFG.url,CFG.key):localArchive();
 let films=[],P={},S={tmdb:"",ai:[],name:""},uid=null,tm={},uemail="";
 const note=t=>{const e=$("st");e.textContent=t;e.style.display="block";clearTimeout(note.t);note.t=setTimeout(()=>e.style.display="none",1600)};
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc=s=>String(s).replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* Offline registry: implements exactly the supabase surface this app calls,
+   over localStorage, so every flow works when the CDN or config.js is absent. */
+function localArchive(){
+ const K="canone.local.v2";
+ let db;try{db=JSON.parse(localStorage.getItem(K))}catch(e){db=null}
+ db=db&&db.users?db:{users:{},session:null,progress:{},settings:{}};
+ const save=()=>{try{localStorage.setItem(K,JSON.stringify(db))}catch(e){console.warn("[archive] localStorage write failed",e)}};
+ const uidOf=()=>db.session?db.session.user.id:null;
+ return{local:true,auth:{
+  async getSession(){return{data:{session:db.session},error:null}},
+  async signInWithPassword({email,password}){const u=db.users[email];
+   if(!u||u.password!==password)return{data:{},error:{message:"Invalid login credentials."}};
+   db.session={user:{id:u.id,email}};save();return{data:{session:db.session,user:{id:u.id,email}},error:null}},
+  async signUp({email,password}){if(db.users[email])return{data:{},error:{message:"User already registered."}};
+   if((password||"").length<6)return{data:{},error:{message:"Password should be at least 6 characters."}};
+   const id="u"+(Object.keys(db.users).length+1);db.users[email]={id,password};save();
+   return{data:{session:null,user:{id,email}},error:null}},
+  async signOut(){db.session=null;save();return{error:null}}},
+  from(table){return{
+   select(){const p=(async()=>{const u=uidOf();
+     if(table==="progress")return{data:Object.values(db.progress[u]||{}),error:null};
+     if(table==="settings")return{data:(db.settings[u]||[]).map(r=>({data:r.data})),error:null};
+     return{data:[],error:null}})();
+    p.maybeSingle=async()=>{const r=await p;return{data:r.data&&r.data.length?r.data[0]:null,error:null}};
+    return p},
+   async upsert(row){const u=uidOf();if(!u)return{error:{message:"Not signed in."}};
+    if(table==="progress"){const m=db.progress[u]=db.progress[u]||{};m[row.film_id]=Object.assign({},m[row.film_id],row)}
+    else if(table==="settings"){db.settings[u]=[row]}
+    save();return{error:null}}}}}}
+const REEL={method:"Offline reading-room reel — 32 plates. Serve films.json for the full composite of Sight & Sound 2022, TSPDT 2026 and AFI 100.",films:[
+{id:"citizen-kane-1941",rank:1,title:"Citizen Kane",year:1941,director:"Orson Welles",country:"USA",language:"English",runtime:119,genres:["Drama","Mystery"],synopsis:"A reporter investigates the last word of a dead newspaper tycoon. Interviews with those who knew him assemble a portrait of a man built on ambition and image.",why:"Deep focus, overlapping dialogue and a fractured timeline: the grammar of modern cinema is drafted here.",wiki:"Citizen Kane"},
+{id:"vertigo-1958",rank:2,title:"Vertigo",year:1958,director:"Alfred Hitchcock",country:"USA",language:"English",runtime:128,genres:["Mystery","Romance"],synopsis:"A retired detective with a fear of heights tails a friend's wife through San Francisco, into obsession and a spiral of remade identities.",why:"The dolly-zoom and a score of relentless longing make possession itself the subject.",wiki:"Vertigo (1958 film)"},
+{id:"the-godfather-1972",rank:3,title:"The Godfather",year:1972,director:"Francis Ford Coppola",country:"USA",language:"English",runtime:175,genres:["Crime","Drama"],synopsis:"An ageing don prepares to hand his empire to a reluctant son, who becomes colder and more complete than the father he replaced.",why:"Family ritual and corporate murder staged with operatic patience.",wiki:"The Godfather"},
+{id:"eight-and-half-1963",rank:4,title:"8½",year:1963,director:"Federico Fellini",country:"Italy",language:"Italian",runtime:138,genres:["Drama","Fantasy"],synopsis:"A blocked director circulates among memories, wives, mistresses and producers while a film refuses to begin.",why:"The confession of creative paralysis that freed a century of autobiographical cinema.",wiki:"8½"},
+{id:"tokyo-story-1953",rank:5,title:"Tokyo Story",year:1953,director:"Yasujirō Ozu",country:"Japan",language:"Japanese",runtime:136,genres:["Drama"],synopsis:"Ageing parents visit their busy children in Tokyo and are gently shelved; only a widow's kindness stays with them.",why:"Ozu's tatami-level stillness turns family drift into monument.",wiki:"Tokyo Story"},
+{id:"metropolis-1927",rank:6,title:"Metropolis",year:1927,director:"Fritz Lang",country:"Germany",language:"Silent",runtime:153,genres:["Drama","Sci-Fi"],synopsis:"In a city of towers and underground machines, a planner's son crosses into the workers' world and meets a machine-man made in a woman's image.",why:"The skyline every future city on screen has answered to since.",wiki:"Metropolis (1927 film)"},
+{id:"battleship-potemkin-1925",rank:7,title:"Battleship Potemkin",year:1925,director:"Sergei Eisenstein",country:"USSR",language:"Silent",runtime:75,genres:["Drama","History"],synopsis:"Mutiny on a tsarist ship culminates in a massacre on the Odessa Steps, a pram rolling among the boots.",why:"Montage as argument: editing proved it could think.",wiki:"Battleship Potemkin"},
+{id:"joan-of-arc-1928",rank:8,title:"The Passion of Joan of Arc",year:1928,director:"Carl Theodor Dreyer",country:"France",language:"Silent",runtime:82,genres:["Drama","History"],synopsis:"Close on a shaved head and enormous eyes: Joan is tried, coerced and burned while the camera refuses to look away.",why:"The face as landscape; no set has ever matched it.",wiki:"The Passion of Joan of Arc"},
+{id:"m-1931",rank:9,title:"M",year:1931,director:"Fritz Lang",country:"Germany",language:"German",runtime:117,genres:["Crime","Mystery"],synopsis:"A city hunts a child murderer while the underworld hunts him too, and both hold a trial.",why:"Sound used as terror — a whistle, a balloon — before anyone knew how.",wiki:"M (1931 film)"},
+{id:"city-lights-1931",rank:10,title:"City Lights",year:1931,director:"Charlie Chaplin",country:"USA",language:"Silent",runtime:87,genres:["Comedy","Drama","Romance"],synopsis:"The Tramp loves a blind flower girl and boxes, schemes and staggers to fund her operation.",why:"The final close-up: recognition without a word.",wiki:"City Lights"},
+{id:"modern-times-1936",rank:11,title:"Modern Times",year:1936,director:"Charlie Chaplin",country:"USA",language:"English",runtime:87,genres:["Comedy","Drama"],synopsis:"A tightening man feeds a machine, is fed by it, and keeps trying to walk out of the factory with a smile.",why:"The assembly line comicised until it indicts.",wiki:"Modern Times (film)"},
+{id:"la-grande-illusion-1937",rank:12,title:"La Grande Illusion",year:1937,director:"Jean Renoir",country:"France",language:"French",runtime:113,genres:["Drama","War"],synopsis:"French officers in a German camp discover class binds them to their captors more than war binds them to each other.",why:"The first great anti-war film without a battle.",wiki:"La Grande Illusion"},
+{id:"casablanca-1942",rank:13,title:"Casablanca",year:1942,director:"Michael Curtiz",country:"USA",language:"English",runtime:102,genres:["Drama","Romance","War"],synopsis:"In a waiting-room city, a café keeper holds two exit visas and the woman who once made him wait.",why:"Studio-era craft at full boil: every line a fixture.",wiki:"Casablanca (film)"},
+{id:"double-indemnity-1944",rank:14,title:"Double Indemnity",year:1944,director:"Billy Wilder",country:"USA",language:"English",runtime:107,genres:["Crime","Drama"],synopsis:"An insurance salesman and a client's wife plan a murder priced at double indemnity, and trust does the rest.",why:"Venetian-blind light and a confession structure noir never escaped.",wiki:"Double Indemnity"},
+{id:"bicycle-thieves-1948",rank:15,title:"Bicycle Thieves",year:1948,director:"Vittorio De Sica",country:"Italy",language:"Italian",runtime:89,genres:["Drama"],synopsis:"A man and his small son cross postwar Rome looking for the stolen bicycle that stands between them and work.",why:"The street as studio: neorealism's founding deed.",wiki:"Bicycle Thieves"},
+{id:"singin-in-the-rain-1952",rank:16,title:"Singin' in the Rain",year:1952,director:"Stanley Donen & Gene Kelly",country:"USA",language:"English",runtime:103,genres:["Comedy","Musical","Romance"],synopsis:"A silent studio scrambles into sound, and a stunt-doubling chorus girl becomes the voice of it.",why:"Joy executed with athletic precision; the title number is pure hydraulics.",wiki:"Singin' in the Rain"},
+{id:"rear-window-1954",rank:17,title:"Rear Window",year:1954,director:"Alfred Hitchcock",country:"USA",language:"English",runtime:112,genres:["Mystery","Thriller"],synopsis:"A photographer in a plaster cast watches his courtyard neighbours and becomes sure one of them has disposed of a wife.",why:"A single set that makes the audience complicit in looking.",wiki:"Rear Window"},
+{id:"pather-panchali-1955",rank:18,title:"Pather Panchali",year:1955,director:"Satyajit Ray",country:"India",language:"Bengali",runtime:125,genres:["Drama"],synopsis:"In a Bengali village, a family's small joys and heavy losses are watched through a child's running feet.",why:"A first film that arrived fully formed and put Indian parallel cinema on the map.",wiki:"Pather Panchali"},
+{id:"the-seventh-seal-1957",rank:19,title:"The Seventh Seal",year:1957,director:"Ingmar Bergman",country:"Sweden",language:"Swedish",runtime:96,genres:["Drama","Fantasy"],synopsis:"A knight back from the crusades challenges Death to chess and buys time to ask whether anything answers.",why:"Plague, faith and a board game: theology made blockable.",wiki:"The Seventh Seal"},
+{id:"breathless-1960",rank:20,title:"Breathless",year:1960,director:"Jean-Luc Godard",country:"France",language:"French",runtime:90,genres:["Crime","Drama"],synopsis:"A small-time thief steals a car, a man and an American girl's week in Paris, cutting every rule as he goes.",why:"Jump cuts as declaration of independence for the New Wave.",wiki:"Breathless (1960 film)"},
+{id:"psycho-1960",rank:21,title:"Psycho",year:1960,director:"Alfred Hitchcock",country:"USA",language:"English",runtime:109,genres:["Horror","Mystery","Thriller"],synopsis:"A clerk flees with stolen money and stops at a quiet motel run by a young man and his mother's voice.",why:"Killed its star at the midpoint and trained audiences to fear the shower.",wiki:"Psycho (1960 film)"},
+{id:"la-dolce-vita-1960",rank:22,title:"La Dolce Vita",year:1960,director:"Federico Fellini",country:"Italy",language:"Italian",runtime:174,genres:["Drama"],synopsis:"A gossip columnist drifts through Rome's nights — miracles, parties, saints and scandal — and watches himself erode.",why:"Gave the paparazzi their name and the century its image of beautiful decay.",wiki:"La Dolce Vita"},
+{id:"the-good-bad-ugly-1966",rank:23,title:"The Good, the Bad and the Ugly",year:1966,director:"Sergio Leone",country:"Italy",language:"Italian",runtime:178,genres:["Western"],synopsis:"Three mercenary hearts circle a buried fortune across a civil war, each holding a third of the secret.",why:"Close-up, standoff, Ennio Morricone: time itself became a weapon.",wiki:"The Good, the Bad and the Ugly"},
+{id:"2001-space-odyssey-1968",rank:24,title:"2001: A Space Odyssey",year:1968,director:"Stanley Kubrick",country:"USA",language:"English",runtime:149,genres:["Sci-Fi"],synopsis:"A bone becomes a satellite; a calm computer becomes a murderer; a stewardess walks into something beyond the star gate.",why:"Effects, scale and silence that redefined what a screen could hold.",wiki:"2001: A Space Odyssey"},
+{id:"godfather-ii-1974",rank:25,title:"The Godfather Part II",year:1974,director:"Francis Ford Coppola",country:"USA",language:"English",runtime:202,genres:["Crime","Drama"],synopsis:"Two timelines: a young don rising in Little Italy, and his son completing the family's ascent by emptying it.",why:"The sequel that doubled as prequel and epitaph.",wiki:"The Godfather Part II"},
+{id:"jeanne-dielman-1975",rank:26,title:"Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles",year:1975,director:"Chantal Akerman",country:"Belgium",language:"French",runtime:201,genres:["Drama"],synopsis:"Three days of a widow's exact domestic schedule — potatoes, parcels, appointments — until a seam slips.",why:"Real time as feminist form; routine as suspense.",wiki:"Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles"},
+{id:"barry-lyndon-1975",rank:27,title:"Barry Lyndon",year:1975,director:"Stanley Kubrick",country:"UK",language:"English",runtime:185,genres:["Drama","War"],synopsis:"An Irish adventurer duels, cheats and marries his way up the eighteenth century, and the century closes its accounts.",why:"Candlelight lenses and painterly composition: every frame a gallery plate.",wiki:"Barry Lyndon"},
+{id:"taxi-driver-1976",rank:28,title:"Taxi Driver",year:1976,director:"Martin Scorsese",country:"USA",language:"English",runtime:114,genres:["Crime","Drama"],synopsis:"A sleepless veteran drives New York's night and decides the city needs a rain that never comes.",why:"Loneliness staged as civic prophecy; the monologue in the mirror.",wiki:"Taxi Driver"},
+{id:"annie-hall-1977",rank:29,title:"Annie Hall",year:1977,director:"Woody Allen",country:"USA",language:"English",runtime:93,genres:["Comedy","Romance"],synopsis:"A neurotic comedian reassembles a finished love affair, talking to the camera and to memory alike.",why:"Broke the romantic comedy open and let the analysis in.",wiki:"Annie Hall"},
+{id:"stalker-1979",rank:30,title:"Stalker",year:1979,director:"Andrei Tarkovsky",country:"USSR",language:"Russian",runtime:162,genres:["Drama","Sci-Fi"],synopsis:"A guide leads a writer and a professor through the Zone toward a room said to grant one's deepest wish.",why:"Water, rust and doubt: science fiction as pilgrimage.",wiki:"Stalker (1979 film)"},
+{id:"raging-bull-1980",rank:31,title:"Raging Bull",year:1980,director:"Martin Scorsese",country:"USA",language:"English",runtime:129,genres:["Biography","Drama","Sport"],synopsis:"A middleweight destroys everyone near him, in the ring and at the kitchen table, and ends rehearsing jokes alone.",why:"Black-and-white violence cut like liturgy; boxingscenes as ballet.",wiki:"Raging Bull"},
+{id:"blade-runner-1982",rank:32,title:"Blade Runner",year:1982,director:"Ridley Scott",country:"USA",language:"English",runtime:117,genres:["Sci-Fi","Thriller"],synopsis:"In a raining Los Angeles, a detector of artificial people hunts four who came home to ask for more life.",why:"The synthetic city every later future borrowed weather from.",wiki:"Blade Runner"}]};
 async function boot(){
- try{const j=await (await fetch("films.json",{cache:"no-cache"})).json();films=j.films;$("meth").textContent=j.method||""}catch(e){document.body.insertAdjacentHTML("beforeend","<p>Cannot load films.json</p>")}
- const{data:{session}}=await sb.auth.getSession();session?start(session.user):($("auth").classList.remove("hide"),$("auth").style.display="grid")}
+ try{const j=await (await fetch("films.json",{cache:"no-cache"})).json();films=j.films;$("meth").textContent=j.method||""}
+ catch(e){console.warn("[canone] films.json unreachable — loading embedded reading-room reel:",e);films=REEL.films;$("meth").textContent=REEL.method;note("Offline reel loaded")}
+ const{data:{session}}=await sb.auth.getSession();
+ if(session)start(session.user);
+ else{$("auth").classList.remove("hide");$("auth").style.display="grid";
+  if(!REMOTE){const l=$("lm");l.textContent="Reading room offline: any email and a six-character password opens the local archive.";l.classList.remove("hide")}}
+}
 async function start(u){uid=u.id;uemail=u.email||"";$("auth").classList.add("hide");$("auth").style.display="none";$("app").classList.remove("hide");$("acc").textContent=S.name||uemail;
  const[a,b]=await Promise.all([sb.from("progress").select("*"),sb.from("settings").select("data").maybeSingle()]);
  if(a.error)note("Sync error: "+a.error.message);(a.data||[]).forEach(r=>P[r.film_id]=r);if(b.data)S={...S,...b.data.data};
@@ -586,8 +926,8 @@ function view(){const q=$("s").value.toLowerCase(),c=$("fc").value,l=$("fl").val
 function roman(n){const t=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]];let r="",v=n;for(const[a,s]of t)while(v>=a){r+=s;v-=a}return r}
 function draw(){const d=films.filter(f=>P[f.id]&&P[f.id].watched).length;$("pt").textContent=`${d} OF ${films.length} CATALOGUED`;$("pb").style.width=(films.length?100*d/films.length:0)+"%";
  const rows=view();
- if(!films.length){$("g").innerHTML=`<div class="empty"><b>Archive Empty</b>films.json did not load. Check console.</div>`;return}
- if(!rows.length){$("g").innerHTML=`<div class="empty"><b>Uncatalogued</b>No plate matches this filter.</div>`;return}
+ if(!films.length){$("g").innerHTML=`<div class="empty"><b>Shelves Empty</b>films.json did not load and no reel is embedded. Check console.</div>`;return}
+ if(!rows.length){$("g").innerHTML=`<div class="empty"><b>Uncatalogued</b>No plate in the archive answers to this filter.</div>`;return}
  const so=$("so").value,byDecade=so==="rank";let lastDec=null,html="";
  rows.forEach(f=>{
   if(byDecade){const dec=Math.floor(f.year/10)*10;if(dec!==lastDec){html+=`<div class="decade"><b>${dec}s</b></div>`;lastDec=dec}}

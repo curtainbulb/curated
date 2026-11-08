@@ -1,34 +1,514 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CANONE · Film Watchlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#e4dcc8;--pa:#f3eee0;--ink:#1a1a1a;--ac:#8c2a1c;--mu:#5c5648;--ln:#1a1a1a}
-@media(prefers-color-scheme:dark){:root{--bg:#1d1b17;--pa:#2a2721;--ink:#efe8d6;--ac:#d4694f;--mu:#a79f8b;--ln:#efe8d6}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Futura,"Century Gothic","Trebuchet MS",sans-serif}
-header{text-align:center;padding:28px 12px 16px;border-bottom:6px double var(--ln)}
-h1{margin:0;font-size:clamp(2rem,8vw,4rem);letter-spacing:.35em;text-transform:uppercase;font-weight:700}
-.sub{color:var(--mu);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
-.bar{height:14px;border:2px solid var(--ln);margin:14px auto 4px;max-width:520px}.bar i{display:block;height:100%;background:var(--ac);width:0}
-main{max-width:1200px;margin:0 auto;padding:12px}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}
-input,select,textarea,button{font:inherit;color:var(--ink);background:var(--pa);border:2px solid var(--ln);border-radius:0;padding:10px}
-button{cursor:pointer;text-transform:uppercase;letter-spacing:.12em;font-weight:700}button.p{background:var(--ac);color:#fff;border-color:var(--ac)}
-:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
-.ask{display:flex;gap:8px;margin:12px 0}.ask input{flex:1;min-width:0}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.chips button{padding:6px 10px;font-size:.75rem}
-#rec{border:2px solid var(--ac);padding:10px;margin:8px 0;background:var(--pa)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.card{background:var(--pa);border:3px solid var(--ln);display:flex;flex-direction:column}.card.w{opacity:.62}.card.hl{outline:4px solid var(--ac)}
-.pos{aspect-ratio:2/3;max-height:320px;width:100%;object-fit:cover;border-bottom:3px solid var(--ln);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:14px;background:repeating-linear-gradient(90deg,transparent 0 28px,rgba(0,0,0,.06) 28px 30px)}
-.pos b{font-size:4rem;line-height:1}.pos span{letter-spacing:.15em;text-transform:uppercase;font-size:.8rem}
-.cb{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}.cb h2{margin:0;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em}
-.m{color:var(--mu);font-size:.8rem}.tag{display:inline-block;border:1px solid var(--ln);padding:0 6px;margin:0 4px 4px 0;font-size:.7rem;text-transform:uppercase}
-.chk{display:flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;min-height:44px;cursor:pointer}.chk input{width:26px;height:26px;accent-color:var(--ac)}
-textarea{width:100%;min-height:64px;resize:vertical}
-dialog{background:var(--pa);color:var(--ink);border:4px solid var(--ln);max-width:560px;width:92%}dialog label{display:block;margin:10px 0 4px;font-weight:700}dialog input,dialog textarea{width:100%}
-#st{position:fixed;right:10px;bottom:10px;background:var(--ink);color:var(--bg);padding:6px 12px;font-size:.8rem;display:none}
-.hide{display:none!important}
+:root {
+  color-scheme: light;
+  --void: #D2C8B8;
+  --surface: #E1D8C9;
+  --surface-raised: #EEE8DC;
+  --surface-hi: #F5F0E6;
+  --border: #4E493F;
+  --border-hi: #292720;
+  --shadow: none;
+  --divider: #756B59;
+  --text-primary: #292720;
+  --text-secondary: #595247;
+  --text-dim: #686154;
+  --text-inverse: #F5F0E6;
+  --accent-primary: #783B32;
+  --accent-secondary: #46584C;
+  --accent-tertiary: #877554;
+  --accent-critical: #783B32;
+  --accent-primary-dim: #D3B7AC;
+  --accent-secondary-dim: #BEC7BD;
+  --accent-tertiary-dim: #D7CBB0;
+  --accent-critical-dim: #D3B7AC;
+  --font-chrome: "Jost", Futura, "Century Gothic", sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --radius: 2px;
+  --motion-fast: 100ms;
+  --dialog-backdrop: rgba(36, 34, 28, .62);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --void: #191A17;
+    --surface: #22231F;
+    --surface-raised: #2C2D28;
+    --surface-hi: #373832;
+    --border: #999385;
+    --border-hi: #EEE8DC;
+    --shadow: none;
+    --divider: #8A8579;
+    --text-primary: #EEE8DC;
+    --text-secondary: #C5BFAF;
+    --text-dim: #ADA797;
+    --text-inverse: #221F1A;
+    --accent-primary: #D6907C;
+    --accent-secondary: #94AA98;
+    --accent-tertiary: #C3AE7B;
+    --accent-critical: #D6907C;
+    --accent-primary-dim: #583830;
+    --accent-secondary-dim: #36463E;
+    --accent-tertiary-dim: #4D442F;
+    --accent-critical-dim: #583830;
+    --dialog-backdrop: rgba(8, 9, 8, .76);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--void);
+  color: var(--text-primary);
+  font: 15px/1.55 var(--font-body);
+}
+.chrome {
+  font-family: var(--font-chrome);
+  letter-spacing: .05em;
+}
+header {
+  padding: 24px 16px 20px;
+  text-align: center;
+  background: var(--surface);
+  border-bottom: 3px solid var(--accent-tertiary);
+}
+.inscription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 10px;
+  color: var(--text-secondary);
+  font: 600 10px/1.3 var(--font-chrome);
+  letter-spacing: .19em;
+  text-transform: uppercase;
+}
+.inscription::before,
+.inscription::after {
+  width: clamp(28px, 5vw, 64px);
+  height: 1px;
+  background: var(--divider);
+  content: "";
+}
+.seal {
+  padding: 1px 5px;
+  color: var(--text-dim);
+  border: 1px solid var(--divider);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font: 500 clamp(2.8rem, 6.2vw, 3.8rem)/1 var(--font-chrome);
+  letter-spacing: .12em;
+}
+.sub {
+  color: var(--text-secondary);
+  font: 13px/1.5 var(--font-body);
+}
+.bar {
+  width: min(72vw, 380px);
+  height: 4px;
+  margin: 14px auto 6px;
+  overflow: hidden;
+  background: var(--surface-hi);
+  border: 1px solid var(--divider);
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--accent-primary);
+  transition: width var(--motion-fast) linear;
+}
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px clamp(16px, 3vw, 32px);
+}
+input,
+select,
+textarea,
+button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 11px;
+  color: var(--text-primary);
+  background: var(--surface-hi);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius);
+  font: inherit;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+button {
+  cursor: pointer;
+  font-family: var(--font-chrome);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .055em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    background-color var(--motion-fast) linear,
+    border-color var(--motion-fast) linear,
+    color var(--motion-fast) linear;
+}
+button:hover:not(:disabled) {
+  background: var(--surface);
+  border-color: var(--border);
+}
+button:active:not(:disabled) {
+  color: var(--text-inverse);
+  background: var(--border);
+  border-color: var(--border);
+}
+button:disabled {
+  cursor: not-allowed;
+  color: var(--text-dim);
+  background: var(--surface);
+}
+button.p {
+  color: var(--text-inverse);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+button.p:hover:not(:disabled) {
+  color: var(--text-inverse);
+  background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+}
+button.p:active:not(:disabled) {
+  color: var(--text-inverse);
+  background: var(--border-hi);
+  border-color: var(--border-hi);
+}
+:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+a {
+  color: var(--accent-primary);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { color: var(--accent-secondary); }
+#auth {
+  width: 100%;
+  padding: 20px;
+  background: var(--surface-raised);
+  border: 1px solid var(--divider);
+  border-bottom: 4px solid var(--accent-tertiary);
+}
+#auth input { width: 100%; }
+#ae { color: var(--accent-critical); }
+.ask {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  max-width: 850px;
+  margin: 0 auto 12px;
+}
+.ask input { min-width: 0; }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 850px;
+  margin: 0 auto 20px;
+}
+.chips button {
+  min-height: 44px;
+  padding: 8px 12px;
+  font-size: 11px;
+}
+#rec {
+  max-width: 850px;
+  margin: 12px auto 20px;
+  padding: 12px 16px;
+  background: var(--surface-raised);
+  border-top: 1px solid var(--divider);
+  border-right: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  border-left: 3px solid var(--accent-primary);
+}
+#rec p { margin: 4px 0; }
+.tools {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 1050px;
+  margin: 20px auto 28px;
+}
+#s,
+#so,
+#cfg,
+#out { grid-column: span 2; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.decade {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0 0;
+  color: var(--text-secondary);
+}
+.decade::before,
+.decade::after {
+  flex: 1;
+  height: 1px;
+  background: var(--divider);
+  content: "";
+}
+.decade b {
+  color: var(--text-secondary);
+  font: 500 12px/1.3 var(--font-chrome);
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(118px, .42fr) minmax(0, 1fr);
+  align-items: stretch;
+  min-width: 0;
+  background: var(--surface-raised);
+  border: 1px solid var(--divider);
+  border-bottom: 4px solid var(--accent-tertiary);
+}
+.card.w { border-left: 4px solid var(--accent-secondary); }
+.card.hl,
+.card:focus-visible {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+.card:focus-within { border-color: var(--accent-primary); }
+.pos {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  color: var(--text-primary);
+  background: var(--surface);
+  border-right: 1px solid var(--divider);
+}
+div.pos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+div.pos b {
+  color: var(--text-primary);
+  font: 600 clamp(2.6rem, 4.5vw, 3.5rem)/1 var(--font-body);
+}
+div.pos span {
+  display: block;
+  max-width: 100%;
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font: 500 11px/1.45 var(--font-chrome);
+  letter-spacing: .035em;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+img.pos { display: block; }
+.pos.skel { background: var(--surface); }
+.pos-err { background: var(--surface) !important; }
+.pos-err::after {
+  margin-top: 8px;
+  padding-top: 6px;
+  color: var(--accent-critical);
+  border-top: 1px solid var(--divider);
+  content: "NO PLATE ON FILE";
+  font: 500 10px/1.3 var(--font-chrome);
+  letter-spacing: .08em;
+}
+.cb {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+}
+.cb h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font: 600 clamp(17px, 1.65vw, 20px)/1.25 var(--font-body);
+  letter-spacing: .005em;
+  overflow-wrap: anywhere;
+}
+.m {
+  color: var(--text-secondary);
+  font: 13px/1.5 var(--font-body);
+}
+.tag {
+  display: inline-block;
+  margin: 0 4px 4px 0;
+  padding: 3px 6px;
+  color: var(--text-primary);
+  background: var(--accent-secondary-dim);
+  border: 1px solid var(--divider);
+  border-radius: 1px;
+  font: 500 10px/1.3 var(--font-chrome);
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.chk {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--text-primary);
+  cursor: pointer;
+  font: 600 12px/1.3 var(--font-chrome);
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+.chk input {
+  width: 20px;
+  height: 20px;
+  min-height: 20px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--accent-primary);
+}
+textarea {
+  width: 100%;
+  min-height: 68px;
+  resize: vertical;
+  font: 15px/1.5 var(--font-body);
+}
+dialog {
+  width: min(92vw, 560px);
+  max-width: 560px;
+  padding: 20px;
+  color: var(--text-primary);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-bottom: 4px solid var(--accent-tertiary);
+}
+dialog::backdrop { background: var(--dialog-backdrop); }
+dialog form { margin: 0; }
+dialog h2 {
+  margin: 0 0 16px;
+  font: 600 21px/1.25 var(--font-body);
+}
+dialog label {
+  display: block;
+  margin: 12px 0 4px;
+  color: var(--text-primary);
+  font: 600 12px/1.4 var(--font-chrome);
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+dialog input,
+dialog textarea { width: 100%; }
+.kf { display: flex; gap: 8px; }
+.kf input { flex: 1; min-width: 0; }
+.kf button { min-width: 64px; padding: 9px; font-size: 11px; }
+.ai-mask { -webkit-text-security: disc; }
+dialog .m { margin-top: 12px; }
+dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
+#st {
+  position: fixed;
+  z-index: 2;
+  right: 12px;
+  bottom: 12px;
+  max-width: min(90vw, 420px);
+  padding: 8px 12px;
+  color: var(--void);
+  background: var(--text-primary);
+  border: 1px solid var(--border);
+  font: 13px/1.4 var(--font-chrome);
+  letter-spacing: .025em;
+  display: none;
+}
+.hide { display: none !important; }
+.empty {
+  grid-column: 1 / -1;
+  padding: 28px 20px;
+  color: var(--text-secondary);
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-left: 4px solid var(--accent-tertiary);
+}
+.empty b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  font: 500 16px/1.3 var(--font-chrome);
+}
+@media (max-width: 780px) {
+  main { padding: 20px 18px; }
+  .tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 720px;
+  }
+  #s,
+  #so,
+  #cfg,
+  #out { grid-column: span 1; }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 720px;
+  }
+}
+@media (max-width: 560px) {
+  header { padding: 22px 12px 18px; }
+  h1 { font-size: clamp(2.5rem, 11vw, 3.2rem); }
+  main { padding: 16px 12px; }
+  .ask { grid-template-columns: 1fr; }
+  .chips { justify-content: flex-start; }
+  .tools { grid-template-columns: 1fr; }
+  .tools > * { grid-column: 1 / -1; }
+  .card {
+    grid-template-columns: minmax(88px, .4fr) minmax(0, 1fr);
+  }
+  .cb { padding: 12px; }
+  .decade { gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
 </style></head><body>
-<header><h1>Canone</h1><div class="sub">Cinema · Rank 1 to N · <span id="meth"></span></div>
-<div class="bar"><i id="pb"></i></div><div id="pt" class="sub"></div></header>
+<header>
+ <div class="inscription" aria-hidden="true"><span class="seal">S·P·Q·R</span>Archivio cinematografico</div>
+ <h1>Canone</h1>
+ <div class="sub">Cinema · Rank 1 to N · <span id="meth"></span></div>
+ <div class="bar"><i id="pb"></i></div>
+ <div id="pt" class="sub"></div>
+</header>
 <main>
 <section id="auth" class="hide" style="max-width:380px;margin:30px auto;display:grid;gap:8px">
 <input id="em" type="email" placeholder="Email" autocomplete="username"><input id="pw" type="password" placeholder="Password (min 6)" autocomplete="current-password">
@@ -40,8 +520,8 @@ dialog{background:var(--pa);color:var(--ink);border:4px solid var(--ln);max-widt
 <div class="tools"><input id="s" type="search" placeholder="Search title or director"><select id="so"><option value="rank">Sort: rank</option><option value="year">Sort: year ↑</option><option value="yd">Sort: year ↓</option><option value="title">Sort: title</option></select>
 <select id="fc"></select><select id="fl"></select><select id="fg"></select><select id="fw"><option value="">All</option><option value="u">Unwatched</option><option value="w">Watched</option></select><button id="cfg">Settings</button><button id="out">Log out</button></div>
 <div class="grid" id="g"></div></section><footer class="m" style="text-align:center;padding:24px 0">Posters via TMDB and Wikipedia. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></main>
-<dialog id="dlg"><form method="dialog"><h2>Settings</h2><label>TMDB API key (posters)</label><input id="tk">
-<label>AI providers: one per line as BASEURL|KEY|MODEL</label><textarea id="ai" rows="4" placeholder="https://openrouter.ai/api/v1|KEY|MODEL_ID"></textarea>
+<dialog id="dlg"><form method="dialog"><h2>Settings</h2><label>TMDB API key (posters)</label><div class="kf"><input id="tk" type="password" autocomplete="off"><button type="button" id="tkv">Show</button></div>
+<label>AI providers: one per line as BASEURL|KEY|MODEL</label><textarea id="ai" rows="4" placeholder="https://openrouter.ai/api/v1|KEY|MODEL_ID" autocomplete="off" class="ai-mask"></textarea>
 <div class="m">Saved privately to your account and synced.</div><p><button class="p" id="sv" value="x">Save</button> <button value="c">Close</button></p></form></dialog>
 <div id="st" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
@@ -67,26 +547,76 @@ function opts(){const u=k=>[...new Set(films.flatMap(f=>[].concat(f[k])))].sort(
 function view(){const q=$("s").value.toLowerCase(),c=$("fc").value,l=$("fl").value,g=$("fg").value,w=$("fw").value,so=$("so").value;
  let r=films.filter(f=>(!q||(f.title+f.director).toLowerCase().includes(q))&&(!c||f.country==c)&&(!l||f.language==l)&&(!g||f.genres.includes(g))&&(!w||(w=="w")==!!(P[f.id]&&P[f.id].watched)));
  const k={rank:(a,b)=>a.rank-b.rank,year:(a,b)=>a.year-b.year,yd:(a,b)=>b.year-a.year,title:(a,b)=>a.title.localeCompare(b.title)}[so];return r.sort(k)}
-function draw(){const d=films.filter(f=>P[f.id]&&P[f.id].watched).length;$("pt").textContent=`${d}/${films.length} watched`;$("pb").style.width=(films.length?100*d/films.length:0)+"%";
- $("g").innerHTML=view().map(f=>{const p=P[f.id]||{};return`<article class="card${p.watched?" w":""}" id="${f.id}"><div class="pos" data-id="${f.id}"><b>${f.rank}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2>${f.rank}. ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${esc(f.language)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p>${esc(f.synopsis)}</p><p class="m"><b>Why it matters:</b> ${esc(f.why)}</p><label class="chk"><input type="checkbox" data-w="${f.id}"${p.watched?" checked":""}> Watched</label><textarea data-n="${f.id}" placeholder="Your note">${esc(p.note||"")}</textarea></div></article>`}).join("");
- document.querySelectorAll(".pos").forEach(poster)}
+function roman(n){const t=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]];let r="",v=n;for(const[a,s]of t)while(v>=a){r+=s;v-=a}return r}
+function draw(){const d=films.filter(f=>P[f.id]&&P[f.id].watched).length;$("pt").textContent=`${d} OF ${films.length} CATALOGUED`;$("pb").style.width=(films.length?100*d/films.length:0)+"%";
+ const rows=view();
+ if(!films.length){$("g").innerHTML=`<div class="empty"><b>Archive Empty</b>films.json did not load. Check console.</div>`;return}
+ if(!rows.length){$("g").innerHTML=`<div class="empty"><b>Uncatalogued</b>No plate matches this filter.</div>`;return}
+ const so=$("so").value,byDecade=so==="rank";let lastDec=null,html="";
+ rows.forEach(f=>{
+  if(byDecade){const dec=Math.floor(f.year/10)*10;if(dec!==lastDec){html+=`<div class="decade"><b>${dec}s</b></div>`;lastDec=dec}}
+  const p=P[f.id]||{},id=esc(f.id);
+  html+=`<article class="card${p.watched?" w":""}" id="${id}" tabindex="0"><div class="pos skel" data-id="${id}"><b>${roman(f.rank)}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2>${f.rank}. ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${esc(f.language)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p>${esc(f.synopsis)}</p><p class="m"><b>Why it matters:</b> ${esc(f.why)}</p><label class="chk"><input type="checkbox" data-w="${id}"${p.watched?" checked":""}> Watched</label><textarea data-n="${id}" placeholder="Your note">${esc(p.note||"")}</textarea></div></article>`
+ });
+ $("g").innerHTML=html;
+ if(!poObs)poObs=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){o.unobserve(e.target);poster(e.target)}}),{rootMargin:"200px"});
+ document.querySelectorAll(".pos").forEach(el=>poObs.observe(el))}
 async function save(id){const p=P[id];const{error}=await sb.from("progress").upsert({user_id:uid,film_id:id,watched:!!p.watched,note:p.note||"",updated_at:new Date().toISOString()});note(error?"Not saved: "+error.message:"Saved")}
 $("g").addEventListener("change",e=>{const id=e.target.dataset.w;if(!id)return;(P[id]=P[id]||{}).watched=e.target.checked;save(id);draw()});
 $("g").addEventListener("input",e=>{const id=e.target.dataset.n;if(!id)return;(P[id]=P[id]||{}).note=e.target.value;clearTimeout(tm[id]);tm[id]=setTimeout(()=>save(id),700)});
 ["s","so","fc","fl","fg","fw"].forEach(i=>$(i).addEventListener("input",draw));
-async function img(f){const c=localStorage["p"+f.id];if(c)return c;let u=null;
- try{if(S.tmdb){const r=await(await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.tmdb)}&query=${encodeURIComponent(f.title)}&year=${f.year}`)).json();const x=r.results&&r.results.find(z=>z.poster_path);if(x)u="https://image.tmdb.org/t/p/w342"+x.poster_path}}catch(e){}
- for(const t of [f.wiki,`${f.title} (${f.year} film)`,f.title]){if(u)break;try{const r=await(await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(t.replace(/ /g,"_")))).json();if(r.thumbnail&&r.type!=="disambiguation")u=r.thumbnail.source}catch(e){}}
- if(u)localStorage["p"+f.id]=u;return u}
-async function poster(el){const f=films.find(x=>x.id==el.dataset.id),u=await img(f);if(!u)return;const i=new Image();i.className="pos";i.alt=f.title+" poster";i.loading="lazy";i.onload=()=>el.replaceWith(i);i.onerror=()=>{delete localStorage["p"+f.id]};i.referrerPolicy="no-referrer";i.src=u}
+let tmdbDead=false,poObs=null;
+async function img(f){const c=localStorage["p"+f.id];if(c)return{url:c};let u=null,err=null;
+ if(S.tmdb&&!tmdbDead){
+  try{
+   const res=await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.tmdb)}&query=${encodeURIComponent(f.title)}&year=${f.year}`);
+   const r=await res.json();
+   if(!res.ok){
+    err=`TMDB ${res.status}: ${r.status_message||"unknown error"}`;
+    if(res.status===401)tmdbDead=true;
+    console.warn("[poster]",f.title,err);
+   }else{
+    const x=r.results&&r.results.find(z=>z.poster_path);
+    if(x)u="https://image.tmdb.org/t/p/w342"+x.poster_path;else err="TMDB: no match for \""+f.title+"\" ("+f.year+")";
+   }
+  }catch(e){err="TMDB request failed: "+e.message;console.warn("[poster]",f.title,err)}
+ }
+ for(const t of [f.wiki,`${f.title} (${f.year} film)`,f.title]){
+  if(u)break;
+  try{
+   const res=await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(t.replace(/ /g,"_")));
+   if(!res.ok){err=(err?err+"; ":"")+`Wikipedia ${res.status} for "${t}"`;continue}
+   const r=await res.json();
+   if(r.thumbnail&&r.type!=="disambiguation")u=r.thumbnail.source;
+   else err=(err?err+"; ":"")+`Wikipedia: no usable thumbnail for "${t}"`;
+  }catch(e){err=(err?err+"; ":"")+`Wikipedia request failed for "${t}": ${e.message}`}
+ }
+ if(u){localStorage["p"+f.id]=u;return{url:u}}
+ if(err)console.warn("[poster] no image for",f.title,"—",err);
+ return{url:null,err};
+}
+async function poster(el){
+ const f=films.find(x=>x.id==el.dataset.id),r=await img(f);
+ el.classList.remove("skel");
+ if(!r.url){el.classList.add("pos-err");el.title=r.err||"Poster unavailable";return}
+ const i=new Image();i.className="pos";i.alt=f.title+" poster";i.loading="lazy";
+ i.onload=()=>el.replaceWith(i);
+ i.onerror=()=>{delete localStorage["p"+f.id];el.classList.add("pos-err");el.title="Image URL returned but failed to load"};
+ i.referrerPolicy="no-referrer";i.src=r.url;
+}
 $("cfg").onclick=()=>$("dlg").showModal();
+$("tkv").onclick=()=>{const t=$("tk");t.type=t.type==="password"?"text":"password"};
+$("ai").addEventListener("focus",()=>$("ai").classList.remove("ai-mask"));
+$("ai").addEventListener("blur",()=>$("ai").classList.add("ai-mask"));
 $("sv").onclick=async()=>{S.tmdb=$("tk").value.trim();S.ai=$("ai").value.split("\n").map(l=>l.split("|").map(s=>s.trim())).filter(a=>a.length>=3&&a[0]).map(a=>({u:a[0],k:a[1],m:a[2]}));
  const{error}=await sb.from("settings").upsert({user_id:uid,data:S});note(error?error.message:"Settings saved");draw()};
 async function ask(t){const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));const box=$("rec");box.classList.remove("hide");
  if(!S.ai.length){box.textContent="Add an AI provider in Settings, or press Surprise me.";return}
  const cat=un.map(f=>`${f.id}|${f.title}|${f.year}|${f.director}|${f.country}|${f.runtime}m|${f.genres.join("/")}`).join("\n");
  const msg=[{role:"system",content:"You recommend films ONLY from the given list. Reply with JSON only: [{\"id\":\"...\",\"reason\":\"one sentence, no spoilers\"}], max 3 items."},{role:"user",content:`Mood: ${t}\nUnwatched films (id|title|year|director|country|runtime|genres):\n${cat}`}];
- for(const p of S.ai){box.textContent="Thinking…";try{const r=await fetch(p.u.replace(/\/$/,"")+"/chat/completions",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+p.k},body:JSON.stringify({model:p.m,messages:msg})});if(!r.ok)throw new Error(r.status);
+ for(const p of S.ai){box.textContent="Thinking…";try{
+  if(!/^https:\/\//i.test(p.u))throw new Error("provider URL must use https");
+  const r=await fetch(p.u.replace(/\/$/,"")+"/chat/completions",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+p.k},body:JSON.stringify({model:p.m,messages:msg})});if(!r.ok)throw new Error(r.status);
   const tx=(await r.json()).choices[0].message.content,a=JSON.parse(tx.slice(tx.indexOf("["),tx.lastIndexOf("]")+1)).filter(x=>films.some(f=>f.id==x.id));if(!a.length)throw new Error("empty");
   box.innerHTML=a.map(x=>{const f=films.find(z=>z.id==x.id);return`<p><a href="#${f.id}"><b>${f.rank}. ${esc(f.title)}</b></a> (${f.year}): ${esc(x.reason)}</p>`}).join("");return}catch(e){box.textContent="Provider failed ("+e.message+"). Trying next…"}}
  box.textContent="All providers failed. Check Settings, or press Surprise me."}
@@ -94,5 +624,13 @@ $("go").onclick=()=>ask($("q").value||"anything good");$("q").onkeydown=e=>e.key
 document.querySelectorAll(".chips [data-m]").forEach(b=>b.onclick=()=>{$("q").value=b.dataset.m;ask(b.dataset.m)});
 $("sur").onclick=()=>{const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));if(!un.length)return;const f=un[Math.random()*un.length|0],b=$("rec");b.classList.remove("hide");b.innerHTML=`<a href="#${f.id}"><b>${f.rank}. ${esc(f.title)}</b></a> (${f.year}), ${esc(f.director)}`};
 document.addEventListener("visibilitychange",async()=>{if(!uid||document.hidden)return;const{data}=await sb.from("progress").select("*");(data||[]).forEach(r=>P[r.film_id]=r);draw()});
+document.addEventListener("keydown",e=>{
+ if(["INPUT","TEXTAREA","SELECT"].includes(document.activeElement.tagName))return;
+ const cards=[...document.querySelectorAll(".card")];if(!cards.length)return;
+ const i=cards.indexOf(document.activeElement);
+ if(["j","ArrowDown","ArrowRight"].includes(e.key)){e.preventDefault();cards[Math.min(i+1,cards.length-1)>=0?Math.min(i+1,cards.length-1):0].focus()}
+ else if(["k","ArrowUp","ArrowLeft"].includes(e.key)){e.preventDefault();cards[Math.max(i-1,0)].focus()}
+ else if(e.key==="w"&&i>=0){const cb=cards[i].querySelector('[data-w]');if(cb){cb.checked=!cb.checked;cb.dispatchEvent(new Event("change",{bubbles:true}))}}
+});
 boot();
 </script></body></html>

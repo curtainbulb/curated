@@ -19,11 +19,11 @@
   --accent-primary: #783B32;
   --accent-secondary: #46584C;
   --accent-tertiary: #877554;
-  --accent-critical: #783B32;
+  --accent-critical: #A3352A;
   --accent-primary-dim: #D3B7AC;
   --accent-secondary-dim: #BEC7BD;
   --accent-tertiary-dim: #D7CBB0;
-  --accent-critical-dim: #D3B7AC;
+  --accent-critical-dim: #E3C2B9;
   --font-chrome: "Jost", Futura, "Century Gothic", sans-serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sp-1: 4px;
@@ -54,11 +54,11 @@
     --accent-primary: #D6907C;
     --accent-secondary: #94AA98;
     --accent-tertiary: #C3AE7B;
-    --accent-critical: #D6907C;
+    --accent-critical: #E8745F;
     --accent-primary-dim: #583830;
     --accent-secondary-dim: #36463E;
     --accent-tertiary-dim: #4D442F;
-    --accent-critical-dim: #583830;
+    --accent-critical-dim: #5C2E25;
     --dialog-backdrop: rgba(8, 9, 8, .76);
   }
 }
@@ -130,9 +130,9 @@ h1 {
   transition: width var(--motion-fast) linear;
 }
 main {
-  max-width: 1180px;
+  max-width: 1640px;
   margin: 0 auto;
-  padding: 24px clamp(16px, 3vw, 32px);
+  padding: 24px clamp(16px, 3vw, 40px);
 }
 input,
 select,
@@ -181,13 +181,13 @@ button:disabled {
 }
 button.p {
   color: var(--text-inverse);
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--accent-critical);
+  border-color: var(--accent-critical);
 }
 button.p:hover:not(:disabled) {
   color: var(--text-inverse);
-  background: var(--accent-secondary);
-  border-color: var(--accent-secondary);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 button.p:active:not(:disabled) {
   color: var(--text-inverse);
@@ -248,7 +248,7 @@ a:hover { color: var(--accent-secondary); }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
-  max-width: 1050px;
+  max-width: 1480px;
   margin: 20px auto 28px;
 }
 #s,
@@ -257,10 +257,10 @@ a:hover { color: var(--accent-secondary); }
 #out { grid-column: span 2; }
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   align-items: stretch;
   gap: 20px;
-  max-width: 1100px;
+  max-width: 1560px;
   margin: 0 auto;
 }
 .decade {
@@ -321,7 +321,7 @@ div.pos {
   text-align: center;
 }
 div.pos b {
-  color: var(--text-primary);
+  color: var(--accent-critical);
   font: 600 clamp(2.6rem, 4.5vw, 3.5rem)/1 var(--font-body);
 }
 div.pos span {
@@ -362,6 +362,7 @@ img.pos { display: block; }
   letter-spacing: .005em;
   overflow-wrap: anywhere;
 }
+.cb h2 .rk { color: var(--accent-critical); }
 .m {
   color: var(--text-secondary);
   font: 13px/1.5 var(--font-body);
@@ -431,9 +432,36 @@ dialog textarea { width: 100%; }
 .kf { display: flex; gap: 8px; }
 .kf input { flex: 1; min-width: 0; }
 .kf button { min-width: 64px; padding: 9px; font-size: 11px; }
-.ai-mask { -webkit-text-security: disc; }
 dialog .m { margin-top: 12px; }
 dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
+.aip-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--divider);
+}
+.aip-row .kf { grid-column: span 1; }
+.aip-x {
+  min-width: 36px;
+  padding: 0;
+  color: var(--accent-critical);
+}
+#aipa { margin: 4px 0 8px; }
+.acc {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 0 4px;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font: 500 11px/1.3 var(--font-chrome);
+  letter-spacing: .03em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
 #st {
   position: fixed;
   z-index: 2;
@@ -473,7 +501,9 @@ dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
   #s,
   #so,
   #cfg,
-  #out { grid-column: span 1; }
+  #out,
+  .acc { grid-column: span 1; }
+  .aip-row { grid-template-columns: 1fr; }
   .grid {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -518,26 +548,32 @@ dialog p { display: flex; flex-wrap: wrap; gap: 8px; }
 <div class="chips"><button data-m="short and easy to get into">Easy</button><button data-m="slow, contemplative">Slow</button><button data-m="exciting and fast">Thrilling</button><button data-m="funny">Funny</button><button data-m="something silent or very old">Old</button><button id="sur">Surprise me</button></div>
 <div id="rec" class="hide"></div>
 <div class="tools"><input id="s" type="search" placeholder="Search title or director"><select id="so"><option value="rank">Sort: rank</option><option value="year">Sort: year ↑</option><option value="yd">Sort: year ↓</option><option value="title">Sort: title</option></select>
-<select id="fc"></select><select id="fl"></select><select id="fg"></select><select id="fw"><option value="">All</option><option value="u">Unwatched</option><option value="w">Watched</option></select><button id="cfg">Settings</button><button id="out">Log out</button></div>
+<select id="fc"></select><select id="fl"></select><select id="fg"></select><select id="fw"><option value="">All</option><option value="u">Unwatched</option><option value="w">Watched</option></select><div id="acc" class="acc"></div><button id="cfg">Settings</button><button id="out">Log out</button></div>
 <div class="grid" id="g"></div></section><footer class="m" style="text-align:center;padding:24px 0">Posters via TMDB and Wikipedia. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></main>
-<dialog id="dlg"><form method="dialog"><h2>Settings</h2><label>TMDB API key (posters)</label><div class="kf"><input id="tk" type="password" autocomplete="off"><button type="button" id="tkv">Show</button></div>
-<label>AI providers: one per line as BASEURL|KEY|MODEL</label><textarea id="ai" rows="4" placeholder="https://openrouter.ai/api/v1|KEY|MODEL_ID" autocomplete="off" class="ai-mask"></textarea>
+<dialog id="dlg"><form method="dialog"><h2>Settings</h2>
+<label>Account</label><div class="m" id="accd"></div>
+<label>Display name</label><input id="dn" placeholder="How you appear here" autocomplete="off">
+<label>TMDB API key (posters)</label><div class="kf"><input id="tk" type="password" autocomplete="off"><button type="button" id="tkv">Show</button></div>
+<label>AI providers — tried in order, next one used if a provider fails</label>
+<div id="aip"></div>
+<button type="button" id="aipa">Add provider</button>
+<textarea id="ai" class="hide" aria-hidden="true"></textarea>
 <div class="m">Saved privately to your account and synced.</div><p><button class="p" id="sv" value="x">Save</button> <button value="c">Close</button></p></form></dialog>
 <div id="st" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
 <script>
 const $=id=>document.getElementById(id),sb=supabase.createClient(CFG.url,CFG.key);
-let films=[],P={},S={tmdb:"",ai:[]},uid=null,tm={};
+let films=[],P={},S={tmdb:"",ai:[],name:""},uid=null,tm={},uemail="";
 const note=t=>{const e=$("st");e.textContent=t;e.style.display="block";clearTimeout(note.t);note.t=setTimeout(()=>e.style.display="none",1600)};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 async function boot(){
  try{const j=await (await fetch("films.json",{cache:"no-cache"})).json();films=j.films;$("meth").textContent=j.method||""}catch(e){document.body.insertAdjacentHTML("beforeend","<p>Cannot load films.json</p>")}
  const{data:{session}}=await sb.auth.getSession();session?start(session.user):($("auth").classList.remove("hide"),$("auth").style.display="grid")}
-async function start(u){uid=u.id;$("auth").classList.add("hide");$("auth").style.display="none";$("app").classList.remove("hide");
+async function start(u){uid=u.id;uemail=u.email||"";$("auth").classList.add("hide");$("auth").style.display="none";$("app").classList.remove("hide");$("acc").textContent=S.name||uemail;
  const[a,b]=await Promise.all([sb.from("progress").select("*"),sb.from("settings").select("data").maybeSingle()]);
  if(a.error)note("Sync error: "+a.error.message);(a.data||[]).forEach(r=>P[r.film_id]=r);if(b.data)S={...S,...b.data.data};
- $("tk").value=S.tmdb||"";$("ai").value=(S.ai||[]).map(x=>[x.u,x.k,x.m].join("|")).join("\n");opts();draw()}
+ $("tk").value=S.tmdb||"";$("ai").value=(S.ai||[]).map(x=>[x.u,x.k,x.m].join("|")).join("\n");$("acc").textContent=S.name||uemail;opts();draw()}
 async function auth(up){$("ae").textContent="";const f=up?sb.auth.signUp:sb.auth.signInWithPassword.bind(sb.auth);
  const{data,error}=await f.call(sb.auth,{email:$("em").value.trim(),password:$("pw").value});
  if(error)return $("ae").textContent=error.message;if(data.session)start(data.user);else $("ae").textContent="Account created. Press Log in."}
@@ -556,7 +592,7 @@ function draw(){const d=films.filter(f=>P[f.id]&&P[f.id].watched).length;$("pt")
  rows.forEach(f=>{
   if(byDecade){const dec=Math.floor(f.year/10)*10;if(dec!==lastDec){html+=`<div class="decade"><b>${dec}s</b></div>`;lastDec=dec}}
   const p=P[f.id]||{},id=esc(f.id);
-  html+=`<article class="card${p.watched?" w":""}" id="${id}" tabindex="0"><div class="pos skel" data-id="${id}"><b>${roman(f.rank)}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2>${f.rank}. ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${esc(f.language)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p>${esc(f.synopsis)}</p><p class="m"><b>Why it matters:</b> ${esc(f.why)}</p><label class="chk"><input type="checkbox" data-w="${id}"${p.watched?" checked":""}> Watched</label><textarea data-n="${id}" placeholder="Your note">${esc(p.note||"")}</textarea></div></article>`
+  html+=`<article class="card${p.watched?" w":""}" id="${id}" tabindex="0"><div class="pos skel" data-id="${id}"><b>${roman(f.rank)}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2><span class="rk">${f.rank}.</span> ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${esc(f.language)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p>${esc(f.synopsis)}</p><p class="m"><b>Why it matters:</b> ${esc(f.why)}</p><label class="chk"><input type="checkbox" data-w="${id}"${p.watched?" checked":""}> Watched</label><textarea data-n="${id}" placeholder="Your note">${esc(p.note||"")}</textarea></div></article>`
  });
  $("g").innerHTML=html;
  if(!poObs)poObs=new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){o.unobserve(e.target);poster(e.target)}}),{rootMargin:"200px"});
@@ -604,11 +640,21 @@ async function poster(el){
  i.onerror=()=>{delete localStorage["p"+f.id];el.classList.add("pos-err");el.title="Image URL returned but failed to load"};
  i.referrerPolicy="no-referrer";i.src=r.url;
 }
-$("cfg").onclick=()=>$("dlg").showModal();
+const PRESETS={claude:["Claude (Anthropic)","https://api.anthropic.com/v1","claude-sonnet-4-5"],openai:["OpenAI GPT","https://api.openai.com/v1","gpt-4o"],gemini:["Google Gemini","https://generativelanguage.googleapis.com/v1beta/openai","gemini-2.0-flash"],groq:["Groq","https://api.groq.com/openai/v1","llama-3.3-70b-versatile"],mistral:["Mistral","https://api.mistral.ai/v1","mistral-large-latest"],openrouter:["OpenRouter (any model)","https://openrouter.ai/api/v1",""],custom:["Custom endpoint","",""]};
+function presetOpts(sel){return`<option value="">Choose provider…</option>`+Object.entries(PRESETS).map(([k,[l]])=>`<option value="${k}"${sel===k?" selected":""}>${esc(l)}</option>`).join("")}
+function providerRow(p){p=p||{preset:"",u:"",k:"",m:""};
+ return `<div class="aip-row"><select class="aip-p">${presetOpts(p.preset)}</select><input class="aip-u" placeholder="Base URL" value="${esc(p.u||"")}"><div class="kf"><input class="aip-k" type="password" placeholder="API key" autocomplete="off" value="${esc(p.k||"")}"><button type="button" class="aip-v">Show</button></div><input class="aip-m" placeholder="Model" value="${esc(p.m||"")}"><button type="button" class="aip-x" aria-label="Remove provider">✕</button></div>`}
+function renderProviders(rows){$("aip").innerHTML=rows.map(providerRow).join("")||providerRow()}
+function providerRowsFromS(){return S.ai&&S.ai.length?S.ai.map(a=>({preset:a.preset||"",u:a.u,k:a.k,m:a.m})):[]}
+$("aip").addEventListener("change",e=>{if(e.target.classList.contains("aip-p")){const row=e.target.closest(".aip-row"),v=e.target.value,pr=PRESETS[v];if(pr){row.querySelector(".aip-u").value=pr[1];if(pr[2])row.querySelector(".aip-m").value=pr[2]}}});
+$("aip").addEventListener("click",e=>{if(e.target.classList.contains("aip-x")){const rows=$("aip").querySelectorAll(".aip-row");if(rows.length>1)e.target.closest(".aip-row").remove();else e.target.closest(".aip-row").querySelectorAll("input").forEach(i=>i.value="")}
+ else if(e.target.classList.contains("aip-v")){const t=e.target.closest(".aip-row").querySelector(".aip-k");t.type=t.type==="password"?"text":"password"}});
+$("aipa").onclick=()=>$("aip").insertAdjacentHTML("beforeend",providerRow());
+$("cfg").onclick=()=>{$("accd").textContent=uemail;$("dn").value=S.name||"";renderProviders(providerRowsFromS());$("dlg").showModal()};
 $("tkv").onclick=()=>{const t=$("tk");t.type=t.type==="password"?"text":"password"};
-$("ai").addEventListener("focus",()=>$("ai").classList.remove("ai-mask"));
-$("ai").addEventListener("blur",()=>$("ai").classList.add("ai-mask"));
-$("sv").onclick=async()=>{S.tmdb=$("tk").value.trim();S.ai=$("ai").value.split("\n").map(l=>l.split("|").map(s=>s.trim())).filter(a=>a.length>=3&&a[0]).map(a=>({u:a[0],k:a[1],m:a[2]}));
+$("sv").onclick=async()=>{S.tmdb=$("tk").value.trim();S.name=$("dn").value.trim();
+ S.ai=[...$("aip").querySelectorAll(".aip-row")].map(r=>({preset:r.querySelector(".aip-p").value,u:r.querySelector(".aip-u").value.trim(),k:r.querySelector(".aip-k").value.trim(),m:r.querySelector(".aip-m").value.trim()})).filter(a=>a.u&&a.k&&a.m);
+ $("ai").value=S.ai.map(x=>[x.u,x.k,x.m].join("|")).join("\n");$("acc").textContent=S.name||uemail;
  const{error}=await sb.from("settings").upsert({user_id:uid,data:S});note(error?error.message:"Settings saved");draw()};
 async function ask(t){const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));const box=$("rec");box.classList.remove("hide");
  if(!S.ai.length){box.textContent="Add an AI provider in Settings, or press Surprise me.";return}

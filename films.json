@@ -1,0 +1,3122 @@
+{
+  "method": "Composite of Sight & Sound 2022 critics' poll (top 250, BFI), TSPDT 2026 '1,000 Greatest Films' (eligible top 150 subset), and AFI's 100 Years...100 Movies (2007, US-only, weighted 0.5x to limit its national bias). Scored by weighted normalized rank (TSPDT 1.0x, S&S 1.3x, AFI 0.5x), summed per film. New candidates not in the TSPDT base pool were added only where ranked in the S&S top 150. Eligibility: a film is excluded only if its production, direction AND principal cast are all from Africa, Latin America, South/Southeast Asia or the Middle East; excluded from this edition on that basis: Pather Panchali, Black Girl, Touki Bouki, The House Is Black, Tropical Malady, Close-Up. Tie-break: composite score, then earlier year. NOT YET MERGED: Cahiers du Cinema list (no clean single ranked list located), Kinema Junpo, other national polls -- flagged here rather than silently omitted.",
+  "films": [
+    {
+      "id": "f001",
+      "rank": 1,
+      "title": "Citizen Kane",
+      "year": 1941,
+      "director": "Orson Welles",
+      "country": "USA",
+      "language": "English",
+      "runtime": 119,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "synopsis": "A reporter investigates the last word of a dead newspaper tycoon. Interviews with those who knew him assemble a portrait of a man built on ambition and image.",
+      "why": "Reset the grammar of cinema with deep focus, nonlinear structure and overlapping sound.",
+      "wiki": "Citizen_Kane",
+      "sources": {
+        "tspdt": 1,
+        "sight_sound_2022": 3,
+        "afi_2007": 1
+      }
+    },
+    {
+      "id": "f002",
+      "rank": 2,
+      "title": "Vertigo",
+      "year": 1958,
+      "director": "Alfred Hitchcock",
+      "country": "USA",
+      "language": "English",
+      "runtime": 128,
+      "genres": [
+        "Thriller",
+        "Romance"
+      ],
+      "synopsis": "A retired detective with a fear of heights is hired to follow a friend's wife. His assignment pulls him into an obsession with her.",
+      "why": "Hitchcock's most psychologically exposed work; it overtook Kane in Sight & Sound's 2012 poll.",
+      "wiki": "Vertigo_(film)",
+      "sources": {
+        "tspdt": 2,
+        "sight_sound_2022": 2,
+        "afi_2007": 9
+      }
+    },
+    {
+      "id": "f003",
+      "rank": 3,
+      "title": "The Godfather",
+      "year": 1972,
+      "director": "Francis Ford Coppola",
+      "country": "USA",
+      "language": "English",
+      "runtime": 175,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "The patriarch of a New York crime family sees his empire threatened. His youngest son, an outsider to the business, is drawn into it.",
+      "why": "Merged popular appeal with critical standing like few films before it.",
+      "wiki": "The_Godfather",
+      "sources": {
+        "tspdt": 6,
+        "sight_sound_2022": 12,
+        "afi_2007": 2
+      }
+    },
+    {
+      "id": "f004",
+      "rank": 4,
+      "title": "2001: A Space Odyssey",
+      "year": 1968,
+      "director": "Stanley Kubrick",
+      "country": "UK",
+      "language": "English",
+      "runtime": 139,
+      "genres": [
+        "Sci-Fi"
+      ],
+      "synopsis": "A mysterious monolith shapes human history from prehistory to the space age. A crewed mission to Jupiter is guided by an advanced computer.",
+      "why": "Set the visual and philosophical standard for serious science fiction.",
+      "wiki": "2001:_A_Space_Odyssey_(film)",
+      "sources": {
+        "tspdt": 3,
+        "sight_sound_2022": 6,
+        "afi_2007": 15
+      }
+    },
+    {
+      "id": "f005",
+      "rank": 5,
+      "title": "Singin' in the Rain",
+      "year": 1952,
+      "director": "Stanley Donen, Gene Kelly",
+      "country": "USA",
+      "language": "English",
+      "runtime": 102,
+      "genres": [
+        "Musical",
+        "Comedy"
+      ],
+      "synopsis": "A silent-film star faces the arrival of sound pictures in late-1920s Hollywood. A young singer and a stubborn co-star complicate the transition.",
+      "why": "The benchmark Hollywood musical and a loving portrait of the industry.",
+      "wiki": "Singin'_in_the_Rain",
+      "sources": {
+        "tspdt": 11,
+        "sight_sound_2022": 10,
+        "afi_2007": 5
+      }
+    },
+    {
+      "id": "f006",
+      "rank": 6,
+      "title": "The Searchers",
+      "year": 1956,
+      "director": "John Ford",
+      "country": "USA",
+      "language": "English",
+      "runtime": 119,
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "After a raid destroys his brother's family, a Civil War veteran searches for his missing niece across years of frontier territory.",
+      "why": "The most debated and influential western, cited by many later directors.",
+      "wiki": "The_Searchers_(1956_film)",
+      "sources": {
+        "tspdt": 9,
+        "sight_sound_2022": 15,
+        "afi_2007": 12
+      }
+    },
+    {
+      "id": "f007",
+      "rank": 7,
+      "title": "Apocalypse Now",
+      "year": 1979,
+      "director": "Francis Ford Coppola",
+      "country": "USA",
+      "language": "English",
+      "runtime": 150,
+      "genres": [
+        "War",
+        "Drama"
+      ],
+      "synopsis": "During the Vietnam War, a captain is sent up a jungle river to find a rogue colonel. The journey grows stranger the deeper he goes.",
+      "why": "The defining Vietnam-era epic, notable for its sound design and production legend.",
+      "wiki": "Apocalypse_Now",
+      "sources": {
+        "tspdt": 13,
+        "sight_sound_2022": 19,
+        "afi_2007": 30
+      }
+    },
+    {
+      "id": "f008",
+      "rank": 8,
+      "title": "Psycho",
+      "year": 1960,
+      "director": "Alfred Hitchcock",
+      "country": "USA",
+      "language": "English",
+      "runtime": 109,
+      "genres": [
+        "Thriller",
+        "Horror"
+      ],
+      "synopsis": "A secretary leaves town with stolen money and stops at an isolated motel. Its quiet owner seems pleasant enough.",
+      "why": "Reshaped the horror-thriller and the way films handle audience expectation.",
+      "wiki": "Psycho_(1960_film)",
+      "sources": {
+        "tspdt": 24,
+        "sight_sound_2022": 31,
+        "afi_2007": 14
+      }
+    },
+    {
+      "id": "f009",
+      "rank": 9,
+      "title": "City Lights",
+      "year": 1931,
+      "director": "Charles Chaplin",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 86,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "A tramp befriends a blind flower seller. He tries to find money to help her while keeping up appearances.",
+      "why": "Often cited as Chaplin's finest balance of comedy and sentiment.",
+      "wiki": "City_Lights",
+      "sources": {
+        "tspdt": 26,
+        "sight_sound_2022": 36,
+        "afi_2007": 11
+      }
+    },
+    {
+      "id": "f010",
+      "rank": 10,
+      "title": "Taxi Driver",
+      "year": 1976,
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "language": "English",
+      "runtime": 113,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "synopsis": "A lonely Vietnam veteran takes a night job driving a cab in New York. The city's grime feeds his growing isolation.",
+      "why": "A landmark of 1970s American cinema and of Scorsese's career.",
+      "wiki": "Taxi_Driver",
+      "sources": {
+        "tspdt": 14,
+        "sight_sound_2022": 29,
+        "afi_2007": 52
+      }
+    },
+    {
+      "id": "f011",
+      "rank": 11,
+      "title": "Some Like It Hot",
+      "year": 1959,
+      "director": "Billy Wilder",
+      "country": "USA",
+      "language": "English",
+      "runtime": 121,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "Two musicians witness a crime in Prohibition-era Chicago. They flee by joining an all-women band heading to Florida.",
+      "why": "Regularly voted among the greatest comedies ever made.",
+      "wiki": "Some_Like_It_Hot",
+      "sources": {
+        "tspdt": 31,
+        "sight_sound_2022": 38,
+        "afi_2007": 22
+      }
+    },
+    {
+      "id": "f012",
+      "rank": 12,
+      "title": "Tokyo Story",
+      "year": 1953,
+      "director": "Yasujiro Ozu",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 134,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "synopsis": "An elderly couple travel to Tokyo to visit their grown children. The children are too busy to spend much time with them.",
+      "why": "The summit of Ozu's quiet, low-angle style and a perennial top-ten entry.",
+      "wiki": "Tokyo_Story",
+      "sources": {
+        "tspdt": 4,
+        "sight_sound_2022": 4
+      }
+    },
+    {
+      "id": "f013",
+      "rank": 13,
+      "title": "Casablanca",
+      "year": 1942,
+      "director": "Michael Curtiz",
+      "country": "USA",
+      "language": "English",
+      "runtime": 102,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "synopsis": "In wartime Morocco, a cynical club owner holds letters of transit that many want. An old love arrives at his door.",
+      "why": "The enduring example of Hollywood studio-era craft and quotability.",
+      "wiki": "Casablanca_(film)",
+      "sources": {
+        "tspdt": 37,
+        "sight_sound_2022": 63,
+        "afi_2007": 3
+      }
+    },
+    {
+      "id": "f014",
+      "rank": 14,
+      "title": "Jeanne Dielman, 23 quai du Commerce, 1080 Bruxelles",
+      "year": 1975,
+      "director": "Chantal Akerman",
+      "country": "Belgium",
+      "language": "French",
+      "runtime": 201,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Over three days, a widowed housewife follows a precise domestic routine. Small deviations begin to appear.",
+      "why": "Topped Sight & Sound's 2022 critics' poll as the first film by a woman to do so.",
+      "wiki": "Jeanne_Dielman,_23_quai_du_Commerce,_1080_Bruxelles",
+      "sources": {
+        "tspdt": 12,
+        "sight_sound_2022": 1
+      }
+    },
+    {
+      "id": "f015",
+      "rank": 15,
+      "title": "The Rules of the Game",
+      "year": 1939,
+      "director": "Jean Renoir",
+      "country": "France",
+      "language": "French",
+      "runtime": 113,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "Aristocrats and their servants gather for a weekend at a country estate. Romantic entanglements multiply across both floors of the house.",
+      "why": "Its ensemble staging and social satire influenced generations of directors.",
+      "wiki": "The_Rules_of_the_Game",
+      "sources": {
+        "tspdt": 5,
+        "sight_sound_2022": 13
+      }
+    },
+    {
+      "id": "f016",
+      "rank": 16,
+      "title": "Sunrise: A Song of Two Humans",
+      "year": 1927,
+      "director": "F.W. Murnau",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 110,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A farmer is tempted by a woman from the city. A journey with his wife tests what remains of their marriage.",
+      "why": "A peak of silent-era visual storytelling made in Hollywood by a German master.",
+      "wiki": "Sunrise_(1927_film)",
+      "sources": {
+        "tspdt": 8,
+        "sight_sound_2022": 11
+      }
+    },
+    {
+      "id": "f017",
+      "rank": 17,
+      "title": "In the Mood for Love",
+      "year": 2000,
+      "director": "Wong Kar-wai",
+      "country": "Hong Kong",
+      "language": "Cantonese",
+      "runtime": 97,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "synopsis": "In 1962 Hong Kong, two neighbours discover their spouses are connected. Their own meetings become careful and restrained.",
+      "why": "The most acclaimed film of the 21st century in several polls; a high point of modern style.",
+      "wiki": "In_the_Mood_for_Love",
+      "sources": {
+        "tspdt": 17,
+        "sight_sound_2022": 5
+      }
+    },
+    {
+      "id": "f018",
+      "rank": 18,
+      "title": "Seven Samurai",
+      "year": 1954,
+      "director": "Akira Kurosawa",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 200,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "synopsis": "A village menaced by bandits hires masterless samurai to defend it. The unlikely group must train farmers to fight.",
+      "why": "Established the template for the team-assembly action film.",
+      "wiki": "Seven_Samurai",
+      "sources": {
+        "tspdt": 10,
+        "sight_sound_2022": 20
+      }
+    },
+    {
+      "id": "f019",
+      "rank": 19,
+      "title": "Man with a Movie Camera",
+      "year": 1929,
+      "director": "Dziga Vertov",
+      "country": "USSR",
+      "language": "Silent",
+      "runtime": 80,
+      "genres": [
+        "Documentary",
+        "Experimental"
+      ],
+      "synopsis": "A cameraman moves through a Soviet city from dawn to night. The film shows both the life of the city and the machinery of filmmaking.",
+      "why": "Placed on Sight & Sound's list as a landmark of the avant-garde documentary.",
+      "wiki": "Man_with_a_Movie_Camera",
+      "sources": {
+        "tspdt": 22,
+        "sight_sound_2022": 9
+      }
+    },
+    {
+      "id": "f020",
+      "rank": 20,
+      "title": "Rear Window",
+      "year": 1954,
+      "director": "Alfred Hitchcock",
+      "country": "USA",
+      "language": "English",
+      "runtime": 112,
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "synopsis": "A photographer confined to his apartment watches his neighbours across the courtyard. He begins to suspect something is wrong.",
+      "why": "A model of suspense through point of view.",
+      "wiki": "Rear_Window",
+      "sources": {
+        "tspdt": 40,
+        "sight_sound_2022": 38,
+        "afi_2007": 48
+      }
+    },
+    {
+      "id": "f021",
+      "rank": 21,
+      "title": "Persona",
+      "year": 1966,
+      "director": "Ingmar Bergman",
+      "country": "Sweden",
+      "language": "Swedish",
+      "runtime": 83,
+      "genres": [
+        "Drama",
+        "Psychological"
+      ],
+      "synopsis": "A nurse is assigned to care for an actress who has stopped speaking. Isolated together, their identities begin to blur.",
+      "why": "Bergman's most formally daring film and a touchstone of modernist cinema.",
+      "wiki": "Persona_(1966_film)",
+      "sources": {
+        "tspdt": 16,
+        "sight_sound_2022": 18
+      }
+    },
+    {
+      "id": "f022",
+      "rank": 22,
+      "title": "8½",
+      "year": 1963,
+      "director": "Federico Fellini",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 135,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "A film director in creative crisis retreats to a spa while his production stalls. Memory, fantasy and desire crowd his attention.",
+      "why": "The definitive film about the act of making films.",
+      "wiki": "8½",
+      "sources": {
+        "tspdt": 7,
+        "sight_sound_2022": 31
+      }
+    },
+    {
+      "id": "f023",
+      "rank": 23,
+      "title": "Mulholland Dr.",
+      "year": 2001,
+      "director": "David Lynch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 147,
+      "genres": [
+        "Mystery",
+        "Psychological"
+      ],
+      "synopsis": "An aspiring actress arrives in Los Angeles and meets a woman suffering from amnesia. Together they try to piece together who she is.",
+      "why": "Topped critics' polls of the 21st century for its dreamlike command of form.",
+      "wiki": "Mulholland_Drive_(film)",
+      "sources": {
+        "tspdt": 29,
+        "sight_sound_2022": 8
+      }
+    },
+    {
+      "id": "f024",
+      "rank": 24,
+      "title": "The Passion of Joan of Arc",
+      "year": 1928,
+      "director": "Carl Theodor Dreyer",
+      "country": "France",
+      "language": "Silent",
+      "runtime": 110,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "Joan of Arc faces a church tribunal in Rouen. The film follows her interrogation almost entirely in close-up.",
+      "why": "A landmark of the close-up and of performance in silent cinema.",
+      "wiki": "The_Passion_of_Joan_of_Arc",
+      "sources": {
+        "tspdt": 19,
+        "sight_sound_2022": 21
+      }
+    },
+    {
+      "id": "f025",
+      "rank": 25,
+      "title": "Sunset Blvd.",
+      "year": 1950,
+      "director": "Billy Wilder",
+      "country": "USA",
+      "language": "English",
+      "runtime": 110,
+      "genres": [
+        "Drama",
+        "Noir"
+      ],
+      "synopsis": "A struggling screenwriter is drawn into the mansion of a forgotten silent-film star in Hollywood.",
+      "why": "The sharpest film about the industry that made it.",
+      "wiki": "Sunset_Boulevard_(film)",
+      "sources": {
+        "tspdt": 41,
+        "sight_sound_2022": 78,
+        "afi_2007": 16
+      }
+    },
+    {
+      "id": "f026",
+      "rank": 26,
+      "title": "Bicycle Thieves",
+      "year": 1948,
+      "director": "Vittorio De Sica",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 89,
+      "genres": [
+        "Drama",
+        "Neorealism"
+      ],
+      "synopsis": "In postwar Rome, a man needs his bicycle to keep a new job. When it is stolen, he and his young son search the city.",
+      "why": "Won the first Sight & Sound poll in 1952 and defined neorealism.",
+      "wiki": "Bicycle_Thieves",
+      "sources": {
+        "tspdt": 15,
+        "sight_sound_2022": 41
+      }
+    },
+    {
+      "id": "f027",
+      "rank": 27,
+      "title": "Mirror",
+      "year": 1975,
+      "director": "Andrei Tarkovsky",
+      "country": "USSR",
+      "language": "Russian",
+      "runtime": 107,
+      "genres": [
+        "Drama",
+        "Experimental"
+      ],
+      "synopsis": "A dying poet recalls his childhood, his mother and the turbulence of the century. Memory, dream and newsreel run together.",
+      "why": "Tarkovsky's most personal film and a model of poetic, nonlinear narrative.",
+      "wiki": "Mirror_(1975_film)",
+      "sources": {
+        "tspdt": 23,
+        "sight_sound_2022": 31
+      }
+    },
+    {
+      "id": "f028",
+      "rank": 28,
+      "title": "L'Atalante",
+      "year": 1934,
+      "director": "Jean Vigo",
+      "country": "France",
+      "language": "French",
+      "runtime": 89,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "synopsis": "A young barge captain marries a village girl and brings her aboard. Life on the canal tests the new marriage.",
+      "why": "Vigo's only feature; a poetic-realist touchstone for later directors.",
+      "wiki": "L'Atalante",
+      "sources": {
+        "tspdt": 21,
+        "sight_sound_2022": 34
+      }
+    },
+    {
+      "id": "f029",
+      "rank": 29,
+      "title": "Breathless",
+      "year": 1960,
+      "director": "Jean-Luc Godard",
+      "country": "France",
+      "language": "French",
+      "runtime": 89,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "A small-time thief on the run in Paris stays close to an American student. The police close in as he tries to collect money owed.",
+      "why": "Launched the French New Wave with jump cuts and street shooting.",
+      "wiki": "Breathless_(1960_film)",
+      "sources": {
+        "tspdt": 18,
+        "sight_sound_2022": 38
+      }
+    },
+    {
+      "id": "f030",
+      "rank": 30,
+      "title": "Au hasard Balthazar",
+      "year": 1966,
+      "director": "Robert Bresson",
+      "country": "France",
+      "language": "French",
+      "runtime": 95,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A donkey passes among the owners of a French village over the course of its life. The film observes the people around it.",
+      "why": "Bresson's austere masterwork; admired by Godard, Tarkovsky and many others.",
+      "wiki": "Au_Hasard_Balthazar",
+      "sources": {
+        "tspdt": 32,
+        "sight_sound_2022": 25
+      }
+    },
+    {
+      "id": "f031",
+      "rank": 31,
+      "title": "Beau travail",
+      "year": 1999,
+      "director": "Claire Denis",
+      "country": "France",
+      "language": "French",
+      "runtime": 92,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A former French Foreign Legion officer remembers his time commanding soldiers in Djibouti and the arrival of a new recruit.",
+      "why": "Ranked in the Sight & Sound top ten in 2022.",
+      "wiki": "Beau_Travail",
+      "sources": {
+        "tspdt": 50,
+        "sight_sound_2022": 7
+      }
+    },
+    {
+      "id": "f032",
+      "rank": 32,
+      "title": "The Night of the Hunter",
+      "year": 1955,
+      "director": "Charles Laughton",
+      "country": "USA",
+      "language": "English",
+      "runtime": 92,
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "synopsis": "A false preacher pursues two children who know where money is hidden. They flee down a river.",
+      "why": "Laughton's only film as director; a cult masterpiece of expressionist style.",
+      "wiki": "The_Night_of_the_Hunter_(film)",
+      "sources": {
+        "tspdt": 36,
+        "sight_sound_2022": 25
+      }
+    },
+    {
+      "id": "f033",
+      "rank": 33,
+      "title": "North by Northwest",
+      "year": 1959,
+      "director": "Alfred Hitchcock",
+      "country": "USA",
+      "language": "English",
+      "runtime": 136,
+      "genres": [
+        "Thriller",
+        "Adventure"
+      ],
+      "synopsis": "An advertising executive is mistaken for a spy and swept into a chase across America.",
+      "why": "The prototype of the wrong-man chase thriller.",
+      "wiki": "North_by_Northwest",
+      "sources": {
+        "tspdt": 55,
+        "sight_sound_2022": 45,
+        "afi_2007": 55
+      }
+    },
+    {
+      "id": "f034",
+      "rank": 34,
+      "title": "Rashomon",
+      "year": 1950,
+      "director": "Akira Kurosawa",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 88,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "A crime in a forest is recounted by several witnesses. Their accounts differ in important ways.",
+      "why": "Introduced Japanese cinema to the West and gave a name to a storytelling method.",
+      "wiki": "Rashomon",
+      "sources": {
+        "tspdt": 25,
+        "sight_sound_2022": 41
+      }
+    },
+    {
+      "id": "f035",
+      "rank": 35,
+      "title": "The Godfather Part II",
+      "year": 1974,
+      "director": "Francis Ford Coppola",
+      "country": "USA",
+      "language": "English",
+      "runtime": 200,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "The film alternates between a young immigrant's rise in early New York and his son's attempts to expand the family business.",
+      "why": "Rare sequel regarded as equal to its original.",
+      "wiki": "The_Godfather_Part_II",
+      "sources": {
+        "tspdt": 30,
+        "sight_sound_2022": 104,
+        "afi_2007": 32
+      }
+    },
+    {
+      "id": "f036",
+      "rank": 36,
+      "title": "The General",
+      "year": 1926,
+      "director": "Buster Keaton, Clyde Bruckman",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 74,
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "synopsis": "During the Civil War, a railroad engineer sets out alone after his stolen locomotive.",
+      "why": "Keaton's masterpiece, noted for its precise stunts and staging.",
+      "wiki": "The_General_(1926_film)",
+      "sources": {
+        "tspdt": 48,
+        "sight_sound_2022": 95,
+        "afi_2007": 18
+      }
+    },
+    {
+      "id": "f037",
+      "rank": 37,
+      "title": "Battleship Potemkin",
+      "year": 1925,
+      "director": "Sergei Eisenstein",
+      "country": "USSR",
+      "language": "Silent",
+      "runtime": 71,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "Sailors aboard a Russian warship grow resentful of their conditions. Tension spreads from the ship to the port city of Odessa.",
+      "why": "The proving ground of montage theory and its influence on editing.",
+      "wiki": "Battleship_Potemkin",
+      "sources": {
+        "tspdt": 20,
+        "sight_sound_2022": 54
+      }
+    },
+    {
+      "id": "f038",
+      "rank": 38,
+      "title": "Raging Bull",
+      "year": 1980,
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "language": "English",
+      "runtime": 129,
+      "genres": [
+        "Drama",
+        "Sports"
+      ],
+      "synopsis": "A middleweight boxer fights his way through the 1940s while his temper strains every relationship he has.",
+      "why": "Voted best film of the 1980s in many critics' polls.",
+      "wiki": "Raging_Bull",
+      "sources": {
+        "tspdt": 35,
+        "sight_sound_2022": 129,
+        "afi_2007": 4
+      }
+    },
+    {
+      "id": "f039",
+      "rank": 39,
+      "title": "Playtime",
+      "year": 1967,
+      "director": "Jacques Tati",
+      "country": "France",
+      "language": "French",
+      "runtime": 108,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "Tourists and businessmen wander through a gleaming modernist Paris, where signs and glass confuse everyone.",
+      "why": "Tati's monumental satire of modern architecture, built on a full-scale set.",
+      "wiki": "Playtime_(film)",
+      "sources": {
+        "tspdt": 45,
+        "sight_sound_2022": 23
+      }
+    },
+    {
+      "id": "f040",
+      "rank": 40,
+      "title": "The 400 Blows",
+      "year": 1959,
+      "director": "François Truffaut",
+      "country": "France",
+      "language": "French",
+      "runtime": 99,
+      "genres": [
+        "Drama",
+        "Coming-of-age"
+      ],
+      "synopsis": "A restless Parisian schoolboy is misunderstood at school and at home. He drifts into small acts of defiance.",
+      "why": "The breakthrough of the French New Wave and a template for the coming-of-age film.",
+      "wiki": "The_400_Blows",
+      "sources": {
+        "tspdt": 27,
+        "sight_sound_2022": 50
+      }
+    },
+    {
+      "id": "f041",
+      "rank": 41,
+      "title": "Late Spring",
+      "year": 1949,
+      "director": "Yasujiro Ozu",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 108,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "synopsis": "A young woman lives contentedly with her widowed father until relatives urge her to marry.",
+      "why": "The first of Ozu's celebrated postwar family dramas.",
+      "wiki": "Late_Spring",
+      "sources": {
+        "tspdt": 53,
+        "sight_sound_2022": 21
+      }
+    },
+    {
+      "id": "f042",
+      "rank": 42,
+      "title": "Ordet",
+      "year": 1955,
+      "director": "Carl Theodor Dreyer",
+      "country": "Denmark",
+      "language": "Danish",
+      "runtime": 125,
+      "genres": [
+        "Drama",
+        "Religion"
+      ],
+      "synopsis": "On a Danish farm, a patriarch's family is divided over faith. One son believes himself to be Jesus Christ.",
+      "why": "A pinnacle of spiritual cinema and long-take staging.",
+      "wiki": "Ordet",
+      "sources": {
+        "tspdt": 34,
+        "sight_sound_2022": 48
+      }
+    },
+    {
+      "id": "f043",
+      "rank": 43,
+      "title": "Barry Lyndon",
+      "year": 1975,
+      "director": "Stanley Kubrick",
+      "country": "UK",
+      "language": "English",
+      "runtime": 183,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "An Irish rogue in the eighteenth century tries to climb from poverty into high society.",
+      "why": "Celebrated for candlelit cinematography and painterly composition.",
+      "wiki": "Barry_Lyndon",
+      "sources": {
+        "tspdt": 43,
+        "sight_sound_2022": 45
+      }
+    },
+    {
+      "id": "f044",
+      "rank": 44,
+      "title": "Blade Runner",
+      "year": 1982,
+      "director": "Ridley Scott",
+      "country": "USA",
+      "language": "English",
+      "runtime": 118,
+      "genres": [
+        "Sci-Fi",
+        "Noir"
+      ],
+      "synopsis": "In a rain-soaked future Los Angeles, a retired officer is pulled back to hunt escaped artificial humans.",
+      "why": "Defined the look of modern science-fiction.",
+      "wiki": "Blade_Runner",
+      "sources": {
+        "tspdt": 39,
+        "sight_sound_2022": 54,
+        "afi_2007": 97
+      }
+    },
+    {
+      "id": "f045",
+      "rank": 45,
+      "title": "M",
+      "year": 1931,
+      "director": "Fritz Lang",
+      "country": "Germany",
+      "language": "German",
+      "runtime": 99,
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "synopsis": "A child killer terrorises Berlin. The police and the city's criminals both begin hunting him.",
+      "why": "An early sound masterpiece that helped define the crime thriller.",
+      "wiki": "M_(1931_film)",
+      "sources": {
+        "tspdt": 51,
+        "sight_sound_2022": 36
+      }
+    },
+    {
+      "id": "f046",
+      "rank": 46,
+      "title": "Lawrence of Arabia",
+      "year": 1962,
+      "director": "David Lean",
+      "country": "UK",
+      "language": "English",
+      "runtime": 216,
+      "genres": [
+        "Epic",
+        "Adventure"
+      ],
+      "synopsis": "A British officer is sent into the Arabian desert during the First World War and becomes involved in an Arab revolt.",
+      "why": "The benchmark of widescreen epic filmmaking.",
+      "wiki": "Lawrence_of_Arabia_(film)",
+      "sources": {
+        "tspdt": 46,
+        "sight_sound_2022": 133,
+        "afi_2007": 7
+      }
+    },
+    {
+      "id": "f047",
+      "rank": 47,
+      "title": "La dolce vita",
+      "year": 1960,
+      "director": "Federico Fellini",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 175,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A journalist drifts through a week of nightlife, scandal and celebrity in Rome. He searches for something more meaningful.",
+      "why": "Won the Palme d'Or and shaped the image of modern Rome and celebrity culture.",
+      "wiki": "La_Dolce_Vita",
+      "sources": {
+        "tspdt": 33,
+        "sight_sound_2022": 60
+      }
+    },
+    {
+      "id": "f048",
+      "rank": 48,
+      "title": "Andrei Rublev",
+      "year": 1966,
+      "director": "Andrei Tarkovsky",
+      "country": "USSR",
+      "language": "Russian",
+      "runtime": 185,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "Episodic scenes follow a medieval icon painter through a violent and turbulent Russia. His faith and his art are repeatedly tested.",
+      "why": "Tarkovsky's epic on the artist's place in history; long suppressed in the USSR.",
+      "wiki": "Andrei_Rublev_(film)",
+      "sources": {
+        "tspdt": 28,
+        "sight_sound_2022": 67
+      }
+    },
+    {
+      "id": "f049",
+      "rank": 49,
+      "title": "The Apartment",
+      "year": 1960,
+      "director": "Billy Wilder",
+      "country": "USA",
+      "language": "English",
+      "runtime": 125,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "An insurance clerk lends his flat to executives for their affairs, hoping to advance his career.",
+      "why": "Won Best Picture and balanced cynicism with warmth.",
+      "wiki": "The_Apartment",
+      "sources": {
+        "tspdt": 54,
+        "sight_sound_2022": 54,
+        "afi_2007": 80
+      }
+    },
+    {
+      "id": "f050",
+      "rank": 50,
+      "title": "Stalker",
+      "year": 1979,
+      "director": "Andrei Tarkovsky",
+      "country": "USSR",
+      "language": "Russian",
+      "runtime": 160,
+      "genres": [
+        "Sci-Fi",
+        "Philosophical"
+      ],
+      "synopsis": "A guide leads a writer and a professor into a forbidden Zone where a room is said to grant wishes.",
+      "why": "One of the most analysed works of slow cinema.",
+      "wiki": "Stalker_(1979_film)",
+      "sources": {
+        "tspdt": 47,
+        "sight_sound_2022": 43
+      }
+    },
+    {
+      "id": "f051",
+      "rank": 51,
+      "title": "Do the Right Thing",
+      "year": 1989,
+      "director": "Spike Lee",
+      "country": "USA",
+      "language": "English",
+      "runtime": 120,
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "synopsis": "On the hottest day of the summer in a Brooklyn neighbourhood, tensions rise around a local pizzeria.",
+      "why": "A landmark of American independent cinema on race and community.",
+      "wiki": "Do_the_Right_Thing",
+      "sources": {
+        "tspdt": 69,
+        "sight_sound_2022": 24,
+        "afi_2007": 96
+      }
+    },
+    {
+      "id": "f052",
+      "rank": 52,
+      "title": "Shoah",
+      "year": 1985,
+      "director": "Claude Lanzmann",
+      "country": "France",
+      "language": "French",
+      "runtime": 566,
+      "genres": [
+        "Documentary",
+        "History"
+      ],
+      "synopsis": "Over more than nine hours, interviews with survivors, witnesses and perpetrators address the Nazi extermination camps.",
+      "why": "A landmark of testimony-based documentary with no archival footage.",
+      "wiki": "Shoah_(film)",
+      "sources": {
+        "tspdt": 64,
+        "sight_sound_2022": 27
+      }
+    },
+    {
+      "id": "f053",
+      "rank": 53,
+      "title": "Contempt",
+      "year": 1963,
+      "director": "Jean-Luc Godard",
+      "country": "France",
+      "language": "French",
+      "runtime": 103,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A screenwriter is hired to rework an adaptation of the Odyssey. His marriage unravels during the production.",
+      "why": "Godard's most lavish film, a meditation on cinema and commerce.",
+      "wiki": "Le_Mépris",
+      "sources": {
+        "tspdt": 44,
+        "sight_sound_2022": 54
+      }
+    },
+    {
+      "id": "f054",
+      "rank": 54,
+      "title": "Modern Times",
+      "year": 1936,
+      "director": "Charles Chaplin",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 89,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A factory worker struggles with machines, joblessness and the Depression, and meets a young woman in similar trouble.",
+      "why": "Chaplin's last appearance as the Tramp and his comment on industrial life.",
+      "wiki": "Modern_Times_(film)",
+      "sources": {
+        "tspdt": 49,
+        "sight_sound_2022": 78,
+        "afi_2007": 78
+      }
+    },
+    {
+      "id": "f055",
+      "rank": 55,
+      "title": "The Battle of Algiers",
+      "year": 1966,
+      "director": "Gillo Pontecorvo",
+      "country": "Italy",
+      "language": "French",
+      "runtime": 121,
+      "genres": [
+        "War",
+        "Drama"
+      ],
+      "synopsis": "In 1950s Algeria, an independence movement and French paratroopers fight a hidden war in the city's streets.",
+      "why": "Shot like newsreel; studied by filmmakers and military academies.",
+      "wiki": "The_Battle_of_Algiers",
+      "sources": {
+        "tspdt": 58,
+        "sight_sound_2022": 45
+      }
+    },
+    {
+      "id": "f056",
+      "rank": 56,
+      "title": "L'avventura",
+      "year": 1960,
+      "director": "Michelangelo Antonioni",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 143,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "During a yacht outing, a woman vanishes on a rocky island. Her lover and her friend search for her and drift together.",
+      "why": "Redefined narrative cinema and booed at Cannes before being celebrated.",
+      "wiki": "L'Avventura",
+      "sources": {
+        "tspdt": 38,
+        "sight_sound_2022": 72
+      }
+    },
+    {
+      "id": "f057",
+      "rank": 57,
+      "title": "GoodFellas",
+      "year": 1990,
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "language": "English",
+      "runtime": 146,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "A boy from Brooklyn grows up around the local mob and rises through its ranks.",
+      "why": "Set a standard for fast, voice-driven crime filmmaking.",
+      "wiki": "Goodfellas",
+      "sources": {
+        "tspdt": 57,
+        "sight_sound_2022": 63,
+        "afi_2007": 92
+      }
+    },
+    {
+      "id": "f058",
+      "rank": 58,
+      "title": "The Third Man",
+      "year": 1949,
+      "director": "Carol Reed",
+      "country": "UK",
+      "language": "English",
+      "runtime": 104,
+      "genres": [
+        "Noir",
+        "Mystery"
+      ],
+      "synopsis": "An American writer arrives in postwar Vienna to meet a friend and finds the friend has died in suspicious circumstances.",
+      "why": "Famed for its angled camerawork and zither score.",
+      "wiki": "The_Third_Man",
+      "sources": {
+        "tspdt": 52,
+        "sight_sound_2022": 63
+      }
+    },
+    {
+      "id": "f059",
+      "rank": 59,
+      "title": "Meshes of the Afternoon",
+      "year": 1943,
+      "director": "Maya Deren, Alexander Hammid",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 15,
+      "genres": [
+        "Experimental"
+      ],
+      "synopsis": "A woman's afternoon repeats in a dreamlike loop.",
+      "why": "Founding work of the American avant-garde.",
+      "wiki": "Meshes_of_the_Afternoon",
+      "sources": {
+        "tspdt": 98,
+        "sight_sound_2022": 16
+      }
+    },
+    {
+      "id": "f060",
+      "rank": 60,
+      "title": "It's a Wonderful Life",
+      "year": 1946,
+      "director": "Frank Capra",
+      "country": "USA",
+      "language": "English",
+      "runtime": 129,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "A small-town man's life is reviewed on a night when everything seems to have gone wrong.",
+      "why": "Gained its classic status through decades of rediscovery.",
+      "wiki": "It's_a_Wonderful_Life",
+      "sources": {
+        "tspdt": 76,
+        "sight_sound_2022": 133,
+        "afi_2007": 20
+      }
+    },
+    {
+      "id": "f061",
+      "rank": 61,
+      "title": "Chinatown",
+      "year": 1974,
+      "director": "Roman Polanski",
+      "country": "USA",
+      "language": "English",
+      "runtime": 131,
+      "genres": [
+        "Noir",
+        "Mystery"
+      ],
+      "synopsis": "A private detective in 1930s Los Angeles takes a routine case that leads into the city's water politics.",
+      "why": "The model neo-noir, often cited for its screenplay.",
+      "wiki": "Chinatown_(1974_film)",
+      "sources": {
+        "tspdt": 66,
+        "sight_sound_2022": 146,
+        "afi_2007": 21
+      }
+    },
+    {
+      "id": "f062",
+      "rank": 62,
+      "title": "Metropolis",
+      "year": 1927,
+      "director": "Fritz Lang",
+      "country": "Germany",
+      "language": "Silent",
+      "runtime": 153,
+      "genres": [
+        "Sci-Fi"
+      ],
+      "synopsis": "In a vertical city, the son of the ruler befriends a woman who speaks for the workers beneath.",
+      "why": "Defined the visual language of cinematic science fiction.",
+      "wiki": "Metropolis_(1927_film)",
+      "sources": {
+        "tspdt": 70,
+        "sight_sound_2022": 67
+      }
+    },
+    {
+      "id": "f063",
+      "rank": 63,
+      "title": "Journey to Italy",
+      "year": 1954,
+      "director": "Roberto Rossellini",
+      "country": "Italy",
+      "language": "English",
+      "runtime": 97,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "An English couple travel to Naples to sell a property. Their marriage shows strain in unfamiliar surroundings.",
+      "why": "A major influence on the French New Wave and modern cinema.",
+      "wiki": "Journey_to_Italy_(film)",
+      "sources": {
+        "tspdt": 67,
+        "sight_sound_2022": 72
+      }
+    },
+    {
+      "id": "f064",
+      "rank": 64,
+      "title": "Ugetsu",
+      "year": 1953,
+      "director": "Kenji Mizoguchi",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 96,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "In civil-war Japan, two villagers leave their wives to pursue wealth and glory, and encounter strange events.",
+      "why": "Brought Mizoguchi's ghost-story artistry to the West.",
+      "wiki": "Ugetsu",
+      "sources": {
+        "tspdt": 56,
+        "sight_sound_2022": 90
+      }
+    },
+    {
+      "id": "f065",
+      "rank": 65,
+      "title": "Touch of Evil",
+      "year": 1958,
+      "director": "Orson Welles",
+      "country": "USA",
+      "language": "English",
+      "runtime": 108,
+      "genres": [
+        "Noir",
+        "Crime"
+      ],
+      "synopsis": "A Mexican narcotics officer and his wife cross paths with a powerful police captain at the U.S. border after a car explosion.",
+      "why": "Opens with one of cinema's most celebrated tracking shots.",
+      "wiki": "Touch_of_Evil",
+      "sources": {
+        "tspdt": 42,
+        "sight_sound_2022": 108
+      }
+    },
+    {
+      "id": "f066",
+      "rank": 66,
+      "title": "Jaws",
+      "year": 1975,
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "language": "English",
+      "runtime": 124,
+      "genres": [
+        "Thriller",
+        "Adventure"
+      ],
+      "synopsis": "A police chief, a scientist and a fisherman set out to stop a shark terrorising a summer resort town.",
+      "why": "The first modern blockbuster.",
+      "wiki": "Jaws_(film)",
+      "sources": {
+        "tspdt": 80,
+        "sight_sound_2022": 104,
+        "afi_2007": 56
+      }
+    },
+    {
+      "id": "f067",
+      "rank": 67,
+      "title": "The Wizard of Oz",
+      "year": 1939,
+      "director": "Victor Fleming",
+      "country": "USA",
+      "language": "English",
+      "runtime": 101,
+      "genres": [
+        "Fantasy",
+        "Musical"
+      ],
+      "synopsis": "A Kansas girl is swept to a magical land and seeks a way home.",
+      "why": "Technicolor cornerstone of American culture.",
+      "wiki": "The_Wizard_of_Oz",
+      "sources": {
+        "tspdt": 113,
+        "sight_sound_2022": 108,
+        "afi_2007": 10
+      }
+    },
+    {
+      "id": "f068",
+      "rank": 68,
+      "title": "Pierrot le fou",
+      "year": 1965,
+      "director": "Jean-Luc Godard",
+      "country": "France",
+      "language": "French",
+      "runtime": 110,
+      "genres": [
+        "Crime",
+        "Romance"
+      ],
+      "synopsis": "A bored husband runs away from Paris with his former babysitter and heads south, pursued by trouble.",
+      "why": "Godard's most colourful and freewheeling New Wave film.",
+      "wiki": "Pierrot_le_Fou",
+      "sources": {
+        "tspdt": 68,
+        "sight_sound_2022": 84
+      }
+    },
+    {
+      "id": "f069",
+      "rank": 69,
+      "title": "Once Upon a Time in the West",
+      "year": 1968,
+      "director": "Sergio Leone",
+      "country": "Italy",
+      "language": "English",
+      "runtime": 165,
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "A widow arrives in a frontier town just as a railroad empire and a hired gunman converge on her land.",
+      "why": "The grand opera of the spaghetti western.",
+      "wiki": "Once_Upon_a_Time_in_the_West",
+      "sources": {
+        "tspdt": 65,
+        "sight_sound_2022": 95
+      }
+    },
+    {
+      "id": "f070",
+      "rank": 70,
+      "title": "Rio Bravo",
+      "year": 1959,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 141,
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "A sheriff holds a dangerous prisoner in jail while a small group of allies waits for the prisoner's powerful brother.",
+      "why": "Hawks's relaxed ensemble western, beloved by directors such as Tarantino and Carpenter.",
+      "wiki": "Rio_Bravo_(film)",
+      "sources": {
+        "tspdt": 61,
+        "sight_sound_2022": 101
+      }
+    },
+    {
+      "id": "f071",
+      "rank": 71,
+      "title": "Sans soleil",
+      "year": 1983,
+      "director": "Chris Marker",
+      "country": "France",
+      "language": "French",
+      "runtime": 100,
+      "genres": [
+        "Documentary",
+        "Essay"
+      ],
+      "synopsis": "Letters from a travelling cameraman reflect on memory, Japan and Africa.",
+      "why": "Cornerstone of the essay film.",
+      "wiki": "Sans_soleil",
+      "sources": {
+        "tspdt": 94,
+        "sight_sound_2022": 59
+      }
+    },
+    {
+      "id": "f072",
+      "rank": 72,
+      "title": "Sansho the Bailiff",
+      "year": 1954,
+      "director": "Kenji Mizoguchi",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 125,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "In feudal Japan, two children are separated from their mother and sold into servitude.",
+      "why": "A pinnacle of Mizoguchi's long-take style.",
+      "wiki": "Sansho_the_Bailiff",
+      "sources": {
+        "tspdt": 84,
+        "sight_sound_2022": 75
+      }
+    },
+    {
+      "id": "f073",
+      "rank": 73,
+      "title": "Sherlock Jr.",
+      "year": 1924,
+      "director": "Buster Keaton",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 45,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A projectionist dreams himself into the film he is screening.",
+      "why": "Keaton's inventive film-about-film.",
+      "wiki": "Sherlock_Jr.",
+      "sources": {
+        "tspdt": 102,
+        "sight_sound_2022": 54
+      }
+    },
+    {
+      "id": "f074",
+      "rank": 74,
+      "title": "The Leopard",
+      "year": 1963,
+      "director": "Luchino Visconti",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 186,
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "A Sicilian prince watches his aristocratic world shift during the unification of Italy.",
+      "why": "A sumptuous study of social change; Palme d'Or winner.",
+      "wiki": "The_Leopard_(1963_film)",
+      "sources": {
+        "tspdt": 74,
+        "sight_sound_2022": 90
+      }
+    },
+    {
+      "id": "f075",
+      "rank": 75,
+      "title": "Wild Strawberries",
+      "year": 1957,
+      "director": "Ingmar Bergman",
+      "country": "Sweden",
+      "language": "Swedish",
+      "runtime": 90,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "An elderly professor travels by car to receive an honour. Along the way he revisits scenes from his past.",
+      "why": "One of Bergman's most humane works and a model for reflective road films.",
+      "wiki": "Wild_Strawberries_(film)",
+      "sources": {
+        "tspdt": 60,
+        "sight_sound_2022": 108
+      }
+    },
+    {
+      "id": "f076",
+      "rank": 76,
+      "title": "Nashville",
+      "year": 1975,
+      "director": "Robert Altman",
+      "country": "USA",
+      "language": "English",
+      "runtime": 160,
+      "genres": [
+        "Drama",
+        "Musical"
+      ],
+      "synopsis": "Twenty-four characters converge around a political campaign and the country-music scene in Nashville.",
+      "why": "The defining ensemble film of the 1970s.",
+      "wiki": "Nashville_(film)",
+      "sources": {
+        "tspdt": 88,
+        "sight_sound_2022": 114,
+        "afi_2007": 59
+      }
+    },
+    {
+      "id": "f077",
+      "rank": 77,
+      "title": "Ali: Fear Eats the Soul",
+      "year": 1974,
+      "director": "Rainer Werner Fassbinder",
+      "country": "West Germany",
+      "language": "German",
+      "runtime": 94,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "An older cleaning woman and a younger Moroccan worker meet and marry in Munich.",
+      "why": "Fassbinder's best-known film.",
+      "wiki": "Ali:_Fear_Eats_the_Soul",
+      "sources": {
+        "tspdt": 105,
+        "sight_sound_2022": 52
+      }
+    },
+    {
+      "id": "f078",
+      "rank": 78,
+      "title": "Blue Velvet",
+      "year": 1986,
+      "director": "David Lynch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 120,
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "synopsis": "A young man finds a severed ear in a field, and he starts investigating a singer in a nearby town.",
+      "why": "Lynch's breakthrough into suburban surrealism.",
+      "wiki": "Blue_Velvet_(film)",
+      "sources": {
+        "tspdt": 83,
+        "sight_sound_2022": 84
+      }
+    },
+    {
+      "id": "f079",
+      "rank": 79,
+      "title": "The Shining",
+      "year": 1980,
+      "director": "Stanley Kubrick",
+      "country": "UK",
+      "language": "English",
+      "runtime": 142,
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "A writer takes a winter caretaker job at an isolated hotel with his wife and young son.",
+      "why": "Kubrick's horror landmark, constantly re-evaluated.",
+      "wiki": "The_Shining_(film)",
+      "sources": {
+        "tspdt": 81,
+        "sight_sound_2022": 88
+      }
+    },
+    {
+      "id": "f080",
+      "rank": 80,
+      "title": "The Piano",
+      "year": 1993,
+      "director": "Jane Campion",
+      "country": "New Zealand",
+      "language": "English",
+      "runtime": 121,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A mute pianist and her daughter arrive in 1850s New Zealand for an arranged marriage.",
+      "why": "First Palme d'Or for a woman director.",
+      "wiki": "The_Piano",
+      "sources": {
+        "tspdt": 114,
+        "sight_sound_2022": 50
+      }
+    },
+    {
+      "id": "f081",
+      "rank": 81,
+      "title": "A Man Escaped",
+      "year": 1956,
+      "director": "Robert Bresson",
+      "country": "France",
+      "language": "French",
+      "runtime": 102,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "synopsis": "A French Resistance fighter held by the Germans prepares to escape from prison.",
+      "why": "Bresson's pared-down study of process and grace.",
+      "wiki": "A_Man_Escaped",
+      "sources": {
+        "tspdt": 82,
+        "sight_sound_2022": 95
+      }
+    },
+    {
+      "id": "f082",
+      "rank": 82,
+      "title": "A Woman Under the Influence",
+      "year": 1974,
+      "director": "John Cassavetes",
+      "country": "USA",
+      "language": "English",
+      "runtime": 155,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A devoted housewife's unpredictable behaviour strains her marriage and family.",
+      "why": "Cassavetes's landmark of improvisational, performance-driven cinema.",
+      "wiki": "A_Woman_Under_the_Influence",
+      "sources": {
+        "tspdt": 71,
+        "sight_sound_2022": 114
+      }
+    },
+    {
+      "id": "f083",
+      "rank": 83,
+      "title": "Cleo from 5 to 7",
+      "year": 1962,
+      "director": "Agnes Varda",
+      "country": "France",
+      "language": "French",
+      "runtime": 90,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A singer spends two hours wandering Paris while she waits for the results of a medical test. The city, and the people she meets in it, slowly change how she sees her own fear.",
+      "why": "A landmark of the French New Wave's Left Bank strand, built almost entirely in real time.",
+      "wiki": "Cl%C3%A9o_from_5_to_7",
+      "sources": {
+        "sight_sound_2022": 14
+      }
+    },
+    {
+      "id": "f084",
+      "rank": 84,
+      "title": "Fanny and Alexander",
+      "year": 1982,
+      "director": "Ingmar Bergman",
+      "country": "Sweden",
+      "language": "Swedish",
+      "runtime": 189,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "synopsis": "Two children in an early-twentieth-century Swedish family live through a change that brings them under a stern new guardian.",
+      "why": "Bergman's summation of his themes, told on a lavish scale.",
+      "wiki": "Fanny_and_Alexander",
+      "sources": {
+        "tspdt": 62,
+        "sight_sound_2022": 129
+      }
+    },
+    {
+      "id": "f085",
+      "rank": 85,
+      "title": "Daisies",
+      "year": 1966,
+      "director": "Věra Chytilová",
+      "country": "Czechoslovakia",
+      "language": "Czech",
+      "runtime": 76,
+      "genres": [
+        "Comedy",
+        "Experimental"
+      ],
+      "synopsis": "Two young women decide the world is spoiled and misbehave.",
+      "why": "Anarchic landmark of the Czechoslovak New Wave.",
+      "wiki": "Daisies",
+      "sources": {
+        "tspdt": 144,
+        "sight_sound_2022": 28
+      }
+    },
+    {
+      "id": "f086",
+      "rank": 86,
+      "title": "The Wild Bunch",
+      "year": 1969,
+      "director": "Sam Peckinpah",
+      "country": "USA",
+      "language": "English",
+      "runtime": 135,
+      "genres": [
+        "Western",
+        "Action"
+      ],
+      "synopsis": "Ageing outlaws plan a last job in 1913 Texas as the old West fades.",
+      "why": "Changed the depiction of screen violence and the revisionist western.",
+      "wiki": "The_Wild_Bunch",
+      "sources": {
+        "tspdt": 77,
+        "sight_sound_2022": 136,
+        "afi_2007": 79
+      }
+    },
+    {
+      "id": "f087",
+      "rank": 87,
+      "title": "Dr. Strangelove",
+      "year": 1964,
+      "director": "Stanley Kubrick",
+      "country": "UK",
+      "language": "English",
+      "runtime": 93,
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "synopsis": "A rogue American general orders a nuclear attack. In the war room, officials scramble to stop it.",
+      "why": "The defining Cold War satire.",
+      "wiki": "Dr._Strangelove",
+      "sources": {
+        "tspdt": 63,
+        "sight_sound_2022": 196,
+        "afi_2007": 39
+      }
+    },
+    {
+      "id": "f088",
+      "rank": 88,
+      "title": "Madame de…",
+      "year": 1953,
+      "director": "Max Ophüls",
+      "country": "France",
+      "language": "French",
+      "runtime": 105,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A pair of earrings passes from hand to hand through a society woman's life.",
+      "why": "Ophüls's gliding-camera high point.",
+      "wiki": "Madame_de…",
+      "sources": {
+        "tspdt": 101,
+        "sight_sound_2022": 90
+      }
+    },
+    {
+      "id": "f089",
+      "rank": 89,
+      "title": "The Man Who Shot Liberty Valance",
+      "year": 1962,
+      "director": "John Ford",
+      "country": "USA",
+      "language": "English",
+      "runtime": 119,
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "A senator returns to a small town for a funeral and recounts how his reputation began.",
+      "why": "Ford's reflection on myth-making in the West.",
+      "wiki": "The_Man_Who_Shot_Liberty_Valance",
+      "sources": {
+        "tspdt": 87,
+        "sight_sound_2022": 108
+      }
+    },
+    {
+      "id": "f090",
+      "rank": 90,
+      "title": "The Red Shoes",
+      "year": 1948,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 133,
+      "genres": [
+        "Drama",
+        "Musical"
+      ],
+      "synopsis": "A young dancer joins a ballet company run by a demanding impresario.",
+      "why": "Technicolor ballet masterpiece.",
+      "wiki": "The_Red_Shoes",
+      "sources": {
+        "tspdt": 119,
+        "sight_sound_2022": 67
+      }
+    },
+    {
+      "id": "f091",
+      "rank": 91,
+      "title": "The Grand Illusion",
+      "year": 1937,
+      "director": "Jean Renoir",
+      "country": "France",
+      "language": "French",
+      "runtime": 117,
+      "genres": [
+        "War",
+        "Drama"
+      ],
+      "synopsis": "French officers held in a German prison camp during the First World War plan escapes while forming bonds with their captors.",
+      "why": "A humanist landmark; the first foreign-language film nominated for Best Picture.",
+      "wiki": "La_Grande_Illusion",
+      "sources": {
+        "tspdt": 59,
+        "sight_sound_2022": 146
+      }
+    },
+    {
+      "id": "f092",
+      "rank": 92,
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "director": "Quentin Tarantino",
+      "country": "USA",
+      "language": "English",
+      "runtime": 154,
+      "genres": [
+        "Crime"
+      ],
+      "synopsis": "Intertwined stories of hitmen, a boxer and a gangster's wife unfold in Los Angeles.",
+      "why": "Reshaped 1990s independent film and nonlinear storytelling.",
+      "wiki": "Pulp_Fiction",
+      "sources": {
+        "tspdt": 78,
+        "sight_sound_2022": 129,
+        "afi_2007": 94
+      }
+    },
+    {
+      "id": "f093",
+      "rank": 93,
+      "title": "Portrait of a Lady on Fire",
+      "year": 2019,
+      "director": "Celine Sciamma",
+      "country": "France",
+      "language": "French",
+      "runtime": 122,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "An 18th-century painter is secretly hired to paint a portrait of a reluctant bride-to-be. Over the days they spend together on an isolated island, painter and subject grow close.",
+      "why": "A precise, painterly study of looking and being looked at, widely cited as the century's highest-ranked new film in the 2022 Sight & Sound poll.",
+      "wiki": "Portrait_of_a_Lady_on_Fire",
+      "sources": {
+        "sight_sound_2022": 30
+      }
+    },
+    {
+      "id": "f094",
+      "rank": 94,
+      "title": "The Spirit of the Beehive",
+      "year": 1973,
+      "director": "Víctor Erice",
+      "country": "Spain",
+      "language": "Spanish",
+      "runtime": 95,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A girl in 1940s Spain is haunted after a village screening of Frankenstein.",
+      "why": "Touchstone of Spanish cinema.",
+      "wiki": "The_Spirit_of_the_Beehive",
+      "sources": {
+        "tspdt": 109,
+        "sight_sound_2022": 84
+      }
+    },
+    {
+      "id": "f095",
+      "rank": 95,
+      "title": "A Brighter Summer Day",
+      "year": 1991,
+      "director": "Edward Yang",
+      "country": "Taiwan",
+      "language": "Mandarin",
+      "runtime": 237,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "synopsis": "A teenager in 1960s Taipei is drawn into street gangs.",
+      "why": "Epic of the Taiwanese New Wave.",
+      "wiki": "A_Brighter_Summer_Day",
+      "sources": {
+        "tspdt": 115,
+        "sight_sound_2022": 78
+      }
+    },
+    {
+      "id": "f096",
+      "rank": 96,
+      "title": "The Conformist",
+      "year": 1970,
+      "director": "Bernardo Bertolucci",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 107,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "In 1930s Italy, a man seeking normality takes a government job that sends him abroad.",
+      "why": "Famous for its cinematography, which influenced the New Hollywood generation.",
+      "wiki": "The_Conformist_(film)",
+      "sources": {
+        "tspdt": 85,
+        "sight_sound_2022": 118
+      }
+    },
+    {
+      "id": "f097",
+      "rank": 97,
+      "title": "Children of Paradise",
+      "year": 1945,
+      "director": "Marcel Carné",
+      "country": "France",
+      "language": "French",
+      "runtime": 195,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "synopsis": "In nineteenth-century Paris, a mime, an actor and a criminal all love the same woman.",
+      "why": "Made under Occupation conditions; a celebrated epic of French cinema.",
+      "wiki": "Children_of_Paradise",
+      "sources": {
+        "tspdt": 72,
+        "sight_sound_2022": 136
+      }
+    },
+    {
+      "id": "f098",
+      "rank": 98,
+      "title": "The Mother and the Whore",
+      "year": 1973,
+      "director": "Jean Eustache",
+      "country": "France",
+      "language": "French",
+      "runtime": 210,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "An idle young man juggles two women in post-1968 Paris.",
+      "why": "Defining talk-driven French film.",
+      "wiki": "The_Mother_and_the_Whore",
+      "sources": {
+        "tspdt": 99,
+        "sight_sound_2022": 104
+      }
+    },
+    {
+      "id": "f099",
+      "rank": 99,
+      "title": "Wanda",
+      "year": 1970,
+      "director": "Barbara Loden",
+      "country": "USA",
+      "language": "English",
+      "runtime": 105,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A drifting woman in Pennsylvania leaves her family and joins a petty criminal.",
+      "why": "Landmark of American independent film.",
+      "wiki": "Wanda",
+      "sources": {
+        "tspdt": 145,
+        "sight_sound_2022": 48
+      }
+    },
+    {
+      "id": "f100",
+      "rank": 100,
+      "title": "Killer of Sheep",
+      "year": 1977,
+      "director": "Charles Burnett",
+      "country": "USA",
+      "language": "English",
+      "runtime": 80,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A slaughterhouse worker in 1970s Watts moves through his days numbed by repetitive, grim labor, while scenes of neighborhood children at play unfold around him.",
+      "why": "Shot on a shoestring over several years, it became a touchstone of independent Black American cinema and the L.A. Rebellion movement.",
+      "wiki": "Killer_of_Sheep",
+      "sources": {
+        "sight_sound_2022": 43
+      }
+    },
+    {
+      "id": "f101",
+      "rank": 101,
+      "title": "To Be or Not to Be",
+      "year": 1942,
+      "director": "Ernst Lubitsch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 99,
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "synopsis": "A Warsaw theatre troupe uses its disguises against Nazi occupiers.",
+      "why": "Black comedy far ahead of its time.",
+      "wiki": "To_Be_or_Not_to_Be",
+      "sources": {
+        "tspdt": 97,
+        "sight_sound_2022": 114
+      }
+    },
+    {
+      "id": "f102",
+      "rank": 102,
+      "title": "Yi Yi",
+      "year": 2000,
+      "director": "Edward Yang",
+      "country": "Taiwan",
+      "language": "Mandarin",
+      "runtime": 173,
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "synopsis": "A Taipei family faces a series of life changes.",
+      "why": "Top-ranked 21st-century film in several polls.",
+      "wiki": "Yi_Yi",
+      "sources": {
+        "tspdt": 116,
+        "sight_sound_2022": 90
+      }
+    },
+    {
+      "id": "f103",
+      "rank": 103,
+      "title": "Spirited Away",
+      "year": 2001,
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 124,
+      "genres": [
+        "Animation",
+        "Fantasy"
+      ],
+      "synopsis": "A girl enters a spirit world's bathhouse to save her parents.",
+      "why": "Won the Oscar and a Golden Bear.",
+      "wiki": "Spirited_Away",
+      "sources": {
+        "tspdt": 129,
+        "sight_sound_2022": 75
+      }
+    },
+    {
+      "id": "f104",
+      "rank": 104,
+      "title": "Come and See",
+      "year": 1985,
+      "director": "Elem Klimov",
+      "country": "USSR",
+      "language": "Russian",
+      "runtime": 142,
+      "genres": [
+        "War",
+        "Drama"
+      ],
+      "synopsis": "A Belarusian teenager joins the partisans in 1943.",
+      "why": "Among the most harrowing war films ever made.",
+      "wiki": "Come_and_See",
+      "sources": {
+        "tspdt": 107,
+        "sight_sound_2022": 104
+      }
+    },
+    {
+      "id": "f105",
+      "rank": 105,
+      "title": "A Matter of Life and Death",
+      "year": 1946,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 104,
+      "genres": [
+        "Fantasy",
+        "Romance"
+      ],
+      "synopsis": "An RAF pilot who cheated death argues for his life.",
+      "why": "Postwar fantasy in colour and monochrome.",
+      "wiki": "A_Matter_of_Life_and_Death",
+      "sources": {
+        "tspdt": 130,
+        "sight_sound_2022": 78
+      }
+    },
+    {
+      "id": "f106",
+      "rank": 106,
+      "title": "News from Home",
+      "year": 1976,
+      "director": "Chantal Akerman",
+      "country": "Belgium",
+      "language": "French",
+      "runtime": 85,
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "Long static shots of New York City streets and subways play beneath a voiceover reading letters from the filmmaker's mother in Belgium.",
+      "why": "A structural essay-film pairing of image and voice that extends Akerman's interest in duration and distance.",
+      "wiki": "News_from_Home",
+      "sources": {
+        "sight_sound_2022": 52
+      }
+    },
+    {
+      "id": "f107",
+      "rank": 107,
+      "title": "The Seventh Seal",
+      "year": 1957,
+      "director": "Ingmar Bergman",
+      "country": "Sweden",
+      "language": "Swedish",
+      "runtime": 96,
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "A knight returning from the Crusades meets Death and challenges him to a game of chess.",
+      "why": "Brought art-house cinema to a wide international audience.",
+      "wiki": "The_Seventh_Seal",
+      "sources": {
+        "tspdt": 86,
+        "sight_sound_2022": 136
+      }
+    },
+    {
+      "id": "f108",
+      "rank": 108,
+      "title": "Imitation of Life",
+      "year": 1959,
+      "director": "Douglas Sirk",
+      "country": "USA",
+      "language": "English",
+      "runtime": 124,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Two single mothers, one white and one Black, raise their daughters together.",
+      "why": "Sirk's melodrama on race and ambition.",
+      "wiki": "Imitation_of_Life",
+      "sources": {
+        "tspdt": 136,
+        "sight_sound_2022": 75
+      }
+    },
+    {
+      "id": "f109",
+      "rank": 109,
+      "title": "Pickpocket",
+      "year": 1959,
+      "director": "Robert Bresson",
+      "country": "France",
+      "language": "French",
+      "runtime": 75,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "A young Parisian drifts into petty theft as a test of himself.",
+      "why": "Bresson's spare study of compulsion.",
+      "wiki": "Pickpocket",
+      "sources": {
+        "tspdt": 90,
+        "sight_sound_2022": 136
+      }
+    },
+    {
+      "id": "f110",
+      "rank": 110,
+      "title": "Bringing Up Baby",
+      "year": 1938,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 102,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A palaeontologist's life is upended by a madcap heiress and a pet leopard.",
+      "why": "Quintessential screwball comedy.",
+      "wiki": "Bringing_Up_Baby",
+      "sources": {
+        "tspdt": 122,
+        "sight_sound_2022": 108,
+        "afi_2007": 88
+      }
+    },
+    {
+      "id": "f111",
+      "rank": 111,
+      "title": "Amarcord",
+      "year": 1973,
+      "director": "Federico Fellini",
+      "country": "Italy",
+      "language": "Italian",
+      "runtime": 127,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "A year in a seaside Italian town of the 1930s is seen through the memories of its residents.",
+      "why": "Fellini's affectionate memory film about fascist-era provincial life.",
+      "wiki": "Amarcord",
+      "sources": {
+        "tspdt": 75,
+        "sight_sound_2022": 157
+      }
+    },
+    {
+      "id": "f112",
+      "rank": 112,
+      "title": "Daughters of the Dust",
+      "year": 1991,
+      "director": "Julie Dash",
+      "country": "USA",
+      "language": "English",
+      "runtime": 112,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "On a Sea Island off the Georgia coast in 1902, a Gullah family debates whether to migrate north, torn between the pull of the mainland and the ground their ancestors are buried in.",
+      "why": "The first feature by a Black woman director to receive wide U.S. theatrical release, and a formally radical, non-linear family portrait.",
+      "wiki": "Daughters_of_the_Dust",
+      "sources": {
+        "sight_sound_2022": 60
+      }
+    },
+    {
+      "id": "f113",
+      "rank": 113,
+      "title": "Moonlight",
+      "year": 2016,
+      "director": "Barry Jenkins",
+      "country": "USA",
+      "language": "English",
+      "runtime": 111,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A boy growing up in a rough Miami neighborhood is shown at three stages of his life, as he comes to terms with his sexuality and his place in the world around him.",
+      "why": "Told in triptych, with a tactile, color-saturated visual style; won the Academy Award for Best Picture.",
+      "wiki": "Moonlight_(2016_film)",
+      "sources": {
+        "sight_sound_2022": 60
+      }
+    },
+    {
+      "id": "f114",
+      "rank": 114,
+      "title": "Aguirre, the Wrath of God",
+      "year": 1972,
+      "director": "Werner Herzog",
+      "country": "West Germany",
+      "language": "German",
+      "runtime": 94,
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "synopsis": "Spanish conquistadors descend the Amazon searching for El Dorado.",
+      "why": "Defining film of New German Cinema.",
+      "wiki": "Aguirre,_the_Wrath_of_God",
+      "sources": {
+        "tspdt": 106,
+        "sight_sound_2022": 118
+      }
+    },
+    {
+      "id": "f115",
+      "rank": 115,
+      "title": "Gertrud",
+      "year": 1964,
+      "director": "Carl Theodor Dreyer",
+      "country": "Denmark",
+      "language": "Danish",
+      "runtime": 116,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A woman in early-1900s Copenhagen demands a love without compromise.",
+      "why": "Dreyer's austere final film.",
+      "wiki": "Gertrud",
+      "sources": {
+        "tspdt": 93,
+        "sight_sound_2022": 136
+      }
+    },
+    {
+      "id": "f116",
+      "rank": 116,
+      "title": "La Jetee",
+      "year": 1962,
+      "director": "Chris Marker",
+      "country": "France",
+      "language": "French",
+      "runtime": 28,
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "synopsis": "After a nuclear war has devastated the world, an underground experiment sends a prisoner back through his own memory in search of a way to save the future.",
+      "why": "A science-fiction film told almost entirely in still photographs; its central image later inspired Terry Gilliam's 12 Monkeys.",
+      "wiki": "La_Jet%C3%A9e",
+      "sources": {
+        "sight_sound_2022": 67
+      }
+    },
+    {
+      "id": "f117",
+      "rank": 117,
+      "title": "The Gleaners and I",
+      "year": 2000,
+      "director": "Agnes Varda",
+      "country": "France",
+      "language": "French",
+      "runtime": 82,
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "A filmmaker travels the French countryside and cities meeting people who gather what others throw away, from leftover crops to discarded furniture, and turns her camera on her own aging hands along the way.",
+      "why": "A warm, self-reflexive documentary essay that treats the act of filming as its own kind of gleaning.",
+      "wiki": "The_Gleaners_%26_I",
+      "sources": {
+        "sight_sound_2022": 67
+      }
+    },
+    {
+      "id": "f118",
+      "rank": 118,
+      "title": "Don't Look Now",
+      "year": 1973,
+      "director": "Nicolas Roeg",
+      "country": "UK",
+      "language": "English",
+      "runtime": 110,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "A grieving couple in Venice meet a psychic who claims to see their daughter.",
+      "why": "Landmark of fragmented editing.",
+      "wiki": "Don't_Look_Now",
+      "sources": {
+        "tspdt": 117,
+        "sight_sound_2022": 114
+      }
+    },
+    {
+      "id": "f119",
+      "rank": 119,
+      "title": "My Neighbor Totoro",
+      "year": 1988,
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 86,
+      "genres": [
+        "Animation",
+        "Family"
+      ],
+      "synopsis": "Two young sisters move with their father to a house in the countryside while their mother recovers from illness in hospital, and discover gentle forest spirits living nearby.",
+      "why": "A gentle, unhurried animated film that became a defining work of Studio Ghibli and a symbol of the studio itself.",
+      "wiki": "My_Neighbor_Totoro",
+      "sources": {
+        "sight_sound_2022": 72
+      }
+    },
+    {
+      "id": "f120",
+      "rank": 120,
+      "title": "Celine and Julie Go Boating",
+      "year": 1974,
+      "director": "Jacques Rivette",
+      "country": "France",
+      "language": "French",
+      "runtime": 193,
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "synopsis": "A librarian and a magician strike up a friendship in Paris, and together they begin slipping into a haunted house where the same melodramatic story keeps replaying itself.",
+      "why": "A playful, three-hour plunge into storytelling and performance that mixes slapstick with genuine mystery.",
+      "wiki": "Celine_and_Julie_Go_Boating",
+      "sources": {
+        "sight_sound_2022": 78
+      }
+    },
+    {
+      "id": "f121",
+      "rank": 121,
+      "title": "Satantango",
+      "year": 1994,
+      "director": "Bela Tarr",
+      "country": "Hungary",
+      "language": "Hungarian",
+      "runtime": 450,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "On a collapsing collective farm, the residents wait out a long rainy season for the return of a man they believe will save them, unaware of what he actually intends.",
+      "why": "A seven-and-a-half-hour film built from extremely long takes, widely regarded as a defining work of slow cinema.",
+      "wiki": "S%C3%A1tht%C3%A1ngo",
+      "sources": {
+        "sight_sound_2022": 78
+      }
+    },
+    {
+      "id": "f122",
+      "rank": 122,
+      "title": "Histoire(s) du cinema",
+      "year": 1988,
+      "director": "Jean-Luc Godard",
+      "country": "France",
+      "language": "French",
+      "runtime": 266,
+      "genres": [
+        "Documentary",
+        "Essay Film"
+      ],
+      "synopsis": "Across eight chapters made over more than a decade, a filmmaker assembles a personal history of cinema out of film clips, paintings, music, and his own commentary.",
+      "why": "A sprawling video-essay project that treats film history itself as raw material for montage.",
+      "wiki": "Histoire(s)_du_Cin%C3%A9ma",
+      "sources": {
+        "sight_sound_2022": 84
+      }
+    },
+    {
+      "id": "f123",
+      "rank": 123,
+      "title": "Chungking Express",
+      "year": 1994,
+      "director": "Wong Kar-wai",
+      "country": "Hong Kong",
+      "language": "Cantonese",
+      "runtime": 102,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "Two lonely Hong Kong policemen, in loosely connected stories, drift through late-night diners and crowded streets after being left by the women they loved.",
+      "why": "Shot quickly between larger productions, it crystallized Wong's handheld, pop-scored romantic style.",
+      "wiki": "Chungking_Express",
+      "sources": {
+        "sight_sound_2022": 88
+      }
+    },
+    {
+      "id": "f124",
+      "rank": 124,
+      "title": "The Magnificent Ambersons",
+      "year": 1942,
+      "director": "Orson Welles",
+      "country": "USA",
+      "language": "English",
+      "runtime": 88,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A wealthy family's heir resists change as industry transforms an Indiana town.",
+      "why": "Studio-recut masterpiece, often called cinema's great lost film.",
+      "wiki": "The_Magnificent_Ambersons",
+      "sources": {
+        "tspdt": 89,
+        "sight_sound_2022": 169
+      }
+    },
+    {
+      "id": "f125",
+      "rank": 125,
+      "title": "Parasite",
+      "year": 2019,
+      "director": "Bong Joon-ho",
+      "country": "South Korea",
+      "language": "Korean",
+      "runtime": 132,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "A poor family schemes its way into employment with a wealthy household, one fake credential at a time, until a buried secret in the house upends everything.",
+      "why": "A tonal high-wire act between comedy, thriller and class satire; the first non-English-language film to win the Best Picture Oscar.",
+      "wiki": "Parasite_(2019_film)",
+      "sources": {
+        "sight_sound_2022": 90
+      }
+    },
+    {
+      "id": "f126",
+      "rank": 126,
+      "title": "Get Out",
+      "year": 2017,
+      "director": "Jordan Peele",
+      "country": "USA",
+      "language": "English",
+      "runtime": 104,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "A young Black man visits his white girlfriend's family estate for the first time and senses something is deeply wrong beneath the family's warm welcome.",
+      "why": "A horror film that turned racial anxiety into genre mechanics, launching Peele as a major directorial voice.",
+      "wiki": "Get_Out",
+      "sources": {
+        "sight_sound_2022": 95
+      }
+    },
+    {
+      "id": "f127",
+      "rank": 127,
+      "title": "Ikiru",
+      "year": 1952,
+      "director": "Akira Kurosawa",
+      "country": "Japan",
+      "language": "Japanese",
+      "runtime": 143,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A bureaucrat learns he has little time left and wonders how to use it.",
+      "why": "Kurosawa's deepest humanist drama.",
+      "wiki": "Ikiru",
+      "sources": {
+        "tspdt": 104,
+        "sight_sound_2022": 157
+      }
+    },
+    {
+      "id": "f128",
+      "rank": 128,
+      "title": "Notorious",
+      "year": 1946,
+      "director": "Alfred Hitchcock",
+      "country": "USA",
+      "language": "English",
+      "runtime": 101,
+      "genres": [
+        "Thriller",
+        "Romance"
+      ],
+      "synopsis": "A U.S. agent recruits a woman to infiltrate a group of exiles in Rio.",
+      "why": "Hitchcock's romance-thriller peak.",
+      "wiki": "Notorious",
+      "sources": {
+        "tspdt": 125,
+        "sight_sound_2022": 133
+      }
+    },
+    {
+      "id": "f129",
+      "rank": 129,
+      "title": "Vagabond",
+      "year": 1985,
+      "director": "Agnes Varda",
+      "country": "France",
+      "language": "French",
+      "runtime": 105,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A young drifter is found dead in a ditch in rural France. Through interviews with the people she crossed paths with in her final weeks, the film pieces together her last days without ever fully explaining her.",
+      "why": "Told backward from a death already announced, refusing the sentimentality that subject usually invites.",
+      "wiki": "Vagabond_(1985_film)",
+      "sources": {
+        "sight_sound_2022": 101
+      }
+    },
+    {
+      "id": "f130",
+      "rank": 130,
+      "title": "Once Upon a Time in America",
+      "year": 1984,
+      "director": "Sergio Leone",
+      "country": "Italy",
+      "language": "English",
+      "runtime": 229,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "Decades in the lives of Jewish-American gangsters in New York.",
+      "why": "Leone's elegiac final epic.",
+      "wiki": "Once_Upon_a_Time_in_America",
+      "sources": {
+        "tspdt": 111,
+        "sight_sound_2022": 157
+      }
+    },
+    {
+      "id": "f131",
+      "rank": 131,
+      "title": "Alien",
+      "year": 1979,
+      "director": "Ridley Scott",
+      "country": "USA",
+      "language": "English",
+      "runtime": 117,
+      "genres": [
+        "Sci-Fi",
+        "Horror"
+      ],
+      "synopsis": "A space crew investigates a distress signal.",
+      "why": "Defined science-fiction horror.",
+      "wiki": "Alien",
+      "sources": {
+        "tspdt": 120,
+        "sight_sound_2022": 146
+      }
+    },
+    {
+      "id": "f132",
+      "rank": 132,
+      "title": "Goodbye, Dragon Inn",
+      "year": 2003,
+      "director": "Tsai Ming-liang",
+      "country": "Taiwan",
+      "language": "Mandarin",
+      "runtime": 82,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "On its final night of business, a crumbling Taipei movie palace shows one last film to a scattering of patrons while the box office clerk and projectionist drift through the building's empty corridors.",
+      "why": "An almost wordless elegy for communal moviegoing, shot in a real cinema shortly before its closure.",
+      "wiki": "Goodbye,_Dragon_Inn",
+      "sources": {
+        "sight_sound_2022": 108
+      }
+    },
+    {
+      "id": "f133",
+      "rank": 133,
+      "title": "There Will Be Blood",
+      "year": 2007,
+      "director": "Paul Thomas Anderson",
+      "country": "USA",
+      "language": "English",
+      "runtime": 158,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A prospector builds an oil empire in early-1900s California.",
+      "why": "Leading film of the 2000s.",
+      "wiki": "There_Will_Be_Blood",
+      "sources": {
+        "tspdt": 141,
+        "sight_sound_2022": 123
+      }
+    },
+    {
+      "id": "f134",
+      "rank": 134,
+      "title": "His Girl Friday",
+      "year": 1940,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 92,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "An editor tries to win back his ex-wife and star reporter.",
+      "why": "Fastest overlapping dialogue of classic comedy.",
+      "wiki": "His_Girl_Friday",
+      "sources": {
+        "tspdt": 137,
+        "sight_sound_2022": 129
+      }
+    },
+    {
+      "id": "f135",
+      "rank": 135,
+      "title": "Last Year at Marienbad",
+      "year": 1961,
+      "director": "Alain Resnais",
+      "country": "France",
+      "language": "French",
+      "runtime": 94,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "synopsis": "At a baroque hotel, a man insists he met a woman there last year.",
+      "why": "Modernist puzzle-film landmark.",
+      "wiki": "Last_Year_at_Marienbad",
+      "sources": {
+        "tspdt": 110,
+        "sight_sound_2022": 169
+      }
+    },
+    {
+      "id": "f136",
+      "rank": 136,
+      "title": "All About Eve",
+      "year": 1950,
+      "director": "Joseph L. Mankiewicz",
+      "country": "USA",
+      "language": "English",
+      "runtime": 138,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "An ageing stage star takes a devoted young fan under her wing.",
+      "why": "Razor-sharp backstage drama.",
+      "wiki": "All_About_Eve",
+      "sources": {
+        "tspdt": 132,
+        "sight_sound_2022": 211,
+        "afi_2007": 28
+      }
+    },
+    {
+      "id": "f137",
+      "rank": 137,
+      "title": "The Texas Chain Saw Massacre",
+      "year": 1974,
+      "director": "Tobe Hooper",
+      "country": "USA",
+      "language": "English",
+      "runtime": 83,
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "A group of friends road-tripping through rural Texas stumble onto an isolated farmhouse where a family of killers awaits them.",
+      "why": "A low-budget horror film whose raw, documentary-like texture reshaped the genre's visual grammar.",
+      "wiki": "The_Texas_Chain_Saw_Massacre",
+      "sources": {
+        "sight_sound_2022": 118
+      }
+    },
+    {
+      "id": "f138",
+      "rank": 138,
+      "title": "The Thing",
+      "year": 1982,
+      "director": "John Carpenter",
+      "country": "USA",
+      "language": "English",
+      "runtime": 109,
+      "genres": [
+        "Horror",
+        "Sci-Fi"
+      ],
+      "synopsis": "A research team at an Antarctic outpost discovers a shape-shifting alien life form that can perfectly imitate any living thing, and begins turning on each other out of pure suspicion.",
+      "why": "Its practical creature effects and bleak, paranoid tone have made it one of the most influential horror films of its decade.",
+      "wiki": "The_Thing_(1982_film)",
+      "sources": {
+        "sight_sound_2022": 118
+      }
+    },
+    {
+      "id": "f139",
+      "rank": 139,
+      "title": "The Matrix",
+      "year": 1999,
+      "director": "Lilly Wachowski and Lana Wachowski",
+      "country": "USA",
+      "language": "English",
+      "runtime": 136,
+      "genres": [
+        "Sci-Fi",
+        "Action"
+      ],
+      "synopsis": "A computer programmer is pulled into a hidden resistance movement after learning the world he knows is a simulated reality built to keep humanity docile.",
+      "why": "Fused martial-arts choreography, philosophy, and pioneering visual effects into a genre-defining blockbuster.",
+      "wiki": "The_Matrix",
+      "sources": {
+        "sight_sound_2022": 118
+      }
+    },
+    {
+      "id": "f140",
+      "rank": 140,
+      "title": "The Umbrellas of Cherbourg",
+      "year": 1964,
+      "director": "Jacques Demy",
+      "country": "France",
+      "language": "French",
+      "runtime": 91,
+      "genres": [
+        "Musical",
+        "Romance"
+      ],
+      "synopsis": "A young couple in a French port town faces separation. All dialogue is sung.",
+      "why": "Palme d'Or winner.",
+      "wiki": "The_Umbrellas_of_Cherbourg",
+      "sources": {
+        "tspdt": 149,
+        "sight_sound_2022": 123
+      }
+    },
+    {
+      "id": "f141",
+      "rank": 141,
+      "title": "Star Wars",
+      "year": 1977,
+      "director": "George Lucas",
+      "country": "USA",
+      "language": "English",
+      "runtime": 121,
+      "genres": [
+        "Sci-Fi",
+        "Adventure"
+      ],
+      "synopsis": "A farm boy joins a rebellion against a galactic empire.",
+      "why": "Transformed popular cinema.",
+      "wiki": "Star_Wars",
+      "sources": {
+        "tspdt": 135,
+        "sight_sound_2022": 226,
+        "afi_2007": 13
+      }
+    },
+    {
+      "id": "f142",
+      "rank": 142,
+      "title": "Only Angels Have Wings",
+      "year": 1939,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 121,
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "synopsis": "A traveling entertainer arrives at a remote South American port town and falls in with a crew of mail pilots who fly dangerous routes through the mountains.",
+      "why": "A defining Hawksian study of professional competence and quiet courage under pressure.",
+      "wiki": "Only_Angels_Have_Wings",
+      "sources": {
+        "sight_sound_2022": 123
+      }
+    },
+    {
+      "id": "f143",
+      "rank": 143,
+      "title": "Johnny Guitar",
+      "year": 1954,
+      "director": "Nicholas Ray",
+      "country": "USA",
+      "language": "English",
+      "runtime": 110,
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "A saloon owner on the edge of a frontier town faces down a posse led by a rival woman determined to run her out, while a gunfighter from her past arrives to help.",
+      "why": "A stylized, operatic Western built around two fierce female leads, later reclaimed as a landmark of camp and queer subtext.",
+      "wiki": "Johnny_Guitar",
+      "sources": {
+        "sight_sound_2022": 123
+      }
+    },
+    {
+      "id": "f144",
+      "rank": 144,
+      "title": "The Colour of Pomegranates",
+      "year": 1968,
+      "director": "Sergei Parajanov",
+      "country": "Soviet Union",
+      "language": "Armenian",
+      "runtime": 79,
+      "genres": [
+        "Drama",
+        "Biography"
+      ],
+      "synopsis": "The life of the 18th-century Armenian poet Sayat-Nova is told not through conventional narrative but through a sequence of symbolic tableaux drawn from Armenian folk art and iconography.",
+      "why": "One of cinema's most radical breaks from narrative convention, composed almost entirely of static, symbolic tableaux.",
+      "wiki": "The_Color_of_Pomegranates",
+      "sources": {
+        "sight_sound_2022": 123
+      }
+    },
+    {
+      "id": "f145",
+      "rank": 145,
+      "title": "Vivre sa vie",
+      "year": 1962,
+      "director": "Jean-Luc Godard",
+      "country": "France",
+      "language": "French",
+      "runtime": 85,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Twelve episodes follow a young Parisian woman's life.",
+      "why": "Godard's portrait of Anna Karina.",
+      "wiki": "Vivre_sa_vie",
+      "sources": {
+        "tspdt": 126,
+        "sight_sound_2022": 157
+      }
+    },
+    {
+      "id": "f146",
+      "rank": 146,
+      "title": "Annie Hall",
+      "year": 1977,
+      "director": "Woody Allen",
+      "country": "USA",
+      "language": "English",
+      "runtime": 93,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "A comedian looks back on his relationship with a singer.",
+      "why": "Reshaped the romantic comedy.",
+      "wiki": "Annie_Hall",
+      "sources": {
+        "tspdt": 108,
+        "sight_sound_2022": 244,
+        "afi_2007": 35
+      }
+    },
+    {
+      "id": "f147",
+      "rank": 147,
+      "title": "Hiroshima mon amour",
+      "year": 1959,
+      "director": "Alain Resnais",
+      "country": "France",
+      "language": "French",
+      "runtime": 91,
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A French actress and a Japanese architect have an affair in Hiroshima.",
+      "why": "Founding work of modernist cinema.",
+      "wiki": "Hiroshima_mon_amour",
+      "sources": {
+        "tspdt": 118,
+        "sight_sound_2022": 169
+      }
+    },
+    {
+      "id": "f148",
+      "rank": 148,
+      "title": "The Ascent",
+      "year": 1977,
+      "director": "Larisa Shepitko",
+      "country": "Soviet Union",
+      "language": "Russian",
+      "runtime": 111,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "synopsis": "Two Soviet partisans are captured by German forces during World War II, and must each decide, under brutal pressure, what they are and are not willing to betray.",
+      "why": "A harrowing war film shaped by religious imagery, made by one of Soviet cinema's few prominent woman directors.",
+      "wiki": "The_Ascent_(1977_film)",
+      "sources": {
+        "sight_sound_2022": 128
+      }
+    },
+    {
+      "id": "f149",
+      "rank": 149,
+      "title": "The Gold Rush",
+      "year": 1925,
+      "director": "Charles Chaplin",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 82,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "The Tramp joins the Klondike gold rush and meets hunger, danger and a dance-hall girl.",
+      "why": "Chaplin's definitive silent comedy.",
+      "wiki": "The_Gold_Rush",
+      "sources": {
+        "tspdt": 91,
+        "afi_2007": 58
+      }
+    },
+    {
+      "id": "f150",
+      "rank": 150,
+      "title": "Los Olvidados",
+      "year": 1950,
+      "director": "Luis Buñuel",
+      "country": "Mexico",
+      "language": "Spanish",
+      "runtime": 88,
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "synopsis": "Street children in Mexico City struggle to survive.",
+      "why": "Buñuel's Mexican breakthrough.",
+      "wiki": "Los_Olvidados",
+      "sources": {
+        "tspdt": 133,
+        "sight_sound_2022": 157
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CANONE · Film Watchlist</title>
+<style>
+:root{--bg:#e4dcc8;--pa:#f3eee0;--ink:#1a1a1a;--ac:#8c2a1c;--mu:#5c5648;--ln:#1a1a1a}
+@media(prefers-color-scheme:dark){:root{--bg:#1d1b17;--pa:#2a2721;--ink:#efe8d6;--ac:#d4694f;--mu:#a79f8b;--ln:#efe8d6}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Futura,"Century Gothic","Trebuchet MS",sans-serif}
+header{text-align:center;padding:28px 12px 16px;border-bottom:6px double var(--ln)}
+h1{margin:0;font-size:clamp(2rem,8vw,4rem);letter-spacing:.35em;text-transform:uppercase;font-weight:700}
+.sub{color:var(--mu);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+.bar{height:14px;border:2px solid var(--ln);margin:14px auto 4px;max-width:520px}.bar i{display:block;height:100%;background:var(--ac);width:0}
+main{max-width:1200px;margin:0 auto;padding:12px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}
+input,select,textarea,button{font:inherit;color:var(--ink);background:var(--pa);border:2px solid var(--ln);border-radius:0;padding:10px}
+button{cursor:pointer;text-transform:uppercase;letter-spacing:.12em;font-weight:700}button.p{background:var(--ac);color:#fff;border-color:var(--ac)}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.ask{display:flex;gap:8px;margin:12px 0}.ask input{flex:1;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.chips button{padding:6px 10px;font-size:.75rem}
+#rec{border:2px solid var(--ac);padding:10px;margin:8px 0;background:var(--pa)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--pa);border:3px solid var(--ln);display:flex;flex-direction:column}.card.w{opacity:.62}.card.hl{outline:4px solid var(--ac)}
+.pos{aspect-ratio:2/3;max-height:320px;width:100%;object-fit:cover;border-bottom:3px solid var(--ln);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:14px;background:repeating-linear-gradient(90deg,transparent 0 28px,rgba(0,0,0,.06) 28px 30px)}
+.pos b{font-size:4rem;line-height:1}.pos span{letter-spacing:.15em;text-transform:uppercase;font-size:.8rem}
+.cb{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}.cb h2{margin:0;font-size:1.15rem;text-transform:uppercase;letter-spacing:.06em}
+.m{color:var(--mu);font-size:.8rem}.tag{display:inline-block;border:1px solid var(--ln);padding:0 6px;margin:0 4px 4px 0;font-size:.7rem;text-transform:uppercase}
+.chk{display:flex;align-items:center;gap:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;min-height:44px;cursor:pointer}.chk input{width:26px;height:26px;accent-color:var(--ac)}
+textarea{width:100%;min-height:64px;resize:vertical}
+dialog{background:var(--pa);color:var(--ink);border:4px solid var(--ln);max-width:560px;width:92%}dialog label{display:block;margin:10px 0 4px;font-weight:700}dialog input,dialog textarea{width:100%}
+#st{position:fixed;right:10px;bottom:10px;background:var(--ink);color:var(--bg);padding:6px 12px;font-size:.8rem;display:none}
+.hide{display:none!important}
+</style></head><body>
+<header><h1>Canone</h1><div class="sub">Cinema · Rank 1 to N · <span id="meth"></span></div>
+<div class="bar"><i id="pb"></i></div><div id="pt" class="sub"></div></header>
+<main>
+<section id="auth" class="hide" style="max-width:380px;margin:30px auto;display:grid;gap:8px">
+<input id="em" type="email" placeholder="Email" autocomplete="username"><input id="pw" type="password" placeholder="Password (min 6)" autocomplete="current-password">
+<button class="p" id="in">Log in</button><button id="up">Create account</button><div id="ae" class="m"></div></section>
+<section id="app" class="hide">
+<div class="ask"><input id="q" placeholder="What do you feel like? e.g. slow, sad, under 2 hours" aria-label="Ask for a recommendation"><button class="p" id="go">Pick for me</button></div>
+<div class="chips"><button data-m="short and easy to get into">Easy</button><button data-m="slow, contemplative">Slow</button><button data-m="exciting and fast">Thrilling</button><button data-m="funny">Funny</button><button data-m="something silent or very old">Old</button><button id="sur">Surprise me</button></div>
+<div id="rec" class="hide"></div>
+<div class="tools"><input id="s" type="search" placeholder="Search title or director"><select id="so"><option value="rank">Sort: rank</option><option value="year">Sort: year ↑</option><option value="yd">Sort: year ↓</option><option value="title">Sort: title</option></select>
+<select id="fc"></select><select id="fl"></select><select id="fg"></select><select id="fw"><option value="">All</option><option value="u">Unwatched</option><option value="w">Watched</option></select><button id="cfg">Settings</button><button id="out">Log out</button></div>
+<div class="grid" id="g"></div></section><footer class="m" style="text-align:center;padding:24px 0">Posters via TMDB and Wikipedia. This product uses the TMDB API but is not endorsed or certified by TMDB.</footer></main>
+<dialog id="dlg"><form method="dialog"><h2>Settings</h2><label>TMDB API key (posters)</label><input id="tk">
+<label>AI providers: one per line as BASEURL|KEY|MODEL</label><textarea id="ai" rows="4" placeholder="https://openrouter.ai/api/v1|KEY|MODEL_ID"></textarea>
+<div class="m">Saved privately to your account and synced.</div><p><button class="p" id="sv" value="x">Save</button> <button value="c">Close</button></p></form></dialog>
+<div id="st" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script>
+const $=id=>document.getElementById(id),sb=supabase.createClient(CFG.url,CFG.key);
+let films=[],P={},S={tmdb:"",ai:[]},uid=null,tm={};
+const note=t=>{const e=$("st");e.textContent=t;e.style.display="block";clearTimeout(note.t);note.t=setTimeout(()=>e.style.display="none",1600)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function boot(){
+ try{const j=await (await fetch("films.json",{cache:"no-cache"})).json();films=j.films;$("meth").textContent=j.method||""}catch(e){document.body.insertAdjacentHTML("beforeend","<p>Cannot load films.json</p>")}
+ const{data:{session}}=await sb.auth.getSession();session?start(session.user):($("auth").classList.remove("hide"),$("auth").style.display="grid")}
+async function start(u){uid=u.id;$("auth").classList.add("hide");$("auth").style.display="none";$("app").classList.remove("hide");
+ const[a,b]=await Promise.all([sb.from("progress").select("*"),sb.from("settings").select("data").maybeSingle()]);
+ if(a.error)note("Sync error: "+a.error.message);(a.data||[]).forEach(r=>P[r.film_id]=r);if(b.data)S={...S,...b.data.data};
+ $("tk").value=S.tmdb||"";$("ai").value=(S.ai||[]).map(x=>[x.u,x.k,x.m].join("|")).join("\n");opts();draw()}
+async function auth(up){$("ae").textContent="";const f=up?sb.auth.signUp:sb.auth.signInWithPassword.bind(sb.auth);
+ const{data,error}=await f.call(sb.auth,{email:$("em").value.trim(),password:$("pw").value});
+ if(error)return $("ae").textContent=error.message;if(data.session)start(data.user);else $("ae").textContent="Account created. Press Log in."}
+$("in").onclick=()=>auth(0);$("up").onclick=()=>auth(1);$("out").onclick=async()=>{await sb.auth.signOut();location.reload()};
+function opts(){const u=k=>[...new Set(films.flatMap(f=>[].concat(f[k])))].sort();
+ [["fc","country","Country"],["fl","language","Language"],["fg","genres","Genre"]].forEach(([id,k,l])=>$(id).innerHTML=`<option value="">${l}: all</option>`+u(k).map(v=>`<option>${esc(v)}</option>`).join(""))}
+function view(){const q=$("s").value.toLowerCase(),c=$("fc").value,l=$("fl").value,g=$("fg").value,w=$("fw").value,so=$("so").value;
+ let r=films.filter(f=>(!q||(f.title+f.director).toLowerCase().includes(q))&&(!c||f.country==c)&&(!l||f.language==l)&&(!g||f.genres.includes(g))&&(!w||(w=="w")==!!(P[f.id]&&P[f.id].watched)));
+ const k={rank:(a,b)=>a.rank-b.rank,year:(a,b)=>a.year-b.year,yd:(a,b)=>b.year-a.year,title:(a,b)=>a.title.localeCompare(b.title)}[so];return r.sort(k)}
+function draw(){const d=films.filter(f=>P[f.id]&&P[f.id].watched).length;$("pt").textContent=`${d}/${films.length} watched`;$("pb").style.width=(films.length?100*d/films.length:0)+"%";
+ $("g").innerHTML=view().map(f=>{const p=P[f.id]||{};return`<article class="card${p.watched?" w":""}" id="${f.id}"><div class="pos" data-id="${f.id}"><b>${f.rank}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2>${f.rank}. ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${esc(f.language)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><p>${esc(f.synopsis)}</p><p class="m"><b>Why it matters:</b> ${esc(f.why)}</p><label class="chk"><input type="checkbox" data-w="${f.id}"${p.watched?" checked":""}> Watched</label><textarea data-n="${f.id}" placeholder="Your note">${esc(p.note||"")}</textarea></div></article>`}).join("");
+ document.querySelectorAll(".pos").forEach(poster)}
+async function save(id){const p=P[id];const{error}=await sb.from("progress").upsert({user_id:uid,film_id:id,watched:!!p.watched,note:p.note||"",updated_at:new Date().toISOString()});note(error?"Not saved: "+error.message:"Saved")}
+$("g").addEventListener("change",e=>{const id=e.target.dataset.w;if(!id)return;(P[id]=P[id]||{}).watched=e.target.checked;save(id);draw()});
+$("g").addEventListener("input",e=>{const id=e.target.dataset.n;if(!id)return;(P[id]=P[id]||{}).note=e.target.value;clearTimeout(tm[id]);tm[id]=setTimeout(()=>save(id),700)});
+["s","so","fc","fl","fg","fw"].forEach(i=>$(i).addEventListener("input",draw));
+async function img(f){const c=localStorage["p"+f.id];if(c)return c;let u=null;
+ try{if(S.tmdb){const r=await(await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${encodeURIComponent(S.tmdb)}&query=${encodeURIComponent(f.title)}&year=${f.year}`)).json();const x=r.results&&r.results.find(z=>z.poster_path);if(x)u="https://image.tmdb.org/t/p/w342"+x.poster_path}}catch(e){}
+ for(const t of [f.wiki,`${f.title} (${f.year} film)`,f.title]){if(u)break;try{const r=await(await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(t.replace(/ /g,"_")))).json();if(r.thumbnail&&r.type!=="disambiguation")u=r.thumbnail.source}catch(e){}}
+ if(u)localStorage["p"+f.id]=u;return u}
+async function poster(el){const f=films.find(x=>x.id==el.dataset.id),u=await img(f);if(!u)return;const i=new Image();i.className="pos";i.alt=f.title+" poster";i.loading="lazy";i.onload=()=>el.replaceWith(i);i.onerror=()=>{delete localStorage["p"+f.id]};i.referrerPolicy="no-referrer";i.src=u}
+$("cfg").onclick=()=>$("dlg").showModal();
+$("sv").onclick=async()=>{S.tmdb=$("tk").value.trim();S.ai=$("ai").value.split("\n").map(l=>l.split("|").map(s=>s.trim())).filter(a=>a.length>=3&&a[0]).map(a=>({u:a[0],k:a[1],m:a[2]}));
+ const{error}=await sb.from("settings").upsert({user_id:uid,data:S});note(error?error.message:"Settings saved");draw()};
+async function ask(t){const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));const box=$("rec");box.classList.remove("hide");
+ if(!S.ai.length){box.textContent="Add an AI provider in Settings, or press Surprise me.";return}
+ const cat=un.map(f=>`${f.id}|${f.title}|${f.year}|${f.director}|${f.country}|${f.runtime}m|${f.genres.join("/")}`).join("\n");
+ const msg=[{role:"system",content:"You recommend films ONLY from the given list. Reply with JSON only: [{\"id\":\"...\",\"reason\":\"one sentence, no spoilers\"}], max 3 items."},{role:"user",content:`Mood: ${t}\nUnwatched films (id|title|year|director|country|runtime|genres):\n${cat}`}];
+ for(const p of S.ai){box.textContent="Thinking…";try{const r=await fetch(p.u.replace(/\/$/,"")+"/chat/completions",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+p.k},body:JSON.stringify({model:p.m,messages:msg})});if(!r.ok)throw new Error(r.status);
+  const tx=(await r.json()).choices[0].message.content,a=JSON.parse(tx.slice(tx.indexOf("["),tx.lastIndexOf("]")+1)).filter(x=>films.some(f=>f.id==x.id));if(!a.length)throw new Error("empty");
+  box.innerHTML=a.map(x=>{const f=films.find(z=>z.id==x.id);return`<p><a href="#${f.id}"><b>${f.rank}. ${esc(f.title)}</b></a> (${f.year}): ${esc(x.reason)}</p>`}).join("");return}catch(e){box.textContent="Provider failed ("+e.message+"). Trying next…"}}
+ box.textContent="All providers failed. Check Settings, or press Surprise me."}
+$("go").onclick=()=>ask($("q").value||"anything good");$("q").onkeydown=e=>e.key=="Enter"&&ask($("q").value||"anything good");
+document.querySelectorAll(".chips [data-m]").forEach(b=>b.onclick=()=>{$("q").value=b.dataset.m;ask(b.dataset.m)});
+$("sur").onclick=()=>{const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));if(!un.length)return;const f=un[Math.random()*un.length|0],b=$("rec");b.classList.remove("hide");b.innerHTML=`<a href="#${f.id}"><b>${f.rank}. ${esc(f.title)}</b></a> (${f.year}), ${esc(f.director)}`};
+document.addEventListener("visibilitychange",async()=>{if(!uid||document.hidden)return;const{data}=await sb.from("progress").select("*");(data||[]).forEach(r=>P[r.film_id]=r);draw()});
+boot();
+</script></body></html>

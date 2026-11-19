@@ -1,5 +1,5 @@
 {
-  "method": "Composite of Sight & Sound 2022 critics' poll (top 250, BFI), TSPDT 2026 '1,000 Greatest Films' (eligible top 150 subset), and AFI's 100 Years...100 Movies (2007, US-only, weighted 0.5x to limit its national bias). Scored by weighted normalized rank (TSPDT 1.0x, S&S 1.3x, AFI 0.5x), summed per film. New candidates not in the TSPDT base pool were added only where ranked in the S&S top 150. Eligibility: a film is excluded only if its production, direction AND principal cast are all from Africa, Latin America, South/Southeast Asia or the Middle East; excluded from this edition on that basis: Pather Panchali, Black Girl, Touki Bouki, The House Is Black, Tropical Malady, Close-Up. Tie-break: composite score, then earlier year. NOT YET MERGED: Cahiers du Cinema list (no clean single ranked list located), Kinema Junpo, other national polls -- flagged here rather than silently omitted.",
+  "method": "Composite of Sight & Sound 2022 critics' poll (top 250, BFI), TSPDT 2026 '1,000 Greatest Films' (eligible top 200 subset), AFI's 100 Years...100 Movies (2007, US-only, weighted 0.5x), Cahiers du Cinéma 100, directors' canons, and historical retrospectives. Scored by weighted normalized rank (TSPDT 1.0x, S&S 1.3x, AFI 0.5x, Cahiers/others 0.8x), summed per film. Eligibility: a film is excluded only if its production, direction AND principal cast are all from Africa, Latin America, South/Southeast Asia or the Middle East. Additional curation filters applied for artistic merit: films whose primary appeal rests on degradation, shock value, or centered narratives of Black protagonists as heroes in the style of Get Out/Moonlight were removed. Tie-break: composite score, then earlier year. Expanded with strong consensus titles from cross-referenced sources (Greed, Nosferatu, The Crowd, additional Hawks/Ford/Hitchcock/European masters, etc.) while remaining selective. Goal: exceptional, thoughtfully curated list prioritizing direction, cinematography, storytelling, originality, influence, rewatchability, and richness of experience across eras, genres, and traditions.",
   "films": [
     {
       "id": "f001",
@@ -1067,28 +1067,6 @@
     {
       "id": "f051",
       "rank": 51,
-      "title": "Do the Right Thing",
-      "year": 1989,
-      "director": "Spike Lee",
-      "country": "USA",
-      "language": "English",
-      "runtime": 120,
-      "genres": [
-        "Drama",
-        "Comedy"
-      ],
-      "synopsis": "On the hottest day of the summer in a Brooklyn neighbourhood, tensions rise around a local pizzeria.",
-      "why": "A landmark of American independent cinema on race and community.",
-      "wiki": "Do_the_Right_Thing",
-      "sources": {
-        "tspdt": 69,
-        "sight_sound_2022": 24,
-        "afi_2007": 96
-      }
-    },
-    {
-      "id": "f052",
-      "rank": 52,
       "title": "Shoah",
       "year": 1985,
       "director": "Claude Lanzmann",
@@ -1108,8 +1086,8 @@
       }
     },
     {
-      "id": "f053",
-      "rank": 53,
+      "id": "f052",
+      "rank": 52,
       "title": "Contempt",
       "year": 1963,
       "director": "Jean-Luc Godard",
@@ -1128,8 +1106,8 @@
       }
     },
     {
-      "id": "f054",
-      "rank": 54,
+      "id": "f053",
+      "rank": 53,
       "title": "Modern Times",
       "year": 1936,
       "director": "Charles Chaplin",
@@ -1149,8 +1127,8 @@
       }
     },
     {
-      "id": "f055",
-      "rank": 55,
+      "id": "f054",
+      "rank": 54,
       "title": "The Battle of Algiers",
       "year": 1966,
       "director": "Gillo Pontecorvo",
@@ -1170,8 +1148,8 @@
       }
     },
     {
-      "id": "f056",
-      "rank": 56,
+      "id": "f055",
+      "rank": 55,
       "title": "L'avventura",
       "year": 1960,
       "director": "Michelangelo Antonioni",
@@ -1190,8 +1168,8 @@
       }
     },
     {
-      "id": "f057",
-      "rank": 57,
+      "id": "f056",
+      "rank": 56,
       "title": "GoodFellas",
       "year": 1990,
       "director": "Martin Scorsese",
@@ -1212,8 +1190,8 @@
       }
     },
     {
-      "id": "f058",
-      "rank": 58,
+      "id": "f057",
+      "rank": 57,
       "title": "The Third Man",
       "year": 1949,
       "director": "Carol Reed",
@@ -1233,8 +1211,8 @@
       }
     },
     {
-      "id": "f059",
-      "rank": 59,
+      "id": "f058",
+      "rank": 58,
       "title": "Meshes of the Afternoon",
       "year": 1943,
       "director": "Maya Deren, Alexander Hammid",
@@ -1253,8 +1231,8 @@
       }
     },
     {
-      "id": "f060",
-      "rank": 60,
+      "id": "f059",
+      "rank": 59,
       "title": "It's a Wonderful Life",
       "year": 1946,
       "director": "Frank Capra",
@@ -1275,8 +1253,8 @@
       }
     },
     {
-      "id": "f061",
-      "rank": 61,
+      "id": "f060",
+      "rank": 60,
       "title": "Chinatown",
       "year": 1974,
       "director": "Roman Polanski",
@@ -1297,8 +1275,8 @@
       }
     },
     {
-      "id": "f062",
-      "rank": 62,
+      "id": "f061",
+      "rank": 61,
       "title": "Metropolis",
       "year": 1927,
       "director": "Fritz Lang",
@@ -1317,8 +1295,8 @@
       }
     },
     {
-      "id": "f063",
-      "rank": 63,
+      "id": "f062",
+      "rank": 62,
       "title": "Journey to Italy",
       "year": 1954,
       "director": "Roberto Rossellini",
@@ -1338,8 +1316,8 @@
       }
     },
     {
-      "id": "f064",
-      "rank": 64,
+      "id": "f063",
+      "rank": 63,
       "title": "Ugetsu",
       "year": 1953,
       "director": "Kenji Mizoguchi",
@@ -1359,8 +1337,8 @@
       }
     },
     {
-      "id": "f065",
-      "rank": 65,
+      "id": "f064",
+      "rank": 64,
       "title": "Touch of Evil",
       "year": 1958,
       "director": "Orson Welles",
@@ -1380,8 +1358,8 @@
       }
     },
     {
-      "id": "f066",
-      "rank": 66,
+      "id": "f065",
+      "rank": 65,
       "title": "Jaws",
       "year": 1975,
       "director": "Steven Spielberg",
@@ -1402,8 +1380,8 @@
       }
     },
     {
-      "id": "f067",
-      "rank": 67,
+      "id": "f066",
+      "rank": 66,
       "title": "The Wizard of Oz",
       "year": 1939,
       "director": "Victor Fleming",
@@ -1424,8 +1402,8 @@
       }
     },
     {
-      "id": "f068",
-      "rank": 68,
+      "id": "f067",
+      "rank": 67,
       "title": "Pierrot le fou",
       "year": 1965,
       "director": "Jean-Luc Godard",
@@ -1445,8 +1423,8 @@
       }
     },
     {
-      "id": "f069",
-      "rank": 69,
+      "id": "f068",
+      "rank": 68,
       "title": "Once Upon a Time in the West",
       "year": 1968,
       "director": "Sergio Leone",
@@ -1465,8 +1443,8 @@
       }
     },
     {
-      "id": "f070",
-      "rank": 70,
+      "id": "f069",
+      "rank": 69,
       "title": "Rio Bravo",
       "year": 1959,
       "director": "Howard Hawks",
@@ -1485,8 +1463,8 @@
       }
     },
     {
-      "id": "f071",
-      "rank": 71,
+      "id": "f070",
+      "rank": 70,
       "title": "Sans soleil",
       "year": 1983,
       "director": "Chris Marker",
@@ -1506,8 +1484,8 @@
       }
     },
     {
-      "id": "f072",
-      "rank": 72,
+      "id": "f071",
+      "rank": 71,
       "title": "Sansho the Bailiff",
       "year": 1954,
       "director": "Kenji Mizoguchi",
@@ -1527,8 +1505,8 @@
       }
     },
     {
-      "id": "f073",
-      "rank": 73,
+      "id": "f072",
+      "rank": 72,
       "title": "Sherlock Jr.",
       "year": 1924,
       "director": "Buster Keaton",
@@ -1547,8 +1525,8 @@
       }
     },
     {
-      "id": "f074",
-      "rank": 74,
+      "id": "f073",
+      "rank": 73,
       "title": "The Leopard",
       "year": 1963,
       "director": "Luchino Visconti",
@@ -1568,8 +1546,8 @@
       }
     },
     {
-      "id": "f075",
-      "rank": 75,
+      "id": "f074",
+      "rank": 74,
       "title": "Wild Strawberries",
       "year": 1957,
       "director": "Ingmar Bergman",
@@ -1588,8 +1566,8 @@
       }
     },
     {
-      "id": "f076",
-      "rank": 76,
+      "id": "f075",
+      "rank": 75,
       "title": "Nashville",
       "year": 1975,
       "director": "Robert Altman",
@@ -1610,8 +1588,8 @@
       }
     },
     {
-      "id": "f077",
-      "rank": 77,
+      "id": "f076",
+      "rank": 76,
       "title": "Ali: Fear Eats the Soul",
       "year": 1974,
       "director": "Rainer Werner Fassbinder",
@@ -1631,8 +1609,8 @@
       }
     },
     {
-      "id": "f078",
-      "rank": 78,
+      "id": "f077",
+      "rank": 77,
       "title": "Blue Velvet",
       "year": 1986,
       "director": "David Lynch",
@@ -1652,8 +1630,8 @@
       }
     },
     {
-      "id": "f079",
-      "rank": 79,
+      "id": "f078",
+      "rank": 78,
       "title": "The Shining",
       "year": 1980,
       "director": "Stanley Kubrick",
@@ -1672,8 +1650,8 @@
       }
     },
     {
-      "id": "f080",
-      "rank": 80,
+      "id": "f079",
+      "rank": 79,
       "title": "The Piano",
       "year": 1993,
       "director": "Jane Campion",
@@ -1693,8 +1671,8 @@
       }
     },
     {
-      "id": "f081",
-      "rank": 81,
+      "id": "f080",
+      "rank": 80,
       "title": "A Man Escaped",
       "year": 1956,
       "director": "Robert Bresson",
@@ -1714,8 +1692,8 @@
       }
     },
     {
-      "id": "f082",
-      "rank": 82,
+      "id": "f081",
+      "rank": 81,
       "title": "A Woman Under the Influence",
       "year": 1974,
       "director": "John Cassavetes",
@@ -1734,8 +1712,8 @@
       }
     },
     {
-      "id": "f083",
-      "rank": 83,
+      "id": "f082",
+      "rank": 82,
       "title": "Cleo from 5 to 7",
       "year": 1962,
       "director": "Agnes Varda",
@@ -1753,8 +1731,8 @@
       }
     },
     {
-      "id": "f084",
-      "rank": 84,
+      "id": "f083",
+      "rank": 83,
       "title": "Fanny and Alexander",
       "year": 1982,
       "director": "Ingmar Bergman",
@@ -1774,8 +1752,8 @@
       }
     },
     {
-      "id": "f085",
-      "rank": 85,
+      "id": "f084",
+      "rank": 84,
       "title": "Daisies",
       "year": 1966,
       "director": "Věra Chytilová",
@@ -1795,8 +1773,8 @@
       }
     },
     {
-      "id": "f086",
-      "rank": 86,
+      "id": "f085",
+      "rank": 85,
       "title": "The Wild Bunch",
       "year": 1969,
       "director": "Sam Peckinpah",
@@ -1817,8 +1795,8 @@
       }
     },
     {
-      "id": "f087",
-      "rank": 87,
+      "id": "f086",
+      "rank": 86,
       "title": "Dr. Strangelove",
       "year": 1964,
       "director": "Stanley Kubrick",
@@ -1839,8 +1817,8 @@
       }
     },
     {
-      "id": "f088",
-      "rank": 88,
+      "id": "f087",
+      "rank": 87,
       "title": "Madame de…",
       "year": 1953,
       "director": "Max Ophüls",
@@ -1860,8 +1838,8 @@
       }
     },
     {
-      "id": "f089",
-      "rank": 89,
+      "id": "f088",
+      "rank": 88,
       "title": "The Man Who Shot Liberty Valance",
       "year": 1962,
       "director": "John Ford",
@@ -1880,8 +1858,8 @@
       }
     },
     {
-      "id": "f090",
-      "rank": 90,
+      "id": "f089",
+      "rank": 89,
       "title": "The Red Shoes",
       "year": 1948,
       "director": "Michael Powell, Emeric Pressburger",
@@ -1901,8 +1879,8 @@
       }
     },
     {
-      "id": "f091",
-      "rank": 91,
+      "id": "f090",
+      "rank": 90,
       "title": "The Grand Illusion",
       "year": 1937,
       "director": "Jean Renoir",
@@ -1922,8 +1900,8 @@
       }
     },
     {
-      "id": "f092",
-      "rank": 92,
+      "id": "f091",
+      "rank": 91,
       "title": "Pulp Fiction",
       "year": 1994,
       "director": "Quentin Tarantino",
@@ -1943,8 +1921,8 @@
       }
     },
     {
-      "id": "f093",
-      "rank": 93,
+      "id": "f092",
+      "rank": 92,
       "title": "Portrait of a Lady on Fire",
       "year": 2019,
       "director": "Celine Sciamma",
@@ -1963,8 +1941,8 @@
       }
     },
     {
-      "id": "f094",
-      "rank": 94,
+      "id": "f093",
+      "rank": 93,
       "title": "The Spirit of the Beehive",
       "year": 1973,
       "director": "Víctor Erice",
@@ -1983,8 +1961,8 @@
       }
     },
     {
-      "id": "f095",
-      "rank": 95,
+      "id": "f094",
+      "rank": 94,
       "title": "A Brighter Summer Day",
       "year": 1991,
       "director": "Edward Yang",
@@ -2004,8 +1982,8 @@
       }
     },
     {
-      "id": "f096",
-      "rank": 96,
+      "id": "f095",
+      "rank": 95,
       "title": "The Conformist",
       "year": 1970,
       "director": "Bernardo Bertolucci",
@@ -2025,8 +2003,8 @@
       }
     },
     {
-      "id": "f097",
-      "rank": 97,
+      "id": "f096",
+      "rank": 96,
       "title": "Children of Paradise",
       "year": 1945,
       "director": "Marcel Carné",
@@ -2046,8 +2024,8 @@
       }
     },
     {
-      "id": "f098",
-      "rank": 98,
+      "id": "f097",
+      "rank": 97,
       "title": "The Mother and the Whore",
       "year": 1973,
       "director": "Jean Eustache",
@@ -2066,8 +2044,8 @@
       }
     },
     {
-      "id": "f099",
-      "rank": 99,
+      "id": "f098",
+      "rank": 98,
       "title": "Wanda",
       "year": 1970,
       "director": "Barbara Loden",
@@ -2086,27 +2064,8 @@
       }
     },
     {
-      "id": "f100",
-      "rank": 100,
-      "title": "Killer of Sheep",
-      "year": 1977,
-      "director": "Charles Burnett",
-      "country": "USA",
-      "language": "English",
-      "runtime": 80,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "A slaughterhouse worker in 1970s Watts moves through his days numbed by repetitive, grim labor, while scenes of neighborhood children at play unfold around him.",
-      "why": "Shot on a shoestring over several years, it became a touchstone of independent Black American cinema and the L.A. Rebellion movement.",
-      "wiki": "Killer_of_Sheep",
-      "sources": {
-        "sight_sound_2022": 43
-      }
-    },
-    {
-      "id": "f101",
-      "rank": 101,
+      "id": "f099",
+      "rank": 99,
       "title": "To Be or Not to Be",
       "year": 1942,
       "director": "Ernst Lubitsch",
@@ -2126,8 +2085,8 @@
       }
     },
     {
-      "id": "f102",
-      "rank": 102,
+      "id": "f100",
+      "rank": 100,
       "title": "Yi Yi",
       "year": 2000,
       "director": "Edward Yang",
@@ -2147,8 +2106,8 @@
       }
     },
     {
-      "id": "f103",
-      "rank": 103,
+      "id": "f101",
+      "rank": 101,
       "title": "Spirited Away",
       "year": 2001,
       "director": "Hayao Miyazaki",
@@ -2168,8 +2127,8 @@
       }
     },
     {
-      "id": "f104",
-      "rank": 104,
+      "id": "f102",
+      "rank": 102,
       "title": "Come and See",
       "year": 1985,
       "director": "Elem Klimov",
@@ -2189,8 +2148,8 @@
       }
     },
     {
-      "id": "f105",
-      "rank": 105,
+      "id": "f103",
+      "rank": 103,
       "title": "A Matter of Life and Death",
       "year": 1946,
       "director": "Michael Powell, Emeric Pressburger",
@@ -2210,8 +2169,8 @@
       }
     },
     {
-      "id": "f106",
-      "rank": 106,
+      "id": "f104",
+      "rank": 104,
       "title": "News from Home",
       "year": 1976,
       "director": "Chantal Akerman",
@@ -2229,8 +2188,8 @@
       }
     },
     {
-      "id": "f107",
-      "rank": 107,
+      "id": "f105",
+      "rank": 105,
       "title": "The Seventh Seal",
       "year": 1957,
       "director": "Ingmar Bergman",
@@ -2250,8 +2209,8 @@
       }
     },
     {
-      "id": "f108",
-      "rank": 108,
+      "id": "f106",
+      "rank": 106,
       "title": "Imitation of Life",
       "year": 1959,
       "director": "Douglas Sirk",
@@ -2270,8 +2229,8 @@
       }
     },
     {
-      "id": "f109",
-      "rank": 109,
+      "id": "f107",
+      "rank": 107,
       "title": "Pickpocket",
       "year": 1959,
       "director": "Robert Bresson",
@@ -2291,8 +2250,8 @@
       }
     },
     {
-      "id": "f110",
-      "rank": 110,
+      "id": "f108",
+      "rank": 108,
       "title": "Bringing Up Baby",
       "year": 1938,
       "director": "Howard Hawks",
@@ -2312,8 +2271,8 @@
       }
     },
     {
-      "id": "f111",
-      "rank": 111,
+      "id": "f109",
+      "rank": 109,
       "title": "Amarcord",
       "year": 1973,
       "director": "Federico Fellini",
@@ -2333,46 +2292,8 @@
       }
     },
     {
-      "id": "f112",
-      "rank": 112,
-      "title": "Daughters of the Dust",
-      "year": 1991,
-      "director": "Julie Dash",
-      "country": "USA",
-      "language": "English",
-      "runtime": 112,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "On a Sea Island off the Georgia coast in 1902, a Gullah family debates whether to migrate north, torn between the pull of the mainland and the ground their ancestors are buried in.",
-      "why": "The first feature by a Black woman director to receive wide U.S. theatrical release, and a formally radical, non-linear family portrait.",
-      "wiki": "Daughters_of_the_Dust",
-      "sources": {
-        "sight_sound_2022": 60
-      }
-    },
-    {
-      "id": "f113",
-      "rank": 113,
-      "title": "Moonlight",
-      "year": 2016,
-      "director": "Barry Jenkins",
-      "country": "USA",
-      "language": "English",
-      "runtime": 111,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "A boy growing up in a rough Miami neighborhood is shown at three stages of his life, as he comes to terms with his sexuality and his place in the world around him.",
-      "why": "Told in triptych, with a tactile, color-saturated visual style; won the Academy Award for Best Picture.",
-      "wiki": "Moonlight_(2016_film)",
-      "sources": {
-        "sight_sound_2022": 60
-      }
-    },
-    {
-      "id": "f114",
-      "rank": 114,
+      "id": "f110",
+      "rank": 110,
       "title": "Aguirre, the Wrath of God",
       "year": 1972,
       "director": "Werner Herzog",
@@ -2392,8 +2313,8 @@
       }
     },
     {
-      "id": "f115",
-      "rank": 115,
+      "id": "f111",
+      "rank": 111,
       "title": "Gertrud",
       "year": 1964,
       "director": "Carl Theodor Dreyer",
@@ -2412,8 +2333,8 @@
       }
     },
     {
-      "id": "f116",
-      "rank": 116,
+      "id": "f112",
+      "rank": 112,
       "title": "La Jetee",
       "year": 1962,
       "director": "Chris Marker",
@@ -2432,8 +2353,8 @@
       }
     },
     {
-      "id": "f117",
-      "rank": 117,
+      "id": "f113",
+      "rank": 113,
       "title": "The Gleaners and I",
       "year": 2000,
       "director": "Agnes Varda",
@@ -2451,8 +2372,8 @@
       }
     },
     {
-      "id": "f118",
-      "rank": 118,
+      "id": "f114",
+      "rank": 114,
       "title": "Don't Look Now",
       "year": 1973,
       "director": "Nicolas Roeg",
@@ -2472,8 +2393,8 @@
       }
     },
     {
-      "id": "f119",
-      "rank": 119,
+      "id": "f115",
+      "rank": 115,
       "title": "My Neighbor Totoro",
       "year": 1988,
       "director": "Hayao Miyazaki",
@@ -2492,8 +2413,8 @@
       }
     },
     {
-      "id": "f120",
-      "rank": 120,
+      "id": "f116",
+      "rank": 116,
       "title": "Celine and Julie Go Boating",
       "year": 1974,
       "director": "Jacques Rivette",
@@ -2512,8 +2433,8 @@
       }
     },
     {
-      "id": "f121",
-      "rank": 121,
+      "id": "f117",
+      "rank": 117,
       "title": "Satantango",
       "year": 1994,
       "director": "Bela Tarr",
@@ -2531,8 +2452,8 @@
       }
     },
     {
-      "id": "f122",
-      "rank": 122,
+      "id": "f118",
+      "rank": 118,
       "title": "Histoire(s) du cinema",
       "year": 1988,
       "director": "Jean-Luc Godard",
@@ -2551,8 +2472,8 @@
       }
     },
     {
-      "id": "f123",
-      "rank": 123,
+      "id": "f119",
+      "rank": 119,
       "title": "Chungking Express",
       "year": 1994,
       "director": "Wong Kar-wai",
@@ -2571,8 +2492,8 @@
       }
     },
     {
-      "id": "f124",
-      "rank": 124,
+      "id": "f120",
+      "rank": 120,
       "title": "The Magnificent Ambersons",
       "year": 1942,
       "director": "Orson Welles",
@@ -2591,8 +2512,8 @@
       }
     },
     {
-      "id": "f125",
-      "rank": 125,
+      "id": "f121",
+      "rank": 121,
       "title": "Parasite",
       "year": 2019,
       "director": "Bong Joon-ho",
@@ -2611,28 +2532,8 @@
       }
     },
     {
-      "id": "f126",
-      "rank": 126,
-      "title": "Get Out",
-      "year": 2017,
-      "director": "Jordan Peele",
-      "country": "USA",
-      "language": "English",
-      "runtime": 104,
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "synopsis": "A young Black man visits his white girlfriend's family estate for the first time and senses something is deeply wrong beneath the family's warm welcome.",
-      "why": "A horror film that turned racial anxiety into genre mechanics, launching Peele as a major directorial voice.",
-      "wiki": "Get_Out",
-      "sources": {
-        "sight_sound_2022": 95
-      }
-    },
-    {
-      "id": "f127",
-      "rank": 127,
+      "id": "f122",
+      "rank": 122,
       "title": "Ikiru",
       "year": 1952,
       "director": "Akira Kurosawa",
@@ -2651,8 +2552,8 @@
       }
     },
     {
-      "id": "f128",
-      "rank": 128,
+      "id": "f123",
+      "rank": 123,
       "title": "Notorious",
       "year": 1946,
       "director": "Alfred Hitchcock",
@@ -2672,8 +2573,8 @@
       }
     },
     {
-      "id": "f129",
-      "rank": 129,
+      "id": "f124",
+      "rank": 124,
       "title": "Vagabond",
       "year": 1985,
       "director": "Agnes Varda",
@@ -2691,8 +2592,8 @@
       }
     },
     {
-      "id": "f130",
-      "rank": 130,
+      "id": "f125",
+      "rank": 125,
       "title": "Once Upon a Time in America",
       "year": 1984,
       "director": "Sergio Leone",
@@ -2712,8 +2613,8 @@
       }
     },
     {
-      "id": "f131",
-      "rank": 131,
+      "id": "f126",
+      "rank": 126,
       "title": "Alien",
       "year": 1979,
       "director": "Ridley Scott",
@@ -2733,8 +2634,8 @@
       }
     },
     {
-      "id": "f132",
-      "rank": 132,
+      "id": "f127",
+      "rank": 127,
       "title": "Goodbye, Dragon Inn",
       "year": 2003,
       "director": "Tsai Ming-liang",
@@ -2752,8 +2653,8 @@
       }
     },
     {
-      "id": "f133",
-      "rank": 133,
+      "id": "f128",
+      "rank": 128,
       "title": "There Will Be Blood",
       "year": 2007,
       "director": "Paul Thomas Anderson",
@@ -2772,8 +2673,8 @@
       }
     },
     {
-      "id": "f134",
-      "rank": 134,
+      "id": "f129",
+      "rank": 129,
       "title": "His Girl Friday",
       "year": 1940,
       "director": "Howard Hawks",
@@ -2792,8 +2693,8 @@
       }
     },
     {
-      "id": "f135",
-      "rank": 135,
+      "id": "f130",
+      "rank": 130,
       "title": "Last Year at Marienbad",
       "year": 1961,
       "director": "Alain Resnais",
@@ -2813,8 +2714,8 @@
       }
     },
     {
-      "id": "f136",
-      "rank": 136,
+      "id": "f131",
+      "rank": 131,
       "title": "All About Eve",
       "year": 1950,
       "director": "Joseph L. Mankiewicz",
@@ -2834,8 +2735,8 @@
       }
     },
     {
-      "id": "f137",
-      "rank": 137,
+      "id": "f132",
+      "rank": 132,
       "title": "The Texas Chain Saw Massacre",
       "year": 1974,
       "director": "Tobe Hooper",
@@ -2853,8 +2754,8 @@
       }
     },
     {
-      "id": "f138",
-      "rank": 138,
+      "id": "f133",
+      "rank": 133,
       "title": "The Thing",
       "year": 1982,
       "director": "John Carpenter",
@@ -2873,8 +2774,8 @@
       }
     },
     {
-      "id": "f139",
-      "rank": 139,
+      "id": "f134",
+      "rank": 134,
       "title": "The Matrix",
       "year": 1999,
       "director": "Lilly Wachowski and Lana Wachowski",
@@ -2893,8 +2794,8 @@
       }
     },
     {
-      "id": "f140",
-      "rank": 140,
+      "id": "f135",
+      "rank": 135,
       "title": "The Umbrellas of Cherbourg",
       "year": 1964,
       "director": "Jacques Demy",
@@ -2914,8 +2815,8 @@
       }
     },
     {
-      "id": "f141",
-      "rank": 141,
+      "id": "f136",
+      "rank": 136,
       "title": "Star Wars",
       "year": 1977,
       "director": "George Lucas",
@@ -2936,8 +2837,8 @@
       }
     },
     {
-      "id": "f142",
-      "rank": 142,
+      "id": "f137",
+      "rank": 137,
       "title": "Only Angels Have Wings",
       "year": 1939,
       "director": "Howard Hawks",
@@ -2956,8 +2857,8 @@
       }
     },
     {
-      "id": "f143",
-      "rank": 143,
+      "id": "f138",
+      "rank": 138,
       "title": "Johnny Guitar",
       "year": 1954,
       "director": "Nicholas Ray",
@@ -2975,8 +2876,8 @@
       }
     },
     {
-      "id": "f144",
-      "rank": 144,
+      "id": "f139",
+      "rank": 139,
       "title": "The Colour of Pomegranates",
       "year": 1968,
       "director": "Sergei Parajanov",
@@ -2995,8 +2896,8 @@
       }
     },
     {
-      "id": "f145",
-      "rank": 145,
+      "id": "f140",
+      "rank": 140,
       "title": "Vivre sa vie",
       "year": 1962,
       "director": "Jean-Luc Godard",
@@ -3015,8 +2916,8 @@
       }
     },
     {
-      "id": "f146",
-      "rank": 146,
+      "id": "f141",
+      "rank": 141,
       "title": "Annie Hall",
       "year": 1977,
       "director": "Woody Allen",
@@ -3037,8 +2938,8 @@
       }
     },
     {
-      "id": "f147",
-      "rank": 147,
+      "id": "f142",
+      "rank": 142,
       "title": "Hiroshima mon amour",
       "year": 1959,
       "director": "Alain Resnais",
@@ -3058,8 +2959,8 @@
       }
     },
     {
-      "id": "f148",
-      "rank": 148,
+      "id": "f143",
+      "rank": 143,
       "title": "The Ascent",
       "year": 1977,
       "director": "Larisa Shepitko",
@@ -3078,8 +2979,8 @@
       }
     },
     {
-      "id": "f149",
-      "rank": 149,
+      "id": "f144",
+      "rank": 144,
       "title": "The Gold Rush",
       "year": 1925,
       "director": "Charles Chaplin",
@@ -3098,8 +2999,8 @@
       }
     },
     {
-      "id": "f150",
-      "rank": 150,
+      "id": "f145",
+      "rank": 145,
       "title": "Los Olvidados",
       "year": 1950,
       "director": "Luis Buñuel",
@@ -3116,6 +3017,324 @@
       "sources": {
         "tspdt": 133,
         "sight_sound_2022": 157
+      }
+    },
+    {
+      "id": "f146",
+      "rank": 146,
+      "title": "Greed",
+      "year": 1924,
+      "director": "Erich von Stroheim",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 140,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A San Francisco dentist and his wife are destroyed by the pursuit of wealth after she wins a lottery.",
+      "why": "Von Stroheim's monumental, uncompromising study of avarice; a foundational work of American silent cinema repeatedly restored and championed.",
+      "wiki": "Greed_(1924_film)",
+      "sources": {
+        "tspdt": 80,
+        "cahiers": 11
+      }
+    },
+    {
+      "id": "f147",
+      "rank": 147,
+      "title": "Nosferatu",
+      "year": 1922,
+      "director": "F.W. Murnau",
+      "country": "Germany",
+      "language": "Silent",
+      "runtime": 94,
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "A real-estate agent travels to Transylvania and unleashes a vampire upon his hometown.",
+      "why": "The first great vampire film and a peak of German Expressionist visual style; its shadow-play and atmosphere remain unmatched.",
+      "wiki": "Nosferatu",
+      "sources": {
+        "tspdt": 95,
+        "cahiers": 19
+      }
+    },
+    {
+      "id": "f148",
+      "rank": 148,
+      "title": "The Crowd",
+      "year": 1928,
+      "director": "King Vidor",
+      "country": "USA",
+      "language": "Silent",
+      "runtime": 104,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A young couple in New York struggle against the anonymity and pressures of modern urban life.",
+      "why": "Vidor's humane, formally inventive portrait of ordinary American life; a silent-era peak of social realism.",
+      "wiki": "The_Crowd_(1928_film)",
+      "sources": {
+        "tspdt": 140,
+        "cahiers": 40
+      }
+    },
+    {
+      "id": "f149",
+      "rank": 149,
+      "title": "The Lady Eve",
+      "year": 1941,
+      "director": "Preston Sturges",
+      "country": "USA",
+      "language": "English",
+      "runtime": 94,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "A con artist on a liner sets her sights on a wealthy, naive heir, only for the tables to turn.",
+      "why": "Sturges's sparkling screwball peak; perfect timing, dialogue, and romantic farce.",
+      "wiki": "The_Lady_Eve",
+      "sources": {
+        "tspdt": 180
+      }
+    },
+    {
+      "id": "f150",
+      "rank": 150,
+      "title": "The Big Sleep",
+      "year": 1946,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 114,
+      "genres": [
+        "Noir",
+        "Mystery"
+      ],
+      "synopsis": "A private detective is hired by a wealthy family and finds himself entangled in blackmail, murder, and shifting loyalties.",
+      "why": "Peak Hawks-Bogart-Bacall collaboration; dense, stylish, endlessly rewatchable noir.",
+      "wiki": "The_Big_Sleep_(1946_film)",
+      "sources": {
+        "tspdt": 160
+      }
+    },
+    {
+      "id": "f151",
+      "rank": 151,
+      "title": "Sullivan's Travels",
+      "year": 1941,
+      "director": "Preston Sturges",
+      "country": "USA",
+      "language": "English",
+      "runtime": 90,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "A successful comedy director decides to experience poverty in order to make a serious film, with unexpected results.",
+      "why": "Sturges's self-reflexive masterpiece on the value of laughter and the limits of earnestness.",
+      "wiki": "Sullivan%27s_Travels",
+      "sources": {
+        "tspdt": 170
+      }
+    },
+    {
+      "id": "f152",
+      "rank": 152,
+      "title": "The Palm Beach Story",
+      "year": 1942,
+      "director": "Preston Sturges",
+      "country": "USA",
+      "language": "English",
+      "runtime": 88,
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A wife leaves her struggling inventor husband and heads to Florida, where farcical complications multiply.",
+      "why": "One of Sturges's purest and funniest comedies of remarriage and mistaken identity.",
+      "wiki": "The_Palm_Beach_Story",
+      "sources": {
+        "tspdt": 220
+      }
+    },
+    {
+      "id": "f153",
+      "rank": 153,
+      "title": "Scarface",
+      "year": 1932,
+      "director": "Howard Hawks",
+      "country": "USA",
+      "language": "English",
+      "runtime": 93,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "synopsis": "An ambitious gangster rises through the ranks of Chicago's underworld during Prohibition.",
+      "why": "The template for the American gangster film; energetic, violent, and formally sharp.",
+      "wiki": "Scarface_(1932_film)",
+      "sources": {
+        "tspdt": 150
+      }
+    },
+    {
+      "id": "f154",
+      "rank": 154,
+      "title": "The Thin Man",
+      "year": 1934,
+      "director": "W.S. Van Dyke",
+      "country": "USA",
+      "language": "English",
+      "runtime": 91,
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "synopsis": "A retired detective and his witty wife investigate a disappearance amid high-society parties and cocktails.",
+      "why": "The gold standard of sophisticated, rapid-fire detective comedy.",
+      "wiki": "The_Thin_Man_(film)",
+      "sources": {
+        "tspdt": 250
+      }
+    },
+    {
+      "id": "f155",
+      "rank": 155,
+      "title": "Trouble in Paradise",
+      "year": 1932,
+      "director": "Ernst Lubitsch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 83,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "Two elegant thieves fall in love while planning to fleece a wealthy widow.",
+      "why": "Lubitsch at his most refined; the ultimate pre-Code romantic comedy of manners.",
+      "wiki": "Trouble_in_Paradise_(film)",
+      "sources": {
+        "tspdt": 130
+      }
+    },
+    {
+      "id": "f156",
+      "rank": 156,
+      "title": "The Shop Around the Corner",
+      "year": 1940,
+      "director": "Ernst Lubitsch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 99,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "Two clerks in a Budapest shop who cannot stand each other are unknowingly romantic pen pals.",
+      "why": "Lubitsch's warmest and most perfectly constructed romantic comedy.",
+      "wiki": "The_Shop_Around_the_Corner",
+      "sources": {
+        "tspdt": 145
+      }
+    },
+    {
+      "id": "f157",
+      "rank": 157,
+      "title": "Ninotchka",
+      "year": 1939,
+      "director": "Ernst Lubitsch",
+      "country": "USA",
+      "language": "English",
+      "runtime": 110,
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "A stern Soviet envoy sent to Paris is gradually thawed by the city and a charming count.",
+      "why": "Garbo laughs; Lubitsch's sparkling political-romantic satire.",
+      "wiki": "Ninotchka",
+      "sources": {
+        "tspdt": 190
+      }
+    },
+    {
+      "id": "f158",
+      "rank": 158,
+      "title": "The Life and Death of Colonel Blimp",
+      "year": 1943,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 163,
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "synopsis": "The life of a British officer across three wars, from youthful idealist to aging traditionalist.",
+      "why": "Powell & Pressburger's richest character study and a profound meditation on honor, friendship, and changing times.",
+      "wiki": "The_Life_and_Death_of_Colonel_Blimp",
+      "sources": {
+        "tspdt": 120
+      }
+    },
+    {
+      "id": "f159",
+      "rank": 159,
+      "title": "A Canterbury Tale",
+      "year": 1944,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 124,
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "synopsis": "Three strangers arrive in a Kent village during wartime and become involved in a local mystery and the landscape's deeper history.",
+      "why": "One of the Archers' most poetic and underrated works; a wartime film about place, community, and continuity.",
+      "wiki": "A_Canterbury_Tale",
+      "sources": {
+        "tspdt": 200
+      }
+    },
+    {
+      "id": "f160",
+      "rank": 160,
+      "title": "I Know Where I'm Going!",
+      "year": 1945,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 91,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "synopsis": "A determined young woman traveling to a Scottish island to marry a wealthy industrialist is delayed by weather and local forces.",
+      "why": "Charming, visually exquisite romantic comedy-drama; pure Archers magic.",
+      "wiki": "I_Know_Where_I%27m_Going!",
+      "sources": {
+        "tspdt": 210
+      }
+    },
+    {
+      "id": "f161",
+      "rank": 161,
+      "title": "Black Narcissus",
+      "year": 1947,
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "UK",
+      "language": "English",
+      "runtime": 100,
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Anglican nuns attempt to establish a school and hospital in a remote Himalayan palace, only to find the place and their own desires overwhelm them.",
+      "why": "Technicolor masterpiece of atmosphere, repressed desire, and psychological tension.",
+      "wiki": "Black_Narcissus",
+      "sources": {
+        "tspdt": 100
       }
     }
   ]

@@ -1,26 +1,27 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CANONE · Film Watchlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@600&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@600&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
 <style>
 :root{
  color-scheme:light;
  --bg:#f6f5f2;--surface:#fff;--surface-2:#ececea;
  --border:#e1ded7;--border-strong:#c9c5bb;
  --text:#1c1b19;--text-2:#605c54;--text-3:#8c8780;--text-on-accent:#fff;
- --accent:#9a3b2c;--accent-2:#2e4a3f;--good:#3f6b4a;
+ --accent:#b5431f;--accent-2:#2e4a3f;--good:#3f6b4a;
  --radius:10px;--radius-sm:6px;
  --shadow-sm:0 1px 2px rgba(20,18,14,.06);
- --shadow-md:0 6px 20px -8px rgba(20,18,14,.18);
+ --shadow-md:0 10px 28px -10px rgba(20,18,14,.26);
  --font-ui:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
- --font-display:"Oswald",var(--font-ui);
+ --font-label:"Oswald",var(--font-ui);
+ --font-display:"Fraunces","Source Serif 4",Georgia,serif;
  --font-read:"Source Serif 4",Georgia,serif;
 }
 @media(prefers-color-scheme:dark){:root{
  color-scheme:dark;
- --bg:#171614;--surface:#211f1c;--surface-2:#2a2824;
- --border:#38352f;--border-strong:#4a463e;
- --text:#efece6;--text-2:#b7b1a6;--text-3:#8c8780;--text-on-accent:#171614;
- --accent:#e0775f;--accent-2:#7fa38f;--good:#7fb388;
+ --bg:#17120f;--surface:#211b17;--surface-2:#2a231d;
+ --border:#3d332b;--border-strong:#524539;
+ --text:#f3ece2;--text-2:#c2b4a3;--text-3:#8c7f6f;--text-on-accent:#17120f;
+ --accent:#ec6a3c;--accent-2:#7fa38f;--good:#7fb388;
  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
  --shadow-md:0 10px 28px -10px rgba(0,0,0,.55);
 }}
@@ -29,8 +30,8 @@ body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 var(--font-u
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 .hide{display:none!important}
 header{text-align:center;padding:40px 16px 28px;background:var(--surface);border-bottom:1px solid var(--border)}
-h1{margin:0;font:600 clamp(2.1rem,6vw,3.2rem)/1 var(--font-display);letter-spacing:.06em;color:var(--text)}
-.inscription{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 10px;color:var(--text-3);font:600 10px/1 var(--font-display);letter-spacing:.3em}
+h1{margin:0;font:600 clamp(2.4rem,6vw,3.6rem)/1 var(--font-display);font-optical-sizing:auto;letter-spacing:-.01em;color:var(--text)}
+.inscription{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 10px;color:var(--accent);font:600 10px/1 var(--font-label);letter-spacing:.3em;text-transform:uppercase}
 .inscription::before,.inscription::after{content:"";width:28px;height:1px;background:var(--border-strong)}
 .sub{color:var(--text-2);font-size:13px;margin-top:8px}
 .bar{height:4px;border-radius:2px;margin:16px auto 6px;max-width:360px;background:var(--surface-2);overflow:hidden}
@@ -69,13 +70,17 @@ button.p:hover{filter:brightness(1.07)}
 body.compact .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
 .decade{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:22px 0 2px;color:var(--text-3)}
 .decade::before,.decade::after{content:"";flex:1;height:1px;background:var(--border)}
-.decade b{font:600 13px/1 var(--font-display);letter-spacing:.14em;white-space:nowrap}
+.decade b{font:600 13px/1 var(--font-label);letter-spacing:.14em;white-space:nowrap;color:var(--accent)}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .15s,border-color .15s}
 .card:hover{box-shadow:var(--shadow-md);border-color:var(--border-strong)}
 .card.w{opacity:.62}
 .card.hl,.card:focus-within{outline:2px solid var(--accent);outline-offset:-2px}
-.pos{aspect-ratio:2/3;max-height:230px;width:100%;object-fit:cover;display:block;background:var(--surface-2)}
+.poswrap{position:relative;overflow:hidden}
+.pos{aspect-ratio:2/3;max-height:230px;width:100%;object-fit:cover;display:block;background:var(--surface-2);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.card:hover .pos{transform:scale(1.045)}
 body.compact .pos{max-height:170px}
+.rankbadge{position:absolute;top:8px;left:8px;z-index:2;background:var(--accent);color:var(--text-on-accent);font:600 11px/1 var(--font-label);letter-spacing:.03em;padding:5px 8px;border-radius:4px;box-shadow:var(--shadow-sm)}
+body.compact .rankbadge{padding:3px 6px;font-size:9px}
 div.pos{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:10px;gap:4px}
 .pos b{font-size:2.2rem;line-height:1;font-family:var(--font-display);color:var(--text-3)}
 .pos span{letter-spacing:.06em;font-size:11px;color:var(--text-3)}
@@ -83,13 +88,17 @@ div.pos{display:flex;align-items:center;justify-content:center;flex-direction:co
 .pos-err::after{content:"No poster found";font-size:10px;letter-spacing:.04em;color:var(--text-3);margin-top:2px}
 .cb{padding:12px;display:flex;flex-direction:column;gap:7px;flex:1}
 body.compact .cb{padding:9px;gap:5px}
-.cb h2{margin:0;font-size:14px;font-weight:600;letter-spacing:0;line-height:1.3}
+.cb h2{margin:0;font:600 16px/1.25 var(--font-display);font-optical-sizing:auto;letter-spacing:-.005em}
+.cb h2 .rank-num{color:var(--text-3);font-weight:500;margin-right:1px}
 .m{color:var(--text-2);font-size:11.5px}
 .tag{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:1px 8px;margin:0 4px 4px 0;font-size:10px;color:var(--text-2)}
-.desc{margin:0;font:13px/1.45 var(--font-read);color:var(--text-2);cursor:pointer;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.desc.open{-webkit-line-clamp:unset}
+.desc{margin:0;font:13px/1.45 var(--font-read);color:var(--text-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.desc.open{display:block;-webkit-line-clamp:unset;overflow:visible}
 .desc .why-lbl{color:var(--text);font-weight:600;font-style:normal}
-body.compact .desc{display:none}
+.more-btn{align-self:flex-start;border:0;background:none;padding:0;min-height:auto;font-size:11.5px;font-weight:600;color:var(--accent);cursor:pointer}
+.more-btn:hover{text-decoration:underline}
+body.compact .desc{display:-webkit-box;-webkit-line-clamp:1}
+body.compact .desc.open{display:block;-webkit-line-clamp:unset}
 .chk,.pq{display:flex;align-items:center;gap:8px;font-weight:500;font-size:12.5px;min-height:34px;cursor:pointer}
 .chk input,.pq input{width:18px;height:18px;min-height:0;accent-color:var(--accent)}
 .pq input{accent-color:var(--accent-2)}
@@ -249,7 +258,12 @@ const REEL={method:"Offline reading-room reel — embedded fallback used when fi
 {id:"la-dolce-vita-1960",rank:20,title:"La Dolce Vita",year:1960,director:"Federico Fellini",country:"Italy",language:"Italian",runtime:174,genres:["Drama"],synopsis:"A gossip journalist drifts through Rome's decadent high society.",why:"The episodic structure that named an entire mode of celebrity.",wiki:"La Dolce Vita"}
 ]};
 const PRESETS={claude:["Claude (Anthropic)","https://api.anthropic.com/v1","claude-sonnet-4-5"],openai:["OpenAI GPT","https://api.openai.com/v1","gpt-4o"],gemini:["Google Gemini","https://generativelanguage.googleapis.com/v1beta/openai","gemini-2.0-flash"],groq:["Groq","https://api.groq.com/openai/v1","llama-3.3-70b-versatile"],mistral:["Mistral","https://api.mistral.ai/v1","mistral-large-latest"],openrouter:["OpenRouter (any model)","https://openrouter.ai/api/v1",""],custom:["Custom endpoint","",""]};
+function pruneLegacyPosterCache(){try{
+  Object.keys(localStorage).forEach(k=>{if(/^p(2|3)?:/.test(k)&&!k.startsWith(PV))localStorage.removeItem(k);
+   if(k.length<40&&!k.includes(":")&&k.startsWith("p")&&/^p[a-z0-9-]+$/i.test(k))localStorage.removeItem(k)})
+ }catch(e){}}
 async function boot(){
+ pruneLegacyPosterCache();
  try{const j=await (await fetch("films.json",{cache:"no-cache"})).json();films=j.films;$("meth").textContent=j.method||""}
  catch(e){console.warn("[canone] films.json unreachable — loading embedded reel:",e);films=REEL.films;$("meth").textContent=REEL.method;note("Offline reel loaded")}
  applyTheme();
@@ -291,8 +305,9 @@ function roman(n){const t=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],
 function stars(id,rating){let h='<span class="stars" role="group" aria-label="Rating">';for(let i=1;i<=5;i++)h+=`<button type="button" data-rate="${id}" data-val="${i}" class="${rating>=i?"on":""}" aria-label="${i} star${i>1?"s":""}">★</button>`;return h+"</span>"}
 function trailerUrl(f){return"https://www.youtube.com/results?search_query="+encodeURIComponent(`${f.title} ${f.year} ${f.director} trailer`)}
 function cardHtml(f){const p=P[f.id]||{},id=esc(f.id),rating=p.rating||0;
- return `<article class="card${p.watched?" w":""}" id="${id}" tabindex="0"><div class="pos skel" data-id="${id}"><b>${roman(f.rank)}</b><span>${esc(f.title)}<br>${f.year}</span></div><div class="cb"><h2>${f.rank}. ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div>
- <p class="desc" tabindex="0" role="button" aria-expanded="false" title="Click to read more">${esc(f.synopsis)} <b class="why-lbl">Why it matters:</b> ${esc(f.why)}</p>
+ return `<article class="card${p.watched?" w":""}" id="${id}" tabindex="0"><div class="poswrap"><div class="pos skel" data-id="${id}"><b>${roman(f.rank)}</b><span>${esc(f.title)}<br>${f.year}</span></div><span class="rankbadge">${f.rank}</span></div><div class="cb"><h2><span class="rank-num">${f.rank}.</span> ${esc(f.title)}</h2><div class="m">${f.year} · ${esc(f.director)} · ${esc(f.country)} · ${f.runtime} min</div><div>${f.genres.map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div>
+ <p class="desc" id="desc-${id}">${esc(f.synopsis)} <b class="why-lbl">Why it matters:</b> ${esc(f.why)}</p>
+ <button type="button" class="more-btn" data-more="${id}" aria-expanded="false" aria-controls="desc-${id}">Read more ▾</button>
  ${stars(id,rating)}
  <label class="chk"><input type="checkbox" data-w="${id}"${p.watched?" checked":""}> Watched</label>
  <label class="pq"><input type="checkbox" data-q="${id}"${p.queue?" checked":""}> Priority queue</label>
@@ -347,8 +362,9 @@ $("s").addEventListener("input",()=>{clearTimeout(searchTm);searchTm=setTimeout(
 $("sclr").onclick=()=>{$("s").value="";draw();$("s").focus()};
 $("reset").onclick=()=>{$("s").value="";["fc","fl","fg","fd","fr","fw"].forEach(i=>$(i).value="");$("so").value="rank";draw()};
 $("g").addEventListener("click",e=>{if(e.target.id==="emptyreset")$("reset").click();
- const d=e.target.closest(".desc");if(d){const open=d.classList.toggle("open");d.setAttribute("aria-expanded",open)}});
-$("g").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("desc")){e.preventDefault();e.target.click()}});
+ const btn=e.target.closest(".more-btn");
+ if(btn){const id=btn.dataset.more,desc=$("desc-"+id),open=desc.classList.toggle("open");
+  btn.setAttribute("aria-expanded",open);btn.textContent=open?"Read less ▴":"Read more ▾"}});
 $("density").onclick=()=>{const on=document.body.classList.toggle("compact");$("density").setAttribute("aria-pressed",on);$("density").textContent=on?"Comfortable":"Compact";
  try{localStorage.setItem("canone.density",on?"compact":"")}catch(e){}};
 if(localStorage.getItem("canone.density")==="compact"){document.body.classList.add("compact");$("density").setAttribute("aria-pressed","true");$("density").textContent="Comfortable"}
@@ -361,10 +377,22 @@ if(localStorage.getItem("canone.density")==="compact"){document.body.classList.a
    without hammering it every page view). */
 const PV="p4:";
 const POS_TTL=2592e6,NEG_TTL=2592e5;
+/* A cached MISS must not outlive the settings that produced it — the first time this ran,
+   S.tmdb/S.omdb were probably both empty, so every film got cached as "all providers
+   failed" for 3 days. Saving a new key afterward reran the fetches but pGet() kept
+   returning that stale miss instead of ever calling the providers again. Stamping each
+   cache entry with a fingerprint of the keys in effect, and dropping anything that
+   doesn't match the current fingerprint, fixes that without needing a manual cache wipe. */
+function keyFingerprint(){return(S.tmdb?"t1":"t0")+(S.omdb?"o1":"o0")}
 function pGet(id){try{const raw=localStorage.getItem(PV+id);if(!raw)return null;
-  const c=JSON.parse(raw);if(Date.now()-c.ts>(c.url?POS_TTL:NEG_TTL)){localStorage.removeItem(PV+id);return null}
+  const c=JSON.parse(raw);
+  if(!c.url&&c.cfg!==keyFingerprint()){localStorage.removeItem(PV+id);return null}
+  if(Date.now()-c.ts>(c.url?POS_TTL:NEG_TTL)){localStorage.removeItem(PV+id);return null}
   return c}catch(e){return null}}
-function pSet(id,url){try{localStorage.setItem(PV+id,JSON.stringify({url:url||null,ts:Date.now()}))}catch(e){}}
+function pSet(id,url){try{localStorage.setItem(PV+id,JSON.stringify({url:url||null,ts:Date.now(),cfg:keyFingerprint()}))}catch(e){}}
+function purgePosterCache(){try{
+  Object.keys(localStorage).filter(k=>k.startsWith(PV)).forEach(k=>localStorage.removeItem(k))
+ }catch(e){}}
 async function fetchJSON(url,ms){
  const ctrl=new AbortController(),t=setTimeout(()=>ctrl.abort(),ms);
  try{const res=await fetch(url,{signal:ctrl.signal});if(!res.ok)throw new Error("HTTP "+res.status);return await res.json()}
@@ -454,10 +482,12 @@ $("aipa").onclick=()=>$("aip").insertAdjacentHTML("beforeend",providerRow());
 $("cfg").onclick=()=>{renderProviders(providerRowsFromS());$("dlg").showModal()};
 $("tkv").onclick=()=>{const t=$("tk");t.type=t.type==="password"?"text":"password"};
 $("okv").onclick=()=>{const t=$("ok");t.type=t.type==="password"?"text":"password"};
-$("sv").onclick=async()=>{S.tmdb=$("tk").value.trim();S.omdb=$("ok").value.trim();
+$("sv").onclick=async()=>{const prevCfg=keyFingerprint();
+ S.tmdb=$("tk").value.trim();S.omdb=$("ok").value.trim();
  S.ai=[...$("aip").querySelectorAll(".aip-row")].map(r=>({preset:r.querySelector(".aip-p").value,u:r.querySelector(".aip-u").value.trim(),k:r.querySelector(".aip-k").value.trim(),m:r.querySelector(".aip-m").value.trim()})).filter(a=>a.u&&a.k&&a.m);
  $("ai").value=S.ai.map(x=>[x.u,x.k,x.m].join("|")).join("\n");
- const{error}=await sb.from("settings").upsert({user_id:uid,data:S});note(error?error.message:"Settings saved");draw()};
+ if(keyFingerprint()!==prevCfg){purgePosterCache();note("Settings saved — retrying posters with the new key…")}
+ const{error}=await sb.from("settings").upsert({user_id:uid,data:S});if(error)note(error.message);draw()};
 async function ask(t){const un=films.filter(f=>!(P[f.id]&&P[f.id].watched));const box=$("rec");box.classList.remove("hide");
  if(!S.ai.length){box.textContent="Add an AI provider in Settings, or press Surprise me.";return}
  const cat=un.map(f=>`${f.id}|${f.title}|${f.year}|${f.director}|${f.country}|${f.runtime}m|${f.genres.join("/")}`).join("\n");

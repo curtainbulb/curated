@@ -579,12 +579,19 @@ async function start(user){
  try{
   const progressQuery=sb.from("progress").select("*");
   const settingsQuery=sb.from("settings").select("data");
-  const [progressResult,settingsResult]=await Promise.all([
+  const schemaQuery=REMOTE?sb.from("progress").select("film_id,rating,queue,watch_date").eq("user_id",uid).limit(1):Promise.resolve({data:[],error:null});
+  const [progressResult,settingsResult,schemaResult]=await Promise.all([
    REMOTE?progressQuery.eq("user_id",uid):progressQuery,
-   REMOTE?settingsQuery.eq("user_id",uid).maybeSingle():settingsQuery.maybeSingle()
+   REMOTE?settingsQuery.eq("user_id",uid).maybeSingle():settingsQuery.maybeSingle(),
+   schemaQuery
   ]);
   if(progressResult.error)throw new Error("Progress: "+textOnly(progressResult.error.message,180));
   if(settingsResult.error)throw new Error("Settings: "+textOnly(settingsResult.error.message,180));
+  if(schemaResult.error){
+   const message=textOnly(schemaResult.error.message,180);
+   if(schemaResult.error.code==="42703"||/column|schema cache/i.test(message))throw new Error("The film progress database migration is not installed yet.");
+   throw new Error("Progress fields: "+message);
+  }
   P={};
   (progressResult.data||[]).forEach(row=>{
    if(!row||!filmById.has(row.film_id))return;
@@ -592,7 +599,7 @@ async function start(user){
    if(clean)P[row.film_id]=clean;
   });
   const raw=validObject(settingsResult.data&&settingsResult.data.data)?settingsResult.data.data:{};
-  loadFilmMetadata(raw);
+  if(!REMOTE)loadFilmMetadata(raw);
   const localSecrets=readSecrets(uid),legacy=normalizeSecrets(raw);
   SECRETS=normalizeSecrets({tmdb:localSecrets.tmdb||legacy.tmdb,omdb:localSecrets.omdb||legacy.omdb,ai:localSecrets.ai.length?localSecrets.ai:legacy.ai});
   S=normalizeSettings(raw);
@@ -766,8 +773,9 @@ function touchProgress(id){
  dirtyIds.add(id);
 }
 function progressRow(id){
- const p=P[id]||{};
+ const p=P[id]||{},meta=filmMeta(p);
  return {user_id:uid,film_id:id,watched:p.watched===true,note:typeof p.note==="string"?p.note.slice(0,4000):"",
+  rating:meta.rating,queue:meta.queue,watch_date:meta.watch_date,
   updated_at:p.updated_at||new Date().toISOString()};
 }
 async function save(id){
@@ -775,7 +783,7 @@ async function save(id){
  const row=progressRow(id),meta=filmMeta(P[id]),store=sb,account=uid,remote=REMOTE,previous=saveQueue.get(id)||Promise.resolve();
  const pending=previous.catch(()=>{}).then(async()=>{
   try{
-   if(!sameFilmMeta(meta,persistedFilmMeta[id]))await persistFilmMetadata([{id,meta}],store,account,remote);
+   if(!remote&&!sameFilmMeta(meta,persistedFilmMeta[id]))await persistFilmMetadata([{id,meta}],store,account,remote);
    const result=await store.from("progress").upsert(row,{onConflict:"user_id,film_id"});
    if(result.error){note("Not saved: "+textOnly(result.error.message,180));return false}
    if(uid===account&&P[id]&&P[id].updated_at===row.updated_at){dirtyIds.delete(id);note("Saved")}
@@ -1392,7 +1400,7 @@ async function flushPendingNotes(){
 async function saveBatch(ids){
  const rows=ids.map(id=>{touchProgress(id);return progressRow(id)}),account=uid;
  const entries=ids.map(id=>({id,meta:filmMeta(P[id])})).filter(entry=>!sameFilmMeta(entry.meta,persistedFilmMeta[entry.id]));
- if(entries.length)await persistFilmMetadata(entries);
+ if(!REMOTE&&entries.length)await persistFilmMetadata(entries);
  for(let index=0;index<rows.length;index+=100){
   const result=await sb.from("progress").upsert(rows.slice(index,index+100),{onConflict:"user_id,film_id"});
   if(result.error)throw new Error(textOnly(result.error.message,180));
@@ -1427,30 +1435,17 @@ document.addEventListener("visibilitychange",async()=>{
   await Promise.all([...saveQueue.values()]);
   await settingsWriteQueue;
   const account=uid;
-  const [result,settingsResult]=await Promise.all([
-   sb.from("progress").select("*").eq("user_id",account),
-   sb.from("settings").select("data").eq("user_id",account).maybeSingle()
-  ]);
+  const result=await sb.from("progress").select("*").eq("user_id",account);
   if(uid!==account)return;
-  if(result.error||settingsResult.error){note("Could not refresh synced progress.");return}
-  const raw=validObject(settingsResult.data&&settingsResult.data.data)?settingsResult.data.data:{};
-  const metadata=metadataFromSettings(raw);
+  if(result.error){note("Could not refresh synced progress.");return}
   const retry=new Set([...dirtyIds].filter(id=>filmById.has(id)));
   (result.data||[]).forEach(row=>{
    if(!row||!filmById.has(row.film_id))return;
    const incoming=normalizeProgress(row.film_id,row),current=P[row.film_id];
    if(dirtyIds.has(row.film_id))return;
-   const extra=filmMeta(metadata[row.film_id]);
-   persistedFilmMeta[row.film_id]=extra;
-   Object.assign(incoming,extra);
    if(!current||timestamp(incoming.updated_at)>timestamp(current.updated_at)){
     P[row.film_id]=incoming;dirtyIds.delete(row.film_id);
-   }else Object.assign(current,extra);
-  });
-  Object.entries(metadata).forEach(([id,value])=>{
-   if(!filmById.has(id)||dirtyIds.has(id)||!validObject(value)||P[id])return;
-   const extra=filmMeta(value);persistedFilmMeta[id]=extra;
-   P[id]={film_id:id,watched:false,note:"",updated_at:"",...extra};
+   }
   });
   if(retry.size)await Promise.all([...retry].map(save));
   draw();upNext();filmOfDay();
